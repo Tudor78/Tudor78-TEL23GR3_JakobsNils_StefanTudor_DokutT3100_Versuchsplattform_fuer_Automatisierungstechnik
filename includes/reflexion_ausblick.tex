@@ -1,0 +1,22 @@
+\chapter{Reflexion und Ausblick}
+\label{chap:reflexion-ausblick}
+
+Dieses Kapitel bewertet die Arbeit und das gewählte Vorgehen rückblickend. Anschließend werden die nächsten Schritte skizziert.
+
+\section{Reflexion}
+
+Das geplante Vorgehen hat sich als zielführend erwiesen. Das Ziel einer verbesserten \ac{QA} für Edelstahlschnittkanten wurde erreicht. Der wesentliche Engpass lag in der Datenerfassung in der Messzelle. Die Messungen pro Parameterkombination benötigen viel Zeit. Für ein stabiles und robustes Modell werden jedoch viele Beispiele benötigt. Deshalb konnte innerhalb des Bearbeitungszeitraums kein Modell für die Rauheit aufgebaut werden.
+
+Die gewählte Reihenfolge war hilfreich. Zuerst wurde die Schnittabrissgrenze analysiert. Darauf basierend wurden Daten nach Versuchsplan erzeugt. Die Messmethodik in der Messzelle wurde auf Edelstahl angepasst und anschließend wurde das Modell auf Edelstahldaten neu trainiert. Dieses Vorgehen ist nachvollziehbar und auf weitere Werkstoffe übertragbar, sofern ausreichend repräsentative Daten vorliegen.
+
+\section{Ausblick}
+
+Künftige Arbeiten sollten prüfen, ob ein gemeinsames Modell für Baustahl und Edelstahl vorteilhaft ist. Ein Ansatz mit gemeinsamem Merkmalsextraktor und materialspezifischen Ausgabeschichten erscheint geeignet. Als Eingaben kommen reine Bilddaten oder eine Kombination aus Bilddaten und Metadaten in Frage. Relevante Metadaten sind insbesondere Material, Blechdicke, Schneidgas und zentrale Prozessparameter.
+
+Für die Rauheitsschätzung ist eine Erweiterung des Datensatzes mit verlässlichen Referenzmessungen erforderlich. Sinnvoll ist ein gemeinsames Training für Grat und Rauheit, da beide Größen aus ähnlichen Strukturen hervorgehen. Eine nachgelagerte Kalibrierung der Vorhersagen erhöht die Anwendbarkeit im Betrieb.
+
+Die Datenerfassung in der Messzelle sollte weiter beschleunigt werden. Automatisierte Messabläufe und aktives Lernen können die Auswahl informativer Parameterkombinationen steuern. Ergänzend helfen Datenaugmentation und eine gezielte Abdeckung hoher Burr-Werte, die bei dickerem Blech häufiger auftreten.
+
+Für eine belastbare Validierung sollten Modelle an unabhängigen Materialchargen und bisher unbekannten Blechdicken getestet werden. Darüber hinaus ist es sinnvoll, Unsicherheiten der Vorhersagen auszugeben und potenzielle Verteilungsunterschiede zwischen Trainings- und Anwendungsdaten zu überwachen. Die Präsentation der Ergebnisse sollte sich an anerkannten Qualitätskennzahlen und relevanten Normen orientieren.
+
+Das hier entwickelte Vorgehen lässt sich auf weitere Legierungen und Blechdicken übertragen. Bei Bedarf wird die Messmethodik angepasst und das Modell mit wenigen neuen Beispielen nachtrainiert, um eine robuste Qualitätsschätzung über unterschiedliche Werkstoffe hinweg zu erreichen.

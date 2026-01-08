@@ -1,0 +1,155 @@
+\addchap{Anhang}
+
+\begin{lstlisting}[language={[Sharp]C}, caption={Werkstoffabhängiges Routing der Handscanner-Setups}, label={lst:messzellen-routing}, basicstyle=\scriptsize\ttfamily, breaklines=true, xleftmargin=0.02\textwidth, xrightmargin=0.02\textwidth, numbers=left, numberstyle=\tiny, linewidth=0.96\linewidth, frame=none]
+public static string NameParserMaterial(string input)
+{
+  if (string.IsNullOrWhiteSpace(input))
+    return "ST";                                // Fallback-Wert
+
+  // Position des ersten und zweiten Bindestrichs ermitteln
+  int firstDash = input.IndexOf('-');
+  int secondDash = firstDash >= 0
+           ? input.IndexOf('-', firstDash + 1)
+           : -1;
+
+  // Prüfen, ob ein zweiter Bindestrich und ein Zeichen dahinter existieren
+  if (secondDash < 0 || secondDash + 1 >= input.Length)
+    return "ST";                                // Fallback-Wert
+
+  char digit = input[secondDash + 1];             // Ziffer einlesen
+
+  // Zuordnung: 1 → "ST", 2 → "ST", 3 → "SS" (bei Bedarf anpassen)
+  return digit switch
+  {
+    '1' => "ST",
+    '2' => "ST",
+    '3' => "SS",
+    _ => "ST"                                   // Default
+  };
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Interpolation begrenzter Lücken in 1D-Profilen}, label={lst:interp-limited-nans}]
+def interpolate_limited_nans(vector, max_gap=5):
+    """
+    Interpoliert nur kleine NaN-Lücken (<= max_gap) mit weicher Spline-Interpolation.
+    """
+    vector = vector.copy()
+    isnan = np.isnan(vector)
+    indices = np.arange(len(vector))
+
+    if not np.any(~isnan):
+        return None
+
+    nan_groups = []
+    in_nan = False
+    start = 0
+    for i, val in enumerate(isnan):
+        if val and not in_nan:
+            in_nan = True
+            start = i
+        elif not val and in_nan:
+            in_nan = False
+            nan_groups.append((start, i - 1))
+    if in_nan:
+        nan_groups.append((start, len(vector) - 1))
+
+    for start, end in nan_groups:
+        gap_size = end - start + 1
+        if gap_size <= max_gap:
+            left = start - 1
+            right = end + 1
+            if left < 0 or right >= len(vector):
+                continue
+            if np.isnan(vector[left]) or np.isnan(vector[right]):
+                continue
+
+            # Verwende CubicSpline statt np.interp
+            x_known = [left, right]
+            y_known = [vector[left], vector[right]]
+            cs = CubicSpline(x_known, y_known, bc_type='natural')
+            interp_indices = indices[start:end+1]
+            vector[start:end+1] = cs(interp_indices)
+
+    return vector
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Achsweise Interpolation von NaNs in Matrizen}, label={lst:interp-nan-matrix}]
+def interpolate_nan(matrix_in, axis=0, max_gap=5):
+    """
+    Interpoliert NaNs in einer Matrix entlang der gegebenen Achse mit Begrenzung.
+    """
+    matrix = matrix_in.copy()
+    x, y = matrix.shape
+
+    if axis == 0:
+        for col_index in range(y):
+            if np.isnan(matrix[:, col_index]).any():
+                vec = interpolate_limited_nans(matrix[:, col_index], max_gap=max_gap)
+                if vec is not None:
+                    matrix[:, col_index] = vec
+    else:
+        for row_index in range(x):
+            if np.isnan(matrix[row_index, :]).any():
+                vec = interpolate_limited_nans(matrix[row_index, :], max_gap=max_gap)
+                if vec is not None:
+                    matrix[row_index, :] = vec
+    return matrix
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Interpolation von X-, Y- und Z-Ebenen}, label={lst:interp-planes}]
+def interpolate_planes(X, Y, Z, results_directory=None, max_gap=0.5):
+    """
+    Interpoliert X, Y, Z Ebenen entlang sinnvoller Achsen mit Lückenbegrenzung.
+    """
+    X_interpolated = interpolate_nan(X, axis=1, max_gap=max_gap)
+    Y_interpolated = interpolate_nan(Y, axis=1, max_gap=max_gap)
+    Z_interpolated = interpolate_nan(Z, axis=0, max_gap=max_gap)
+    return X_interpolated, Y_interpolated, Z_interpolated
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Kapselnde 1D-Pipeline: begrenzte Interpolation mit optionaler Glättung}, label={lst:smooth-nan-values}]
+def smooth_nan_values(x, z, max_nan_values_perc=0.4, max_gap=5, 
+                      smoothing=True, window_length=7, polyorder=2):
+    """
+    Interpoliert NaN-Werte in z, aber nur bei kleiner Lückenanzahl
+    und akzeptablem NaN-Anteil. Optional geglättet mit Savitzky-Golay.
+    """
+    z = np.copy(z)
+    nan_indices = np.isnan(z)
+    num_nans = np.sum(nan_indices)
+
+    if num_nans / len(z) > max_nan_values_perc:
+        return None
+
+    z = interpolate_limited_nans(z, max_gap=max_gap)
+
+    # Optional glätten
+    if smoothing and z is not None and np.count_nonzero(~np.isnan(z)) > window_length:
+        z = savgol_filter(z, window_length=window_length, polyorder=polyorder)
+
+    return z
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Schließen kurzer Täler (Valleys) via begrenzter Interpolation}, label={lst:fill-small-valleys}]
+def fill_small_valleys(z, window_size=30, depth_threshold=5.0, max_gap=0.5,
+                       smoothing=True, smooth_window=7, polyorder=2):
+    """
+    Glättet kleine Einbrüche ('valleys') in einem Höhenprofil z.
+    """
+    z = np.array(z).copy()
+    rolling_min = pd.Series(z).rolling(window=window_size, center=True, min_periods=5).min()
+    diff = rolling_min - z
+
+    # Punkte mit tieferem Einbruch als erlaubt
+    valley_mask = (diff > depth_threshold)
+    z[valley_mask] = np.nan
+
+    z_filled = interpolate_limited_nans(z, max_gap=max_gap)
+
+    # Optional glätten
+    if smoothing and z_filled is not None and np.count_nonzero(~np.isnan(z_filled)) > smooth_window:
+        z_filled = savgol_filter(z_filled, window_length=smooth_window, polyorder=2)
+
+    return z_filled
+\end{lstlisting}

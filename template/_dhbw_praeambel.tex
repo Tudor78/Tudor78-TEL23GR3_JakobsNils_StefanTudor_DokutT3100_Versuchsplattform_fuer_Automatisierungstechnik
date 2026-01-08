@@ -1,0 +1,197 @@
+%%% Präambel %%%
+% Sprachumschaltung DE/EN
+\usepackage{ifthen}
+\newcommand{\DEoEN}[2]{\ifthenelse{\equal{\meineSprache}{DE}}{#1}{#2}}
+
+% Zeichencodierung/Fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Farben + Code-Listings
+\usepackage{xcolor}      % statt 'color' (mehr Features)
+\usepackage{listings}
+% Grund-Setup für Listings (Umlaute/EUR etc.)
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, texcl=true}
+\lstset{literate=
+{Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}2
+{ü}{{\"u}}1 {ä}{{\"a}}1 {ö}{{\"o}}1 {€}{{\euro}}1
+}
+% Lesbares Listing-Layout + automatischer Zeilenumbruch
+\lstdefinestyle{code}{
+  numbers=left, numberstyle=\tiny, numbersep=5pt,
+  breaklines=true, breakatwhitespace=true,
+  columns=fullflexible, keepspaces=true, tabsize=2,
+  basicstyle=\ttfamily\small,
+  postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}}\space
+}
+\lstset{style=code}
+
+% Seitenränder
+\usepackage[
+  left=2.5cm, right=2.5cm,
+  top=2.5cm, bottom=2.5cm,
+  foot=12mm, includefoot
+]{geometry}
+
+% Sprache + Anführungszeichen
+\DEoEN{
+  \usepackage[ngerman]{babel}
+  \usepackage[babel,german=quotes]{csquotes}
+}{
+  \usepackage[english]{babel}
+  \usepackage[babel,english=british]{csquotes}
+}
+
+% Listen, Grafiken, Zeilenabstand
+\usepackage{enumerate}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage[ruled,vlined]{algorithm2e}
+\SetKwInput{KwIn}{Input}
+\SetKwInput{KwOut}{Output}
+\SetKw{KwInit}{initialize}
+\SetKw{KwRet}{return}
+
+
+% Testtext, Akronyme
+\usepackage{blindtext}
+% \usepackage{color}  % durch xcolor ersetzt
+\usepackage[nohyperlinks]{acronym}
+
+% Literatur (biblatex + DHBW-Config)
+\usepackage[
+  backend=biber,
+  bibstyle=_dhbw_authoryear,maxbibnames=99,
+  citestyle=authoryear, dashed=false,
+  uniquename=true, useprefix=true,
+  bibencoding=utf8
+]{biblatex}
+\input{template/_dhbw_biblatex-config.tex}
+
+% Verzeichnisse/Tabellen
+\usepackage{tocloft}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
+% Hyperlinks
+\usepackage[hypertexnames=false]{hyperref}
+
+% --- Quellcode statt Listing überall ---
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+
+% Bezeichnungen des listings-Pakets
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Quellcode}
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
+
+% Namen für \autoref (hyperref)
+\providecommand*{\listingautorefname}{Quellcode}
+\providecommand*{\lstlistingautorefname}{Quellcode}
+
+% cleveref: beide möglichen Typen abdecken
+\crefname{listing}{Quellcode}{Quellcodes}
+\Crefname{listing}{Quellcode}{Quellcodes}
+\crefname{lstlisting}{Quellcode}{Quellcodes}
+\Crefname{lstlisting}{Quellcode}{Quellcodes}
+
+% Bessere Umbrüche in \url{…}
+\usepackage{xurl}
+\urlstyle{tt}
+
+% Anhangszähler/Verzeichnis (wie in deiner Vorlage)
+\newcounter{anhcnt}\setcounter{anhcnt}{0}
+\newlistof{anhang}{app}{}
+\newcommand{\anhang}[1]{%
+  \refstepcounter{anhcnt}\setcounter{anhteilcnt}{0}
+  \section*{\appendixname\ \theanhcnt: #1}
+  \addcontentsline{app}{section}{\protect\numberline{\appendixname\ \theanhcnt}#1}\par
+}
+\newcounter{anhteilcnt}\setcounter{anhteilcnt}{0}
+\newcommand{\anhangteil}[1]{%
+  \refstepcounter{anhteilcnt}
+  \subsection*{\appendixname\ \arabic{anhcnt}/\arabic{anhteilcnt}: #1}
+  \addcontentsline{app}{subsection}{\protect\numberline{\appendixname\ \theanhcnt/\arabic{anhteilcnt}}#1}\par
+}
+\renewcommand{\theanhteilcnt}{\appendixname\ \theanhcnt/\arabic{anhteilcnt}}
+
+% tocloft-Einrückungen für Anhangverzeichnis
+\makeatletter
+\newcommand{\abstaendeanhangverzeichnis}{%
+  \renewcommand*{\l@section}{\@dottedtocline{1}{0em}{5.5em}}
+  \renewcommand*{\l@subsection}{\@dottedtocline{2}{2.3em}{6.5em}}
+}
+% Einträge LOF/LOT und Quellcodeverzeichnis (LOL) angeglichen
+\renewcommand*{\l@figure}{\@dottedtocline{1}{0em}{2.3em}}
+\renewcommand*{\l@table}{\@dottedtocline{1}{0em}{2.3em}}
+\renewcommand*{\l@lstlisting}{\@dottedtocline{1}{0em}{2.3em}}
+\makeatother
+
+% Fortlaufende Zähler über Kapitel hinweg
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{footnote}{chapter}
+
+% Kopfzeilen (KOMA-Script)
+\usepackage[automark]{scrlayer-scrpage}
+\input{template/_dhbw_kopfzeilen.tex}
+
+% Euro-Zeichen
+\usepackage{textcomp}
+\usepackage{eurosym}
+\renewcommand{\texteuro}{\euro}  % ACHTUNG: nach hyperref laden!
+
+% Kompatibilität KOMA-Script
+\usepackage{scrhack}
+
+% Abstände bei Kapitelüberschriften (inkl. Verzeichnisse)
+\renewcommand*\chapterheadstartvskip{\vspace*{-\topskip}}
+\newcommand{\myBeforeTitleSkip}{1mm}
+\newcommand{\myAfterTitleSkip}{10mm}
+\setlength\cftbeforetoctitleskip{\myBeforeTitleSkip}
+\setlength\cftbeforeloftitleskip{\myBeforeTitleSkip}
+\setlength\cftbeforelottitleskip{\myBeforeTitleSkip}
+\setlength\cftaftertoctitleskip{\myAfterTitleSkip}
+\setlength\cftafterloftitleskip{\myAfterTitleSkip}
+\setlength\cftafterlottitleskip{\myAfterTitleSkip}
+
+% Anhang beginnen
+\newcommand{\startAnhang}{%
+  \chapter*{\appendixname}
+  \addcontentsline{toc}{chapter}{\appendixname}
+  \section*{\anhangVzBezeichnung}
+  \vspace{-8em}
+  % vor \listofanhang müssen Einrückungen angepasst werden
+  \abstaendeanhangverzeichnis
+  \spezialkopfzeile{\DEoEN{Anhang}{Appendix}}
+}
+
+% Abkürzungsverzeichnis beginnen
+\newcommand{\startAbkVerzeichnis}{%
+  \chapter*{\abkVzBezeichnung}
+  \addcontentsline{toc}{chapter}{\abkVzBezeichnung}
+}
+
+% Zeilenabstand in Tabellen schnell ändern
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+% Sprachspezifische Überschriften
+\DEoEN{%
+  \newcommand{\abkVzBezeichnung}{Abkürzungsverzeichnis}
+  \newcommand{\anhangVzBezeichnung}{Anhangverzeichnis}
+  \renewcaptionname{ngerman}{\refname}{Literaturverzeichnis}
+  \renewcaptionname{ngerman}{\figurename}{Abb.}
+  \renewcaptionname{ngerman}{\tablename}{Tab.}
+}{%
+  \newcommand{\abkVzBezeichnung}{Abbreviations}
+  \newcommand{\anhangVzBezeichnung}{Appendix directory}
+  \renewcaptionname{english}{\contentsname}{Table of Contents}
+  \renewcaptionname{english}{\figurename}{Fig.}
+  \renewcaptionname{english}{\tablename}{Tab.}
+}
+
+%%% Ende der Präambel %%%

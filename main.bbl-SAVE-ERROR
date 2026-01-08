@@ -1,0 +1,459 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{ZahnerStainlessReflect}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ac220886f1981f554c1959d3caedc485}{%
+           family={{A. Zahner Company}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{fullhash}{ac220886f1981f554c1959d3caedc485}
+      \strng{fullhashraw}{ac220886f1981f554c1959d3caedc485}
+      \strng{bibnamehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authorbibnamehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authornamehash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authorfullhash}{ac220886f1981f554c1959d3caedc485}
+      \strng{authorfullhashraw}{ac220886f1981f554c1959d3caedc485}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Stainless Steel}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.azahner.com/metal-info/stainless-steel/
+      \endverb
+      \verb{url}
+      \verb https://www.azahner.com/metal-info/stainless-steel/
+      \endverb
+    \endentry
+    \entry{FischerPochwyt_NeuronaleNetze_2017}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=363ee5f5bad13c9c37bd6e75bc82d224}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3891bd86ecdeb0e4fad3892e822f167f}{%
+           family={Pochwyt},
+           familyi={P\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Heinrich-Heine-Universität Düsseldorf}%
+      }
+      \strng{namehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{fullhash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{fullhashraw}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{bibnamehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authorbibnamehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authornamehash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authorfullhash}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \strng{authorfullhashraw}{b094bdc7742c2a9d4b08173bdc6afb92}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{german}
+      \field{subtitle}{Convolutional Neural Networks am Beispiel eines selbstfahrenden Roboters: Dokumentation}
+      \field{title}{Neuronale Netze}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
+      \endverb
+      \verb{url}
+      \verb https://user.phil.hhu.de/~petersen/SoSe17_Teamprojekt/AR/neuronalenetze.html
+      \endverb
+    \endentry
+    \entry{ISO9013-2017}{standard}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{number}{ISO 9013:2017}
+      \field{title}{Thermal Cutting: Classification of Thermal Cuts: Geometrical Product Specification and Quality Tolerances}
+      \field{urlday}{27}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/60321.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/60321.html
+      \endverb
+    \endentry
+    \entry{ISO11145-2018}{standard}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{number}{ISO 11145:2018}
+      \field{title}{Optics and Photonics: Lasers and Laser-Related Equipment: Vocabulary and Symbols}
+      \field{urlday}{27}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/72944.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/72944.html
+      \endverb
+    \endentry
+    \entry{KeyenceISO4287}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6907a2be1822466b6646454a79ba6d5a}{%
+           family={{KEYENCE Corporation}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{fullhash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{fullhashraw}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{bibnamehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authorbibnamehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authornamehash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authorfullhash}{6907a2be1822466b6646454a79ba6d5a}
+      \strng{authorfullhashraw}{6907a2be1822466b6646454a79ba6d5a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Surface Roughness Parameters: ISO 4287 Overview}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
+      \endverb
+      \verb{url}
+      \verb https://www.keyence.com/ss/products/microscope/roughness/line/parameters.jsp
+      \endverb
+    \endentry
+    \entry{MitutoyoQuickGuide}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0209ca6149a1ae70eaad42334de51f20}{%
+           family={{Mitutoyo Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{fullhash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{fullhashraw}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{bibnamehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authorbibnamehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authornamehash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authorfullhash}{0209ca6149a1ae70eaad42334de51f20}
+      \strng{authorfullhashraw}{0209ca6149a1ae70eaad42334de51f20}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Quick Guide to Surface Roughness Measurement}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mitutoyo.com/webfoo/wp-content/uploads/1984_Surf_Roughness_PG.pdf
+      \endverb
+    \endentry
+    \entry{Schindhelm2014}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ceae6cef66b678f7e6a8235c01049915}{%
+           family={Schindhelm},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Herbert Utz Verlag}%
+      }
+      \strng{namehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{fullhash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{fullhashraw}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{bibnamehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authorbibnamehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authornamehash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authorfullhash}{ceae6cef66b678f7e6a8235c01049915}
+      \strng{authorfullhashraw}{ceae6cef66b678f7e6a8235c01049915}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-8316-4345-5, 978-3-8316-7045-1}
+      \field{langid}{german}
+      \field{series}{Laser in der Materialbearbeitung: Forschungsberichte des IFSW}
+      \field{title}{In-Prozess Qualitätssicherung für das Laserstrahlschneiden von Metallen}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=Kbi1AwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=Kbi1AwAAQBAJ
+      \endverb
+    \endentry
+    \entry{SensorInstruments_LLASLT_Manual_2023}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=698ce21ab50cbf47d976436c1ee518ed}{%
+           family={{Sensor Instruments GmbH}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{fullhash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{fullhashraw}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{bibnamehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authorbibnamehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authornamehash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authorfullhash}{698ce21ab50cbf47d976436c1ee518ed}
+      \strng{authorfullhashraw}{698ce21ab50cbf47d976436c1ee518ed}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{subtitle}{Picture 1: Functional principle of laser triangulation}
+      \field{title}{L-LAS-LT-Scope V5.3x: PC Software Manual}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sensorinstruments.de/downloads/manuals/l-las-lt/Manual%20L-LAS-LT-Scope%20V5_3x%20eng.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.sensorinstruments.de/downloads/manuals/l-las-lt/Manual%20L-LAS-LT-Scope%20V5_3x%20eng.pdf
+      \endverb
+    \endentry
+    \entry{Tatzel-2021}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0a67defbf1d455a4d494c3166542a1c0}{%
+           family={Tatzel},
+           familyi={T\bibinitperiod},
+           given={Leonie\bibnamedelima Felica},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Karlsruher Institut für Technologie (KIT)}%
+      }
+      \list{location}{1}{%
+        {Karlsruhe}%
+      }
+      \strng{namehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{fullhash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{fullhashraw}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{bibnamehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authorbibnamehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authornamehash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authorfullhash}{0a67defbf1d455a4d494c3166542a1c0}
+      \strng{authorfullhashraw}{0a67defbf1d455a4d494c3166542a1c0}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-7315-1128-1}
+      \field{langid}{german}
+      \field{number}{24}
+      \field{series}{Forschungsberichte aus der Industriellen Informationstechnik / Institut für Industrielle Informationstechnik (IIIT), Karlsruher Institut für Technologie}
+      \field{title}{Verbesserungen beim Laserschneiden mit Methoden des maschinellen Lernens}
+      \field{type}{Dissertation}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5445/KSP/1000137690
+      \endverb
+      \verb{urlraw}
+      \verb https://publikationen.bibliothek.kit.edu/1000137690
+      \endverb
+      \verb{url}
+      \verb https://publikationen.bibliothek.kit.edu/1000137690
+      \endverb
+    \endentry
+    \entry{Timesavers_Rauheit_Ra}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25aa7b6b95356f5fa16be6224e89a215}{%
+           family={{Timesavers International}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{fullhash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{fullhashraw}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{bibnamehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authorbibnamehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authornamehash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authorfullhash}{25aa7b6b95356f5fa16be6224e89a215}
+      \strng{authorfullhashraw}{25aa7b6b95356f5fa16be6224e89a215}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{langid}{german}
+      \field{month}{7}
+      \field{title}{Alles was Sie über die Rauheit der Oberfläche (Ra) wissen müssen}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.timesaversint.com/de/Wissensdatenbank/alles-was-sie-ueber-die-rauheit-der-oberflaeche-ra-wissen-muessen/
+      \endverb
+      \verb{url}
+      \verb https://www.timesaversint.com/de/Wissensdatenbank/alles-was-sie-ueber-die-rauheit-der-oberflaeche-ra-wissen-muessen/
+      \endverb
+    \endentry
+    \entry{TRUMPF_FusionCutting}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=82d877dbb095e93389d695af59850f48}{%
+           family={{TRUMPF SE + Co. KG}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{82d877dbb095e93389d695af59850f48}
+      \strng{fullhash}{82d877dbb095e93389d695af59850f48}
+      \strng{fullhashraw}{82d877dbb095e93389d695af59850f48}
+      \strng{bibnamehash}{82d877dbb095e93389d695af59850f48}
+      \strng{authorbibnamehash}{82d877dbb095e93389d695af59850f48}
+      \strng{authornamehash}{82d877dbb095e93389d695af59850f48}
+      \strng{authorfullhash}{82d877dbb095e93389d695af59850f48}
+      \strng{authorfullhashraw}{82d877dbb095e93389d695af59850f48}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Fusion cutting}
+      \field{urlday}{1}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trumpf.com/en_US/solutions/applications/laser-cutting/fusion-cutting/
+      \endverb
+      \verb{url}
+      \verb https://www.trumpf.com/en_US/solutions/applications/laser-cutting/fusion-cutting/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
