@@ -1,22 +1,2 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Schema zur Bestimmung der Rauheit}}{5}{figure.16}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Schematischer Aufbau eines CNN}}{6}{figure.18}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Beispiele zur Plausibilitätsprüfung durch \enquote {Iron-hunter}: links eine gültige Aufnahme der Schnittkante, rechts eine Fehlaufnahme mit verdeckender Hand, die verworfen wird.}}{8}{figure.27}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Prozesskette des Cutting Assistant.}}{9}{figure.28}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Lasertriangulation zur Profilaufnahme. \blx@tocontentsinit {0}\parencite {SensorInstruments_LLASLT_Manual_2023}}}{9}{figure.30}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Messaufbau und Beispielpunktwolke der Schnittkante für den Gratverlauf.}}{10}{figure.31}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}}{13}{figure.35}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Smartphone (4) und Industriekamera (5) in der Messzelle}}{14}{figure.36}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}}{15}{figure.37}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}}{15}{figure.38}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Dunkle Belichtung für die Rauheitsschätzung (i, erstes Bild links), zwei helle Belichtungen für die Gratschätzung (ii, mittlere Bilder) und das daraus generierte HDR-Bild (rechts).}}{16}{figure.40}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Handcanner Bild für die Gratschätzung (Baustahl)}}{17}{figure.41}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Handcanner Bild für die Gratschätzung (Edelstahl)}}{17}{figure.42}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Handscnanner Bild für die Rauheitsschätzung (Baustahl)}}{17}{figure.43}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Handscanner Bild für die Rauheitsschätzung (Edelstahl)}}{17}{figure.44}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}}{18}{figure.45}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Beispielhafter Verlauf der Rauheitskennzahl \(R_a\) entlang einer Schnittkante im ersten Abschnitt mit der Breite 0,3 mm.}}{22}{figure.61}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Ausreißererkennung im Burr-Verlauf}}{23}{figure.64}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Schematische Darstellung der VGG-ähnlichen Architektur zur Regression der Prozessparameter aus einem Schnittkantenbild. Links der Bildeingang, gefolgt von einem Eingangsblock mit \(7\times 7\)-Faltung und vier Blöcken mit jeweils drei \(3\times 3\)-Faltungen. Die dritte Faltung eines Blocks reduziert die räumliche Auflösung. Global Average Pooling verdichtet die 256 Feature-Maps zu einem 256-dimensionalen Vektor, der den Ausgange, dem Burr-Wert, speist. \blx@tocontentsinit {0}\parencite {Tatzel-2021}}}{25}{figure.67}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Burr: wahre gegen vorhergesagte Werte für das \ac {ST}-Modell. Die Farben kennzeichnen 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale markiert $y{=}x$.}}{26}{figure.69}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Burr: wahre gegen vorhergesagte Werte für das \ac {SS}-Modell. Die Farben kennzeichnen 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale markiert $y{=}x$.}}{27}{figure.71}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Schematische Darstellung der Euler-Winkel}}{2}{figure.13}%

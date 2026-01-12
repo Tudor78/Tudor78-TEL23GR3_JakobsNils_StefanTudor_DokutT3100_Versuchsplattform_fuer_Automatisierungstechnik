@@ -1,52 +1,52 @@
-\chapter{Qualitätsschätzungsmodell für Edelstahl}
-\label{chap:qa-edelstahl}
+% \chapter{Qualitätsschätzungsmodell für Edelstahl}
+% \label{chap:qa-edelstahl}
 
-Dieses Kapitel beschreibt das bestehende \ac{QA} auf Basis eines \ac{CNNs} und seine Anpassung an Edelstahl. Als Referenz dient VGG16, ein tiefes Netz aus dreizehn Faltungs- und drei vollständig verbundenen Schichten. Kennzeichnend sind gestapelte \(3\times3\)-Faltungen in Blöcken, eine schrittweise Verkleinerung der Feature-Maps und eine mit der Tiefe zunehmende Kanalzahl. VGG16 umfasst rund 138 Millionen Parameter und ist damit leistungsfähig, aber für unsere Datenbasis zu groß. Ein Transfer vortrainierter Gewichte aus ImageNet lieferte auf Schnittkantenbildern keine stabilen, domänerelevanten Merkmale, da sich die dort gelernten Objektstrukturen deutlich von den Texturen und Kanten der Laserschnitte unterscheiden.
+% Dieses Kapitel beschreibt das bestehende \ac{QA} auf Basis eines \ac{CNNs} und seine Anpassung an Edelstahl. Als Referenz dient VGG16, ein tiefes Netz aus dreizehn Faltungs- und drei vollständig verbundenen Schichten. Kennzeichnend sind gestapelte \(3\times3\)-Faltungen in Blöcken, eine schrittweise Verkleinerung der Feature-Maps und eine mit der Tiefe zunehmende Kanalzahl. VGG16 umfasst rund 138 Millionen Parameter und ist damit leistungsfähig, aber für unsere Datenbasis zu groß. Ein Transfer vortrainierter Gewichte aus ImageNet lieferte auf Schnittkantenbildern keine stabilen, domänerelevanten Merkmale, da sich die dort gelernten Objektstrukturen deutlich von den Texturen und Kanten der Laserschnitte unterscheiden.
 
-Aus den Grundideen von \ac{VGG} wurde daher eine kompaktere, VGG-ähnliche Architektur abgeleitet. Sie behält die Blockstruktur und kleine Faltungskerne bei, reduziert jedoch die Komplexität deutlich und verzichtet auf die breite, mehrstufige Klassifikationskopfkette \parencite{Tatzel-2021}.
+% Aus den Grundideen von \ac{VGG} wurde daher eine kompaktere, VGG-ähnliche Architektur abgeleitet. Sie behält die Blockstruktur und kleine Faltungskerne bei, reduziert jedoch die Komplexität deutlich und verzichtet auf die breite, mehrstufige Klassifikationskopfkette \parencite{Tatzel-2021}.
 
-Nach den Faltungsblöcken liegen mehrere Merkmalskarten vor.
-Global Average Pooling mittelt jede Merkmalskarte über ihre räumlichen Dimensionen und erzeugt so einen kompakten Merkmalsvektor.
-Eine schlanke vollständig verbundene Ausgabeschicht bildet diesen Vektor auf die Zielgröße ab, also den geschätzten Gratwert. Das Modell wird von Grund auf auf Schnittkantenbildern trainiert und ist damit auf die materialspezifischen Muster von Edelstahl abgestimmt. \Cref{fig:vgglike-arch} zeigt die Blockstruktur und den kompakten Kopf des Netzes.
+% Nach den Faltungsblöcken liegen mehrere Merkmalskarten vor.
+% Global Average Pooling mittelt jede Merkmalskarte über ihre räumlichen Dimensionen und erzeugt so einen kompakten Merkmalsvektor.
+% Eine schlanke vollständig verbundene Ausgabeschicht bildet diesen Vektor auf die Zielgröße ab, also den geschätzten Gratwert. Das Modell wird von Grund auf auf Schnittkantenbildern trainiert und ist damit auf die materialspezifischen Muster von Edelstahl abgestimmt. \Cref{fig:vgglike-arch} zeigt die Blockstruktur und den kompakten Kopf des Netzes.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\linewidth]{vgg16_cutting.png}
-  \caption{Schematische Darstellung der VGG-ähnlichen Architektur zur Regression der Prozessparameter aus einem Schnittkantenbild. Links der Bildeingang, gefolgt von einem Eingangsblock mit \(7\times7\)-Faltung und vier Blöcken mit jeweils drei \(3\times3\)-Faltungen. Die dritte Faltung eines Blocks reduziert die räumliche Auflösung. Global Average Pooling verdichtet die 256 Feature-Maps zu einem 256-dimensionalen Vektor, der den Ausgange, dem Burr-Wert, speist. \parencite{Tatzel-2021}}
-  \label{fig:vgglike-arch}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=\linewidth]{vgg16_cutting.png}
+%   \caption{Schematische Darstellung der VGG-ähnlichen Architektur zur Regression der Prozessparameter aus einem Schnittkantenbild. Links der Bildeingang, gefolgt von einem Eingangsblock mit \(7\times7\)-Faltung und vier Blöcken mit jeweils drei \(3\times3\)-Faltungen. Die dritte Faltung eines Blocks reduziert die räumliche Auflösung. Global Average Pooling verdichtet die 256 Feature-Maps zu einem 256-dimensionalen Vektor, der den Ausgange, dem Burr-Wert, speist. \parencite{Tatzel-2021}}
+%   \label{fig:vgglike-arch}
+% \end{figure}
 
-\section{Bewertung des bestehenden Modells}
+% \section{Bewertung des bestehenden Modells}
 
-Das bestehende \ac{QA}-Modell für Baustahl wurde auf einen kleinen Edelstahl-Datensatz übertragen und auf die Gratschätzung angewandt. Für die Rauheitsschätzung ist der bestehende Datensatz zu klein, um eine belastbare Bewertung zu ermöglichen. Die Rauhehitsschätzung benötigt eine größere Datenbasis, da die Rauheit stark von lokalen Unregelmäßigkeiten abhängt. Die Gratschätzung ist robuster und kann auch mit weniger Daten bewertet werden.
-Abbildung~\ref{fig:burr_true_pred_st} zeigt wahre gegen vorhergesagte Burr-Werte für die Blechdicken 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale kennzeichnet die ideale Vorhersage $y{=}x$.
+% Das bestehende \ac{QA}-Modell für Baustahl wurde auf einen kleinen Edelstahl-Datensatz übertragen und auf die Gratschätzung angewandt. Für die Rauheitsschätzung ist der bestehende Datensatz zu klein, um eine belastbare Bewertung zu ermöglichen. Die Rauhehitsschätzung benötigt eine größere Datenbasis, da die Rauheit stark von lokalen Unregelmäßigkeiten abhängt. Die Gratschätzung ist robuster und kann auch mit weniger Daten bewertet werden.
+% Abbildung~\ref{fig:burr_true_pred_st} zeigt wahre gegen vorhergesagte Burr-Werte für die Blechdicken 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale kennzeichnet die ideale Vorhersage $y{=}x$.
 
-Bei kleinen Burr-Werten (hier: 5 mm) liegen die Punkte noch nahe an der Diagonale. Für 10\,mm und 15\,mm werden hohe Burr-Werte deutlich unterschätzt und die Streuung nimmt zu. Ursache ist ein Domänenwechsel von Baustahl zu Edelstahl. Edelstahl zeigt bei größeren Dicken (hier: 10 mm und 15 mm) häufiger hohen Burr. Bei einer Blechdicke von 5 mm ist der Burr-Wert im Verhältnis deutlich geringer. Das Baustahlmodell hat solche Ausprägungen im Training nicht gesehen. Die gelernten Merkmale und die Abbildung von Merkmalen auf den Burr sind dadurch auf den Bereich von Baustahl begrenzt. Das führt zu einer Sättigung der Vorhersage und zu einem dickenabhängigen Bias.
+% Bei kleinen Burr-Werten (hier: 5 mm) liegen die Punkte noch nahe an der Diagonale. Für 10\,mm und 15\,mm werden hohe Burr-Werte deutlich unterschätzt und die Streuung nimmt zu. Ursache ist ein Domänenwechsel von Baustahl zu Edelstahl. Edelstahl zeigt bei größeren Dicken (hier: 10 mm und 15 mm) häufiger hohen Burr. Bei einer Blechdicke von 5 mm ist der Burr-Wert im Verhältnis deutlich geringer. Das Baustahlmodell hat solche Ausprägungen im Training nicht gesehen. Die gelernten Merkmale und die Abbildung von Merkmalen auf den Burr sind dadurch auf den Bereich von Baustahl begrenzt. Das führt zu einer Sättigung der Vorhersage und zu einem dickenabhängigen Bias.
 
-Für eine belastbare Vorhersage auf Edelstahl ist ein erneutes Training mit Edelstahldaten erforderlich. Dabei müssen die Faltungsfilter und nicht nur die letzte Schicht angepasst werden. So können die oberflächenspezifischen Strukturen und die höheren Burr-Werte bei 10\,mm und 15\,mm korrekt erfasst werden.
+% Für eine belastbare Vorhersage auf Edelstahl ist ein erneutes Training mit Edelstahldaten erforderlich. Dabei müssen die Faltungsfilter und nicht nur die letzte Schicht angepasst werden. So können die oberflächenspezifischen Strukturen und die höheren Burr-Werte bei 10\,mm und 15\,mm korrekt erfasst werden.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.72\linewidth]{baustahl_modellbewertung.png}
-  \caption{Burr: wahre gegen vorhergesagte Werte für das \ac{ST}-Modell. Die Farben kennzeichnen 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale markiert $y{=}x$.}
-  \label{fig:burr_true_pred_st}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.72\linewidth]{baustahl_modellbewertung.png}
+%   \caption{Burr: wahre gegen vorhergesagte Werte für das \ac{ST}-Modell. Die Farben kennzeichnen 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale markiert $y{=}x$.}
+%   \label{fig:burr_true_pred_st}
+% \end{figure}
 
-\section{Training für Edelstahldatensatz}
+% \section{Training für Edelstahldatensatz}
 
-Nach dem Training auf Edelstahldaten für die Gratschätzung zeigt Abbildung~\ref{fig:burr_true_pred_ss} eine enge Übereinstimmung der Punkte mit der Diagonalen.
-Der zuvor sichtbare dickenabhängige Bias ist deutlich geringer.
-Hohe Burr-Werte bei 10\,mm und 15\,mm werden nun besser getroffen und die Streuung fällt kleiner aus.
-Der Grund ist, dass das Modell beim Training nun Beispiele mit hohen Burr-Werten aus Edelstahl gesehen hat.
-Diese Ausprägungen waren im Baustahl-Datensatz kaum vorhanden.
-Die gelernten Merkmale bilden die für Edelstahl typischen Strukturen daher zuverlässiger ab.
-Im höchsten Burr-Bereich bleiben geringe systematische Abweichungen bestehen.
-Hier kann eine Erweiterung der Daten mit mehr Fällen hoher Burr-Werte und eine Kalibrierung der Vorhersagen weiter helfen.
-Insgesamt liefert das neu trainierte Modell eine robuste und weitgehend dickenunabhängige Gratschätzung für Edelstahl.
+% Nach dem Training auf Edelstahldaten für die Gratschätzung zeigt Abbildung~\ref{fig:burr_true_pred_ss} eine enge Übereinstimmung der Punkte mit der Diagonalen.
+% Der zuvor sichtbare dickenabhängige Bias ist deutlich geringer.
+% Hohe Burr-Werte bei 10\,mm und 15\,mm werden nun besser getroffen und die Streuung fällt kleiner aus.
+% Der Grund ist, dass das Modell beim Training nun Beispiele mit hohen Burr-Werten aus Edelstahl gesehen hat.
+% Diese Ausprägungen waren im Baustahl-Datensatz kaum vorhanden.
+% Die gelernten Merkmale bilden die für Edelstahl typischen Strukturen daher zuverlässiger ab.
+% Im höchsten Burr-Bereich bleiben geringe systematische Abweichungen bestehen.
+% Hier kann eine Erweiterung der Daten mit mehr Fällen hoher Burr-Werte und eine Kalibrierung der Vorhersagen weiter helfen.
+% Insgesamt liefert das neu trainierte Modell eine robuste und weitgehend dickenunabhängige Gratschätzung für Edelstahl.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.72\linewidth]{trainiertes_modell_burr.png}
-  \caption{Burr: wahre gegen vorhergesagte Werte für das \ac{SS}-Modell. Die Farben kennzeichnen 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale markiert $y{=}x$.}
-  \label{fig:burr_true_pred_ss}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.72\linewidth]{trainiertes_modell_burr.png}
+%   \caption{Burr: wahre gegen vorhergesagte Werte für das \ac{SS}-Modell. Die Farben kennzeichnen 5\,mm, 10\,mm und 15\,mm. Die gestrichelte Diagonale markiert $y{=}x$.}
+%   \label{fig:burr_true_pred_ss}
+% \end{figure}
