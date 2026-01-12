@@ -1,18 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[94] biber-MSWIN64:342> INFO - === 
-[137] Biber.pm:421> INFO - Reading 'main.bcf'
-[235] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
-[246] Biber.pm:4487> INFO - Processing section 0
-[254] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[322] bibtex.pm:1713> INFO - LaTeX decoding ...
-[326] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[454] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[454] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[454] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[454] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[549] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[551] bbl.pm:779> INFO - Output to main.bbl
-[551] Biber.pm:132> WARN - I didn't find a database entry for 'ResearchGate' (section 0)
-[551] Biber.pm:132> WARN - I didn't find a database entry for 'KIT' (section 0)
-[551] Biber.pm:134> INFO - WARNINGS: 2
+[119] biber-MSWIN64:342> INFO - === 
+[198] Biber.pm:421> INFO - Reading 'main.bcf'
+[328] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[339] Biber.pm:4487> INFO - Processing section 0
+[350] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
+[445] bibtex.pm:1713> INFO - LaTeX decoding ...
+[453] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[525] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[525] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[525] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[525] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[533] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[535] bbl.pm:779> INFO - Output to main.bbl

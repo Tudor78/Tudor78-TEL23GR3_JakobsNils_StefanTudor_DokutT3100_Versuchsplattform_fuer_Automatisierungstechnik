@@ -84,9 +84,71 @@
       \verb https://ieeexplore.ieee.org/document/10056232
       \endverb
     \endentry
+    \entry{ResearchGate}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec07dcfdfce40feb0469b335ab9ff97f}{%
+           family={{Iman Bagheri}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{fullhash}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{fullhashraw}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{bibnamehash}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{authorbibnamehash}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{authornamehash}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{authorfullhash}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \strng{authorfullhashraw}{ec07dcfdfce40feb0469b335ab9ff97f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Euler Angles (Yaw, Pitch and Roll)}
+      \field{urlday}{10}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/figure/Euler-Angles-Yaw-Pitch-and-Roll_fig2_342145524
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/figure/Euler-Angles-Yaw-Pitch-and-Roll_fig2_342145524
+      \endverb
+    \endentry
+    \entry{KIT}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42247643d9461e6059d611c47b8cf8b4}{%
+           family={{Tamim Asfour}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{fullhash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{fullhashraw}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{bibnamehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authorbibnamehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authornamehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authorfullhash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authorfullhashraw}{42247643d9461e6059d611c47b8cf8b4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Robotik U: Einführung in die Robotik}
+      \field{urlday}{10}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+      \endverb
+      \verb{url}
+      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+      \endverb
+    \endentry
   \enddatalist
-  \missing{KIT}
-  \missing{ResearchGate}
 \endrefsection
 \endinput
 
