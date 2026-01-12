@@ -1,47 +1,30 @@
 \chapter{Grundlagen und Stand der Technik}
+\label{chap:grundlagen und stand der technik}
 Für die vorliegende Arbeit sind Kenntnisse in den Bereichen Rapid Control Prototyping, modellbasierte Entwicklung mit Matlab und Simulink, Inertialsensorik sowie Lageschätzung mittels Sensorfusion erforderlich, weshalb in den folgenden Kapiteln die hierfür relevanten Grundlagen und der Stand der Technik dargestellt werden.
 
 
 \section{Rapid Control Prototyping}
 \label{sec:Rapid Control Prototyping}
-Rapid Control Prototyping (RCP) bezeichnet einen Entwicklungsansatz,
+Rapid Control Prototyping bezeichnet einen Ansatz zur schnellen Entwicklung und Erprobung von Regelungsstrategien an Anwendungen oder Laboraufbauten. Charakteristisch ist, dass der Entwurf nicht primär durch eine manuelle Implementierung in textbasierten Programmiersprachen erfolgt, sondern durch die Modellierung als grafisches Blockdiagramm, das anschließend auf eine Zielplattform übertragen wird. Die grundlegende Zielrichtung von RCP besteht darin, auf eine manuelle Programmierung in textbasierten Sprachen zu verzichten und stattdessen ein grafisches Modell zu erstellen, aus dem die Entwicklungsplattform direkt programmiert wird. RCP unterstützt damit kurze Iterationszyklen, da Entwurf, Test und Parametrierung in engem Zusammenhang durchgeführt werden können \parencite{HoyosGutierrez2023RCPReview}.
+
+Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielhardware und Entwicklungssoftware verstanden. Die Zielhardware umfasst eine Recheneinheit mit Speicher sowie Ein und Ausgängen und kann je nach Anwendung als PC, Mikrocontroller, DSP oder programmierbare Logik realisiert sein. Die Software stellt eine grafische Modellierungsumgebung bereit, in der der Regelalgorithmus als Blockdiagramm beschrieben wird und aus der anschließend ausführbarer Code für die Zielplattform generiert wird \parencite{HoyosGutierrez2023RCPReview}. In vielen Anwendungen bildet Matlab in Verbindung mit Simulink die zentrale Entwicklungsumgebung, da der Reglerentwurf, die Simulation und die Implementierung über einen konsistenten Modellkern verbunden werden können \parencite{Werth2020LowCostRCP,Fang2009LowCostDSPRCP}. Die genaue Funktionsweise der Modellbasierten Entwicklung mit Matlab und Simulink wird in Abschnitt ~\ref{sec:Modellbasierte Entwicklung mit Matlab/Simulink} erläutert.
+\newpage
 
 \section{Modellbasierte Entwicklung mit Matlab/Simulink}
 \label{sec:Modellbasierte Entwicklung mit Matlab/Simulink}
-"Tudor"
+"Lorem ipsum"
 
 \newpage
 \section{Quaternionen und Euler-Winkel}
 \label{sec:Quaternionen und Euler-Winkel}
-
-Für die Lageschätzung einer IMU ist eine Orientierungsdarstellung erforderlich, da die Lage der IMU aus den Messgrößen des Gyroskops, Beschleunigungssensors geschätzt und anschließend bewertet werden soll. Für die Umsetzung der Filteralgorithmen wird eine mathematische Beschreibung der Rotation benötigt.  
-\\
-Grundsätzlich kommen hierfür sowohl Quaternionen als auch Euler-Winkel in Frage. Quaternionen eignen sich besonders für die interne Berechnung, da sie eine kompakte und singularitätsfreie Darstellung von Rotationen ermöglichen. Zur Ausgabe und Visualisierung der Ergebnisse werden hingegen häufig Euler-Winkel verwendet, da sie die Orientierung anschaulich durch drei Winkel (Yaw, Pitch und Roll) beschreiben. Euler-Winkel besitzen jedoch Singularitäten und sind daher als interne Zustandsdarstellung nur eingeschränkt geeignet. 
-\\
-
-Euler-Winkel beschreiben die Orientierung durch drei aufeinanderfolgende Rotationen und werden üblicherweise als Yaw, Pitch und Roll angegeben. Abbildung \ref{fig:Eulerwinkel} zeigt diese Winkel als Rotationen um die körperfesten Achsen: Roll entspricht einer Rotation um die x-Achse, Pitch einer Rotation um die y-Achse und Yaw einer Rotation um die z-Achse. 
-
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.4\linewidth]{Eulerwinkel.png}
-  \caption[Schematische Darstellung der Euler-Winkel]{Schematische Darstellung der Euler-Winkel\cite{ResearchGate}}
-  \label{fig:Eulerwinkel}
-\end{figure}
-
-
-Die konkrete mathematische Beschreibung hängt von der gewählten Rotationsreihenfolge ab, da unterschiedliche Reihenfolgen zu unterschiedlichen Umrechnungsformeln zwischen Euler-Winkeln und Quaternionen führen. 
-
-Ein zentrales Problem dieser Darstellung ist das Auftreten von Singularitäten. Für die Yaw-Pitch$-$Roll$-$Reihenfolge tritt der kritische Fall in der Nähe von Pitch {formel} auf, da zwei Rotationsachsen dabei effektiv zusammenfallen. In diesem Bereich sind Yaw und Roll nicht mehr unabhängig bestimmbar, sodass bereits kleine Änderungen der tatsächlichen Orientierung zu großen oder sprunghaften Änderungen einzelner Euler-Winkel führen können. Dieses Verhalten wird als Gimbal-Lock bezeichnet.\cite{KIT}
-
-Quaternionen ... 
-Formeln einbinden 
+"Lorem ipsum" 
 
 \newpage
 \section{Lageschätzung mittels Sensorfusion}
 \label{sec:Lageschätzung mittels Sensorfusion}
+"Lorem ipsum"
 
-git git 
+
 
 
 

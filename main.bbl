@@ -19,6 +19,71 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{Fang2009LowCostDSPRCP}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=743671a1da3500b316f94b6bc0c4e035}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c574bbd0bcc91c44fdcfbbb5dd64661}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Yucheng},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a36852c0391a928f6f39a3b7920d2e92}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qichun},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eab7435f373f8fc9d4085b33a2fda8fe}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Tianyou},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{28eae54ce5fb721cc0966e260d3d615b}
+      \strng{fullhash}{7dab0788de8a3acd4543cc44e0b1a422}
+      \strng{fullhashraw}{7dab0788de8a3acd4543cc44e0b1a422}
+      \strng{bibnamehash}{7dab0788de8a3acd4543cc44e0b1a422}
+      \strng{authorbibnamehash}{7dab0788de8a3acd4543cc44e0b1a422}
+      \strng{authornamehash}{28eae54ce5fb721cc0966e260d3d615b}
+      \strng{authorfullhash}{7dab0788de8a3acd4543cc44e0b1a422}
+      \strng{authorfullhashraw}{7dab0788de8a3acd4543cc44e0b1a422}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2009 4th IEEE Conference on Industrial Electronics and Applications (ICIEA)}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{note}{In den Arbeitsunterlagen als PDF vorhanden}
+      \field{title}{Design and Implementation of a Low Cost DSP Based Rapid Control Prototyping System}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/ICIEA.2009.5138516
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICIEA.2009.5138516
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICIEA.2009.5138516
+      \endverb
+    \endentry
     \entry{HoyosGutierrez2023RCPReview}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=44ccc1c290b0f109e315bd56dd577bf5}{%
@@ -84,68 +149,69 @@
       \verb https://ieeexplore.ieee.org/document/10056232
       \endverb
     \endentry
-    \entry{ResearchGate}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ec07dcfdfce40feb0469b335ab9ff97f}{%
-           family={{Iman Bagheri}},
-           familyi={I\bibinitperiod}}}%
+    \entry{Werth2020LowCostRCP}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=29457f29894469a5195c76a430a4d2fd}{%
+           family={Werth},
+           familyi={W\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9056eee0ef4c32b24e9bacf0961046f7}{%
+           family={Faller},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6b85b9b78856ebe449ef4a150b9c0b6}{%
+           family={Liechtenecker},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e39699444226b76c01f725c33f59c241}{%
+           family={Ungermanns},
+           familyi={U\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{fullhash}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{fullhashraw}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{bibnamehash}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{authorbibnamehash}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{authornamehash}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{authorfullhash}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \strng{authorfullhashraw}{ec07dcfdfce40feb0469b335ab9ff97f}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{82b932ea9560d0118ee0694c20344e13}
+      \strng{fullhash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{fullhashraw}{d841b9462e518891ebcb59ad933c9835}
+      \strng{bibnamehash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{authorbibnamehash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{authornamehash}{82b932ea9560d0118ee0694c20344e13}
+      \strng{authorfullhash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{authorfullhashraw}{d841b9462e518891ebcb59ad933c9835}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Euler Angles (Yaw, Pitch and Roll)}
-      \field{urlday}{10}
+      \field{journaltitle}{2020 43rd International Convention on Information, Communication and Electronic Technology (MIPRO)}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{note}{In den Arbeitsunterlagen als PDF vorhanden}
+      \field{title}{Low Cost Rapid Control Prototyping a useful method in Control Engineering Education}
+      \field{urlday}{12}
       \field{urlmonth}{1}
       \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.23919/MIPRO48935.2020.9245122
+      \endverb
       \verb{urlraw}
-      \verb https://www.researchgate.net/figure/Euler-Angles-Yaw-Pitch-and-Roll_fig2_342145524
+      \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
       \endverb
       \verb{url}
-      \verb https://www.researchgate.net/figure/Euler-Angles-Yaw-Pitch-and-Roll_fig2_342145524
-      \endverb
-    \endentry
-    \entry{KIT}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=42247643d9461e6059d611c47b8cf8b4}{%
-           family={{Tamim Asfour}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{fullhash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{fullhashraw}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{bibnamehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authorbibnamehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authornamehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authorfullhash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authorfullhashraw}{42247643d9461e6059d611c47b8cf8b4}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Robotik U: Einführung in die Robotik}
-      \field{urlday}{10}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
-      \endverb
-      \verb{url}
-      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+      \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
       \endverb
     \endentry
   \enddatalist

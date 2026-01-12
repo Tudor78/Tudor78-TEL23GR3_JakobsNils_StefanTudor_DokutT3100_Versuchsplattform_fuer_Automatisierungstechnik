@@ -373,12 +373,6 @@ INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1
 INPUT .\includes\grundlagen.tex
 INPUT .\includes\grundlagen.tex
 INPUT includes\grundlagen.tex
-INPUT .\img\Eulerwinkel.png
-INPUT .\img\Eulerwinkel.png
-INPUT .\img\Eulerwinkel.png
-INPUT .\img\Eulerwinkel.png
-INPUT .\img\Eulerwinkel.png
-INPUT .\img\Eulerwinkel.png
 INPUT .\includes\stand_der_technik.tex
 INPUT .\includes\stand_der_technik.tex
 INPUT includes\stand_der_technik.tex
@@ -428,5 +422,3 @@ INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\e
 INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk
 INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk
-INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
