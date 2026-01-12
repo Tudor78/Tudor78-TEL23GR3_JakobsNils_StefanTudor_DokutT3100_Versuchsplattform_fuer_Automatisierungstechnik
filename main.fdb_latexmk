@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1768221533.93317 "main.bcf" "main.bbl" "main" 1768221540.38813 0
+["biber main"] 1768221533.93317 "main.bcf" "main.bbl" "main" 1768221701.22035 0
   "includes/literatur-datenbank.bib" 1768221417 1275 9243980d5ef34560759acaf8b21fcce4 ""
-  "main.bcf" 1768221539 108696 3f8267c5770789d6b3ed88aeb491fada "pdflatex"
+  "main.bcf" 1768221700 108696 3f8267c5770789d6b3ed88aeb491fada "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1768221536.87748 "c:/Users/JIK2FE/Uni/Tudor78-TEL23GR3_JakobsNils_StefanTudor_DokutT3100_Versuchsplattform_fuer_Automatisierungstechnik/main.tex" "main.pdf" "main" 1768221540.38907 0
+["pdflatex"] 1768221697.59428 "c:/Users/JIK2FE/Uni/Tudor78-TEL23GR3_JakobsNils_StefanTudor_DokutT3100_Versuchsplattform_fuer_Automatisierungstechnik/main.tex" "main.pdf" "main" 1768221701.22129 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1001771820 2971 def0b6c1f0b107b3b936def894055589 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1095.tfm" 993058356 3228 aacd2ac2d814480e4422ad7e830fd2d4 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993058358 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
@@ -189,21 +189,21 @@
   "includes/datengenerierung_edelstahldatensaetze.tex" 1768221417 18360 67e66fce5beea9b25009417e42375e4a ""
   "includes/ehrenwoertliche_erklaerung.tex" 1768221417 671 d5ac3e9b15a78661a1f8aba89da2ae9a ""
   "includes/einleitung.tex" 1768221417 4345 cea50f487005a822c8a234b8c51bce30 ""
-  "includes/grundlagen.tex" 1768221525 13202 50249940507c292d1c18826d13b77dd1 ""
+  "includes/grundlagen.tex" 1768221696 13206 113e2288f20a83f2807f871065f1b3ff ""
   "includes/optimierung_vektorberechnung.tex" 1768221417 15231 a3a6b03f36e4401e33bb58d5d1682be8 ""
   "includes/qa_modell.tex" 1768221417 5721 85ac0af04004bede514edc2a75132dc6 ""
   "includes/reflexion_ausblick.tex" 1768221417 2896 58ce67adc5487460eed1c228d02e5d1f ""
   "includes/sperrvermerk.tex" 1768221417 709 77c3cb0d239cd102d6806ce30029b62e ""
   "includes/stand_der_technik.tex" 1768221417 5629 13d265ce205ec2ac9f4b05fc15e899c6 ""
-  "main.aux" 1768221539 9298 fcb34b86613532a18b55dc3bdbd9923c "pdflatex"
+  "main.aux" 1768221700 9298 fcb34b86613532a18b55dc3bdbd9923c "pdflatex"
   "main.bbl" 1768221536 6170 e6be336d3aff839e59d450c265ede82c "biber main"
-  "main.lof" 1768221539 142 93639ea6b7bf52324e41563df2a54ff4 "pdflatex"
-  "main.lol" 1768221539 95 266fb778c506bbca413fec0c0a8f3005 "pdflatex"
-  "main.lot" 1768221539 30 dd9a1bdf2f8dbad8adb0552ea4fb4223 "pdflatex"
-  "main.out" 1768221539 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1768221539 2365 4a9c51e06dbd9008bb70a73b1290a8b1 "pdflatex"
+  "main.lof" 1768221700 142 93639ea6b7bf52324e41563df2a54ff4 "pdflatex"
+  "main.lol" 1768221700 95 266fb778c506bbca413fec0c0a8f3005 "pdflatex"
+  "main.lot" 1768221700 30 dd9a1bdf2f8dbad8adb0552ea4fb4223 "pdflatex"
+  "main.out" 1768221700 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1768221700 2365 4a9c51e06dbd9008bb70a73b1290a8b1 "pdflatex"
   "main.tex" 1768221417 2823 164d5a1e844ff0b99e47940521227220 ""
-  "main.toc" 1768221539 1111 8c9fe810e7e96bfb20e811cdbcf105d9 "pdflatex"
+  "main.toc" 1768221700 1111 8c9fe810e7e96bfb20e811cdbcf105d9 "pdflatex"
   "template/_dhbw_biblatex-config.tex" 1768221417 5863 6458ff6d1ddde7fe67c7cfcb4b877bb6 ""
   "template/_dhbw_deckblatt.tex" 1768221417 1391 fc0f5135833666fe5ecc8783cc546ba1 ""
   "template/_dhbw_kopfzeilen.tex" 1768221417 3242 2adf395a861555cad5f7183940838bb6 ""

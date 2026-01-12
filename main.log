@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.1.8)  12 JAN 2026 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.1.8)  12 JAN 2026 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1165,13 +1165,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  31484 strings out of 473485
  624256 string characters out of 5723326
- 1621970 words of memory out of 5000000
+ 1620970 words of memory out of 5000000
  54267 multiletter control sequences out of 15000+600000
  575919 words of font info for 71 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,18n,127p,11017b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfcc1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfcc1728.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsl1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1440.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1728.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfti1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (16 pages, 363563 bytes).
+Output written on main.pdf (16 pages, 363566 bytes).
 PDF statistics:
  251 PDF objects out of 1000 (max. 8388607)
  40 named destinations out of 1000 (max. 500000)
