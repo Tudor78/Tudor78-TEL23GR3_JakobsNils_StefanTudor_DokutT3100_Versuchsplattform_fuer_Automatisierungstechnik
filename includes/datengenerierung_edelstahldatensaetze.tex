@@ -1,139 +1,139 @@
-\chapter{Datengenerierung von Edelstahldatensätzen}
+% \chapter{Datengenerierung von Edelstahldatensätzen}
 
-In dem folgendem Kapitel wird die Versuchsplanung zur Identifikation von Schnittabrissgrenzen sowie die Messmethodik und Datenerfassung in der Messzelle für Edelstahlbleche beschrieben. Ziel ist es, den prozesssicheren Arbeitsbereich beim Laserschneiden von Edelstahl systematisch abzugrenzen und eine belastbare Datenbasis für die Erweiterung des KI-gestützten Laserschneidassistenten aufzubauen. Anschließend wird die Anpassung des Handscanner-Setups erläutert, um die Bildqualität für die bildgestützte Qualitätsschätzung zu optimieren.
+% In dem folgendem Kapitel wird die Versuchsplanung zur Identifikation von Schnittabrissgrenzen sowie die Messmethodik und Datenerfassung in der Messzelle für Edelstahlbleche beschrieben. Ziel ist es, den prozesssicheren Arbeitsbereich beim Laserschneiden von Edelstahl systematisch abzugrenzen und eine belastbare Datenbasis für die Erweiterung des KI-gestützten Laserschneidassistenten aufzubauen. Anschließend wird die Anpassung des Handscanner-Setups erläutert, um die Bildqualität für die bildgestützte Qualitätsschätzung zu optimieren.
 
-\section{Bestimmung der Schnittabrissgrenzen und Erstellung des Datensatzes}
-Ziel dieses Kapitels ist die systematische Abgrenzung des prozesssicheren Arbeitsbereichs beim Laserschneiden von Edelstahlblechen sowie die präzise Identifikation der Parameterbereiche, in denen Schnittabrisse auftreten. Unter einem Schnittabriss wird im Folgenden ein Zustand verstanden, in dem das Werkstück infolge ungeeigneter Parameterkombinationen nicht vollständig getrennt wird, weil der Schnittspalt lokal verschweißt oder die Schmelzaustragung unzureichend ist. Die auf diese Weise gewonnenen Grenzwerte bilden die Grundlage für belastbare Parametrierungsempfehlungen und fließen zugleich in die Ausarbeitung strukturierter Versuchspläne zur Datengenerierung ein.
+% \section{Bestimmung der Schnittabrissgrenzen und Erstellung des Datensatzes}
+% Ziel dieses Kapitels ist die systematische Abgrenzung des prozesssicheren Arbeitsbereichs beim Laserschneiden von Edelstahlblechen sowie die präzise Identifikation der Parameterbereiche, in denen Schnittabrisse auftreten. Unter einem Schnittabriss wird im Folgenden ein Zustand verstanden, in dem das Werkstück infolge ungeeigneter Parameterkombinationen nicht vollständig getrennt wird, weil der Schnittspalt lokal verschweißt oder die Schmelzaustragung unzureichend ist. Die auf diese Weise gewonnenen Grenzwerte bilden die Grundlage für belastbare Parametrierungsempfehlungen und fließen zugleich in die Ausarbeitung strukturierter Versuchspläne zur Datengenerierung ein.
 
-Die Experimente sind als zweidimensionale Rasterstudien ausgelegt, bei denen jeweils zwei der drei wesentlichen Prozessparameter, in dem Fall der Arbeit ist es die Fokuslage, die Schnittgeschwindigkeit und dem Gasdruck, variiert werden, während der dritte Parameter konstant gehalten wird. Die Laserleistung bleibt in diesen Studien konstant. Für jede untersuchte Parameterpaarung wird ein $3\times 3$-Feld gefertigt, in dem eine Größe entlang der horizontalen und die andere entlang der vertikalen Richtung stufenweise verändert wird. Formal seien die Stufen der beiden variierten Parameter $x\in\{x_1,x_2,x_3\}$ und $y\in\{y_1,y_2,y_3\}$. Der jeweils dritte Parameter $z$ ist auf einem Referenzniveau $z_0$ fixiert. Die Studie wird sequenziell für alle drei Kombinationen wiederholt, sodass das Prozessfenster in den relevanten Teilräumen konsistent erfasst wird. Die Wahl der Stufen erfolgt material- und dickenspezifisch, aus praxisüblichen Startwerten und internen Erfahrungswerten wird ein plausibler Arbeitsbereich abgeleitet.
+% Die Experimente sind als zweidimensionale Rasterstudien ausgelegt, bei denen jeweils zwei der drei wesentlichen Prozessparameter, in dem Fall der Arbeit ist es die Fokuslage, die Schnittgeschwindigkeit und dem Gasdruck, variiert werden, während der dritte Parameter konstant gehalten wird. Die Laserleistung bleibt in diesen Studien konstant. Für jede untersuchte Parameterpaarung wird ein $3\times 3$-Feld gefertigt, in dem eine Größe entlang der horizontalen und die andere entlang der vertikalen Richtung stufenweise verändert wird. Formal seien die Stufen der beiden variierten Parameter $x\in\{x_1,x_2,x_3\}$ und $y\in\{y_1,y_2,y_3\}$. Der jeweils dritte Parameter $z$ ist auf einem Referenzniveau $z_0$ fixiert. Die Studie wird sequenziell für alle drei Kombinationen wiederholt, sodass das Prozessfenster in den relevanten Teilräumen konsistent erfasst wird. Die Wahl der Stufen erfolgt material- und dickenspezifisch, aus praxisüblichen Startwerten und internen Erfahrungswerten wird ein plausibler Arbeitsbereich abgeleitet.
 
-Für jede Parameterkombination wird ein Viereck geschnitten. Ein Schnitt gilt als erfolgreich, wenn der Trennschnitt vollständig ist, weder Durchhang noch Wiederaufschmelzen im Schnittspalt beobachtet wird und der Schmelzaustrag kontinuierlich erfolgt. Die Beurteilung erfolgt unmittelbar an der Maschine sowie nachgelagert in der Messzelle durch optische Inspektion und Dokumentation der Schnittkante. Sobald ein erster Grenzbereich identifiziert ist, wird das umliegende Parametergebiet gezielt erkundet, bis ein stabiler Übergang zwischen den Zuständen „Schnitt möglich“ und „Schnittabriss“ reproduzierbar nachgewiesen ist. Die so gewonnenen Grenzpunkte werden im jeweiligen Parameterraum verortet und bilden eine aus Messdaten abgeleitete Näherung des Prozessfensters je Blechdicke.
+% Für jede Parameterkombination wird ein Viereck geschnitten. Ein Schnitt gilt als erfolgreich, wenn der Trennschnitt vollständig ist, weder Durchhang noch Wiederaufschmelzen im Schnittspalt beobachtet wird und der Schmelzaustrag kontinuierlich erfolgt. Die Beurteilung erfolgt unmittelbar an der Maschine sowie nachgelagert in der Messzelle durch optische Inspektion und Dokumentation der Schnittkante. Sobald ein erster Grenzbereich identifiziert ist, wird das umliegende Parametergebiet gezielt erkundet, bis ein stabiler Übergang zwischen den Zuständen „Schnitt möglich“ und „Schnittabriss“ reproduzierbar nachgewiesen ist. Die so gewonnenen Grenzpunkte werden im jeweiligen Parameterraum verortet und bilden eine aus Messdaten abgeleitete Näherung des Prozessfensters je Blechdicke.
 
-Auf Basis dieser Grenzanalysen erfolgt die Datengenerierung in Form strukturierter Experimentalpläne. Hierfür wurden insgesamt 17 Edelstahlblechtafeln (1\,\ac{m} $\times$ 2\,\ac{m})  in den Dicken 5\,mm, 8\,mm, 10\,mm, 15\,mm und 20\,mm eingesetzt. Auf jeder Tafel wurden 128 quadratische Proben (100\,mm $\times$ 100\,mm) geschnitten, sodass ein Gesamtdatenumfang von 2\,176 Bauteilen entstand. Die Schneidparameter wurden pro Bauteil innerhalb der vorab definierten, dickenspezifischen Grenzen variiert und nach einem vorgegebenen Schema zufällig ausgewählt. Dieses Design stellt sicher, dass das Datenset sowohl hochwertige als auch ausdrücklich minderwertige Schneidergebnisse enthält, einschließlich Fehlschnitten und Parameterkombinationen nahe der Schnittabrissgrenze. Solche Negativbeispiele sind für die spätere Modellierung essentiell, um die Trennschärfe zwischen »prozesssicher« und »instabil« zu erhöhen und Fehlklassifikationen zu vermeiden.
+% Auf Basis dieser Grenzanalysen erfolgt die Datengenerierung in Form strukturierter Experimentalpläne. Hierfür wurden insgesamt 17 Edelstahlblechtafeln (1\,\ac{m} $\times$ 2\,\ac{m})  in den Dicken 5\,mm, 8\,mm, 10\,mm, 15\,mm und 20\,mm eingesetzt. Auf jeder Tafel wurden 128 quadratische Proben (100\,mm $\times$ 100\,mm) geschnitten, sodass ein Gesamtdatenumfang von 2\,176 Bauteilen entstand. Die Schneidparameter wurden pro Bauteil innerhalb der vorab definierten, dickenspezifischen Grenzen variiert und nach einem vorgegebenen Schema zufällig ausgewählt. Dieses Design stellt sicher, dass das Datenset sowohl hochwertige als auch ausdrücklich minderwertige Schneidergebnisse enthält, einschließlich Fehlschnitten und Parameterkombinationen nahe der Schnittabrissgrenze. Solche Negativbeispiele sind für die spätere Modellierung essentiell, um die Trennschärfe zwischen »prozesssicher« und »instabil« zu erhöhen und Fehlklassifikationen zu vermeiden.
 
-Fehlschnitte wurden vollständig protokolliert. Auch wenn betroffene Proben in Einzelfällen nicht aus der Großtafel entnommen werden konnten, gingen diese Versuche mit eindeutiger Kennzeichnung in die Datenbank ein; damit ist bekannt, dass die jeweilige Parameterkombination für die gegebene Blechdicke kein akzeptables Schneidergebnis liefert. Sämtliche entnehmbaren Bauteile werden in der Messzelle vermessen, identifiziert und mit ihren Soll-/Ist-Parametern verknüpft. Die Datenmenge und der Versuchsplan wurden auf Basis der Erfahrungen mit dem bereits für Baustahl trainierten Modell gewählt, um eine ausreichende Abdeckung des Parameterraums und eine robuste Generalisierungsfähigkeit für Edelstahl sicherzustellen.
+% Fehlschnitte wurden vollständig protokolliert. Auch wenn betroffene Proben in Einzelfällen nicht aus der Großtafel entnommen werden konnten, gingen diese Versuche mit eindeutiger Kennzeichnung in die Datenbank ein; damit ist bekannt, dass die jeweilige Parameterkombination für die gegebene Blechdicke kein akzeptables Schneidergebnis liefert. Sämtliche entnehmbaren Bauteile werden in der Messzelle vermessen, identifiziert und mit ihren Soll-/Ist-Parametern verknüpft. Die Datenmenge und der Versuchsplan wurden auf Basis der Erfahrungen mit dem bereits für Baustahl trainierten Modell gewählt, um eine ausreichende Abdeckung des Parameterraums und eine robuste Generalisierungsfähigkeit für Edelstahl sicherzustellen.
 
-In Summe ermöglicht die kombinierte Vorgehensweise aus Grenzbestimmung und gezielter Datengenerierung sowohl die belastbare Identifikation der Schnittabrissgrenzen als auch den Aufbau einer ausgewogenen Datenbasis. Diese bildet die Voraussetzung für die Erweiterung und Validierung des KI-Modells, das künftig die Qualität von Edelstahlschnitten prädiktiv bewerten und prozesssichere Parameterbereiche verlässlich empfehlen soll.
+% In Summe ermöglicht die kombinierte Vorgehensweise aus Grenzbestimmung und gezielter Datengenerierung sowohl die belastbare Identifikation der Schnittabrissgrenzen als auch den Aufbau einer ausgewogenen Datenbasis. Diese bildet die Voraussetzung für die Erweiterung und Validierung des KI-Modells, das künftig die Qualität von Edelstahlschnitten prädiktiv bewerten und prozesssichere Parameterbereiche verlässlich empfehlen soll.
 
-\section{Messmethodik und Datenerfassung in der Messzelle}
-
-
-Die Messzelle dient der reproduzierbaren Erfassung aller Messdaten zu den im Rahmen der Experimentalpläne geschnittenen Edelstahlbauteilen. Sie ist als sequenzieller Messprozess ausgelegt, in dem ein mehrachsiger KUKA-Industrieroboter die Proben zwischen den Stationen handhabt. Die Bauteile werden an der Startposition gestapelt bereitgestellt, vom Roboter mittels Vakuumgreifer aufgenommen und der ersten Station zugeführt. Dort erfolgt die automatisierte Probenidentifikation über einen aufgebrachten QR-Code (siehe ID-Lesegerät in Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} und Edelstahlprobe mit QR-Code in Abbildung ~\ref{fig:probenID}). Die ermittelte Proben-ID wird mit den Metadaten aus den Experimentalplänen (z.\,B. Blechdicke, Soll-Parameter) verknüpft und dient in der Folge als Schlüssel für die Mess- und Auswertedaten.
-
-Im Anschluss werden an einer Station hochaufgelöste Aufnahmen der ersten Schnittkante erfasst. Hierzu kommt ein Handscanner (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence})zum Einsatz, dessen Aufnahmeparameter, wie z.B. Arbeitsabstand, Belichtung und  Auflösung, konstant gehalten werden. Diese Bilddaten bilden die Grundlage für die bildgestützte Qualitätsschätzung des KI-Systems. Ergänzend dazu wird die gleiche Schnittkante mit einem Keyence-3D-Messsystem (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence}) dreidimensional vermessen, sodass eine 3D-Punktwolke des Kantenverlaufs entsteht. Aus dieser Punktwolke werden definierte Profilverläufe abgeleitet und geometrische Kenngrößen berechnet, die der Erfassung von Gratbildung und der Oberflächenrauheit dienen. Die Berechnung des Grates und der Rauheit ist im obigen Grundlagenkapitel ~\ref{sec:grat-rauheit} näher erläutert. Die genaue funktionsweise des 3D-Messsystems ist im folgenden Kapitel ~\ref{sec:3d-messsystem-keyence} ausgiebig erläutert. Die so gewonnenen Ist-Kenngrößen fungieren als Referenz für den späteren Abgleich mit der Bildqualitätsschätzung. In der Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung.
-
-In der folgenden Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung dargestellt.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\linewidth]{handscanner_keyence.jpg}
-    \caption{Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}
-    \label{fig:handscanner_barcodelesegerät_keyence}    
-\end{figure}
-
-\newpage
-
-Zur vollständigen Dokumentation werden die Schnittkanten zudem mit einer Industriekamera und einem stationären Smartphone-Setup unter verschiedenen Beleuchtungsbedingungen aufgenommen. Die Kombination aus unterschiedlichen Kameras und Beleuchtungen erhöht die Robustheit der visuellen Beurteilbarkeit und unterstützt die spätere manuelle Nachvollziehbarkeit von Auffälligkeiten. Die erfassten Messdaten des Werkstücks, sowie die daraus abgeleiteten Kenngrößen der Proben-ID zugeordnet und in die zentrale Datenbank überführt.
-
-Die Abbildung~\ref{fig:smartphone_industriekamera} zeigt die zuvor beschriebenen Komponenten der Messzelle. Oben im Bild ist das Smartphone (4) mit LED-Ringlicht zu sehen, welches die Schnittkante aus einem 90° Winkel aufnimmt. Unten im Bild ist die Industriekamera (5) mit Auflichtbeleuchtung dargestellt, welche die Schnittkante ebenfalls aus einem 90° Winkel erfasst. Beide Kameras sind fest in der Messzelle montiert und werden automatisch durch den Roboter angesteuert.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\linewidth]{smartphone_industriekamera.jpg}
-    \caption{Smartphone (4) und Industriekamera (5) in der Messzelle}
-    \label{fig:smartphone_industriekamera}
-\end{figure}
-
-Nach der Datenerfassung werden aus der 3D-Messung die tatsächlichen Kenngrößen der Schnittkante berechnet und den Ergebnissen der bildbasierten Qualitätsschätzung gegenübergestellt. Dieser Abgleich ermöglicht die Beurteilung der Übereinstimmung zwischen qualitativer, bildgestützter Bewertung und quantitativer Geometriemessung. Die beschriebenen Messschritte werden für alle vier Schnittkanten jedes Bauteils identisch wiederholt. Abschließend legt der Roboter die vollständig vermessenen Proben an der Endstation geordnet ab.
-
-Anbei ist ein besipielhafter Vergleich der geschätzten Kenngrößen einer Schnittkante im Vergleich zu den gemessenen Kenngrößen in den Abbildungen  ~\ref{fig:burr_true_pred} und ~\ref{fig:roughness_true_pred} dargestellt. Es sind jeweils zwei Diagramme zu sehen, einer für den Gratwert und einer für die Rauheit. Auf den y-Achsen sind die geschätzten Kenngrößen und auf der x-Achse die gemessenen Kenngrößen aufgetragen. Idealerweise liegen alle Punkte auf der Diagonalen, was eine perfekte Übereinstimmung zwischen Schätzung und Messung bedeuten würde. In disem Beispiel Überschätzt das KI-Modell den Rauheitswert leicht, whärend der Gratwert überwiegend "gut" geschätzt wird. Mit einer leichten Abweichung ist stets zu rechnen, da die bildbasierte Schätzung eine Näherung darstellt und nicht alle Details der 3D-Messung erfassen kann.
-
-\begin{figure}[h!]
-    \centering
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{qualitatsschatzung_burr.png}
-        \caption{Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}
-        \label{fig:burr_true_pred}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{qualitatsschatzung_roughness.png}
-        \caption{Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}
-        \label{fig:roughness_true_pred}
-    \end{minipage}
-\end{figure}
+% \section{Messmethodik und Datenerfassung in der Messzelle}
 
 
+% Die Messzelle dient der reproduzierbaren Erfassung aller Messdaten zu den im Rahmen der Experimentalpläne geschnittenen Edelstahlbauteilen. Sie ist als sequenzieller Messprozess ausgelegt, in dem ein mehrachsiger KUKA-Industrieroboter die Proben zwischen den Stationen handhabt. Die Bauteile werden an der Startposition gestapelt bereitgestellt, vom Roboter mittels Vakuumgreifer aufgenommen und der ersten Station zugeführt. Dort erfolgt die automatisierte Probenidentifikation über einen aufgebrachten QR-Code (siehe ID-Lesegerät in Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} und Edelstahlprobe mit QR-Code in Abbildung ~\ref{fig:probenID}). Die ermittelte Proben-ID wird mit den Metadaten aus den Experimentalplänen (z.\,B. Blechdicke, Soll-Parameter) verknüpft und dient in der Folge als Schlüssel für die Mess- und Auswertedaten.
 
-\newpage
+% Im Anschluss werden an einer Station hochaufgelöste Aufnahmen der ersten Schnittkante erfasst. Hierzu kommt ein Handscanner (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence})zum Einsatz, dessen Aufnahmeparameter, wie z.B. Arbeitsabstand, Belichtung und  Auflösung, konstant gehalten werden. Diese Bilddaten bilden die Grundlage für die bildgestützte Qualitätsschätzung des KI-Systems. Ergänzend dazu wird die gleiche Schnittkante mit einem Keyence-3D-Messsystem (siehe Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence}) dreidimensional vermessen, sodass eine 3D-Punktwolke des Kantenverlaufs entsteht. Aus dieser Punktwolke werden definierte Profilverläufe abgeleitet und geometrische Kenngrößen berechnet, die der Erfassung von Gratbildung und der Oberflächenrauheit dienen. Die Berechnung des Grates und der Rauheit ist im obigen Grundlagenkapitel ~\ref{sec:grat-rauheit} näher erläutert. Die genaue funktionsweise des 3D-Messsystems ist im folgenden Kapitel ~\ref{sec:3d-messsystem-keyence} ausgiebig erläutert. Die so gewonnenen Ist-Kenngrößen fungieren als Referenz für den späteren Abgleich mit der Bildqualitätsschätzung. In der Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung.
 
-\subsection{Anpassung der Handscanner Einstellungen für Edelstahl}
-\label{chap:handscanner-setup}
+% In der folgenden Abbildung ~\ref{fig:handscanner_barcodelesegerät_keyence} sind die im obigen Abschnitt beschriebenen Komponenten der Messzelle während einer Messung dargestellt.
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.6\linewidth]{handscanner_keyence.jpg}
+%     \caption{Handscanner (1), ID-Lesegerät (2), Keyence 3D-Messsystem (3) in der Messzelle}
+%     \label{fig:handscanner_barcodelesegerät_keyence}    
+% \end{figure}
 
-Für die bildgestützte Qualitätsschätzung werden die mit dem Handscanner aufgenommenen Schnittkantenbilder als zentrale Eingangsgröße verwendet. Die bisher im Einsatz befindlichen Aufnahmeparameter waren für Baustahl optimiert. Baustahl weist im Vergleich zu Edelstahl eine geringere Oberflächenreflexion und eine tendenziell matte Erscheinung auf. Werden diese Einstellungen unverändert auf Edelstahl angewandt, führt die höhere Reflexion zu Bildartefakten und zu einer unzureichenden Abbildung der relevanten Mikrostruktur \parencite{ZahnerStainlessReflect}. In der Folge würden Grate (\emph{engl. Burr}) unterrepräsentiert und die Rauheit (\emph{engl. Roughness}) potenziell verfälscht erscheinen. Da die Klassifikation der Bildqualität und die darauf basierende Schätzung von \emph{Burr} und \emph{Roughness} unmittelbar in die Parametrierung des Laserschneidprozesses zurückwirken, ist eine werkstoffabhängige Anpassung des Handscanner-Setups zwingend erforderlich.
+% \newpage
 
-Das Aufnahmeprotokoll sieht pro Schnittkante drei Bilder vor: (i) ein bewusst dunkler belichtetes Bild, das primär der Beurteilung der Schnittflächenrauheit dient, sowie (ii) zwei überbelichtete Bilder, die gemeinsam mit dem ersten zu einem HDR-Komposit zusammengeführt werden, um die Kontur und Ausprägung des Grats sicher zu erfassen (siehe besipielhafte Aufnahme in Abbildung ~\ref{fig:vier_bilder_simple}). 
+% Zur vollständigen Dokumentation werden die Schnittkanten zudem mit einer Industriekamera und einem stationären Smartphone-Setup unter verschiedenen Beleuchtungsbedingungen aufgenommen. Die Kombination aus unterschiedlichen Kameras und Beleuchtungen erhöht die Robustheit der visuellen Beurteilbarkeit und unterstützt die spätere manuelle Nachvollziehbarkeit von Auffälligkeiten. Die erfassten Messdaten des Werkstücks, sowie die daraus abgeleiteten Kenngrößen der Proben-ID zugeordnet und in die zentrale Datenbank überführt.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png}\hfill
-  \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png}\hfill
-  \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png}\hfill
-  \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png}
-  \caption{Dunkle Belichtung für die Rauheitsschätzung (i, erstes Bild links), zwei helle Belichtungen für die Gratschätzung (ii, mittlere Bilder) und das daraus generierte HDR-Bild (rechts).}
-  \label{fig:vier_bilder_simple}
-\end{figure}
+% Die Abbildung~\ref{fig:smartphone_industriekamera} zeigt die zuvor beschriebenen Komponenten der Messzelle. Oben im Bild ist das Smartphone (4) mit LED-Ringlicht zu sehen, welches die Schnittkante aus einem 90° Winkel aufnimmt. Unten im Bild ist die Industriekamera (5) mit Auflichtbeleuchtung dargestellt, welche die Schnittkante ebenfalls aus einem 90° Winkel erfasst. Beide Kameras sind fest in der Messzelle montiert und werden automatisch durch den Roboter angesteuert.
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.6\linewidth]{smartphone_industriekamera.jpg}
+%     \caption{Smartphone (4) und Industriekamera (5) in der Messzelle}
+%     \label{fig:smartphone_industriekamera}
+% \end{figure}
+
+% Nach der Datenerfassung werden aus der 3D-Messung die tatsächlichen Kenngrößen der Schnittkante berechnet und den Ergebnissen der bildbasierten Qualitätsschätzung gegenübergestellt. Dieser Abgleich ermöglicht die Beurteilung der Übereinstimmung zwischen qualitativer, bildgestützter Bewertung und quantitativer Geometriemessung. Die beschriebenen Messschritte werden für alle vier Schnittkanten jedes Bauteils identisch wiederholt. Abschließend legt der Roboter die vollständig vermessenen Proben an der Endstation geordnet ab.
+
+% Anbei ist ein besipielhafter Vergleich der geschätzten Kenngrößen einer Schnittkante im Vergleich zu den gemessenen Kenngrößen in den Abbildungen  ~\ref{fig:burr_true_pred} und ~\ref{fig:roughness_true_pred} dargestellt. Es sind jeweils zwei Diagramme zu sehen, einer für den Gratwert und einer für die Rauheit. Auf den y-Achsen sind die geschätzten Kenngrößen und auf der x-Achse die gemessenen Kenngrößen aufgetragen. Idealerweise liegen alle Punkte auf der Diagonalen, was eine perfekte Übereinstimmung zwischen Schätzung und Messung bedeuten würde. In disem Beispiel Überschätzt das KI-Modell den Rauheitswert leicht, whärend der Gratwert überwiegend "gut" geschätzt wird. Mit einer leichten Abweichung ist stets zu rechnen, da die bildbasierte Schätzung eine Näherung darstellt und nicht alle Details der 3D-Messung erfassen kann.
+
+% \begin{figure}[h!]
+%     \centering
+%     \begin{minipage}{0.48\textwidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{qualitatsschatzung_burr.png}
+%         \caption{Vergleich zwischen vorhergesagten und tatsächlichen Werten für den Grat (Burr).}
+%         \label{fig:burr_true_pred}
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}{0.48\textwidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{qualitatsschatzung_roughness.png}
+%         \caption{Vergleich zwischen vorhergesagten und tatsächlichen Werten für die Rauheit (Roughness).}
+%         \label{fig:roughness_true_pred}
+%     \end{minipage}
+% \end{figure}
 
 
-Die Kalibrierung der Belichtung erfolgt schrittweise. Zunächst wird die Belichtungszeit für das Rauheitsbild so eingestellt, dass die Textur der Schnittfläche ohne Sättigung und mit klarer Detailzeichnung sichtbar ist. Diese Entscheidung erfolgt in dieser Phase bewusst subjektiv, jedoch anhand vorab definierter visueller Kriterien, wie z.B. ausreichender Tonwertumfang und erkennbarer Strukturkontrast. Im Anschluss werden die Belichtungsparameter der beiden HDR-Bilder iterativ variiert, bis der Grat entlang der Schnittkante über den gesamten Bildbereich eindeutig detektierbar ist, ohne dass umliegende Bereiche vollständig verloren gehen. Da die HDR-Komposition durch die Eingangsbilder beeinflusst wird, erfolgt die Abstimmung der HDR-Belichtungen stets nach der Festlegung des Rauheitsbildes. 
 
-Zur Sicherstellung der Kompatibilität mit dem bestehenden KI-Modell wird die Anpassung an Referenzaufnahmen aus der bereits validierten Baustahlkonfiguration ausgerichtet. Praktisch bedeutet dies, dass eine Baustahlschnittkante mit den etablierten Baustahleinstellungen aufgenommen wird und die Edelstahlaufnahmen so justiert werden, dass die resultierenden Bildcharakteristika in qualitativer Hinsicht vergleichbar sind. Auf diese Weise wird gewährleistet, dass die Edelstahlbilder in das bestehende Modell eingebunden und mit den vorhandenen Trainings- und Bewertungsroutinen verarbeitet werden können.
+% \newpage
 
-Die Abbildungen~\ref{fig:burr_baustahl},~\ref{fig:burr_edelstahl}, ~\ref{fig:roughness_baustahl} und ~\ref{fig:roughness_edelstahl} zeigen exemplarisch die finalen Handscanner Bilder, welche für die Qualitätsschätzung genutzt werden, für Edelstahl im Vergleich zu den bisherigen Bildern für die Qualitätsschätzung von Baustahl. In den Abbildungen ist jeweils die gleiche Schnittkante eines Blechteils aus den geschnittenen Experimentalplänen dargestellt mit einer Dicke von 15 mm, einmal ein Baustahlblech und einmal ein Edelstahlblech.
+% \subsection{Anpassung der Handscanner Einstellungen für Edelstahl}
+% \label{chap:handscanner-setup}
 
-\begin{figure}[htbp]
-  \centering
-  \begin{minipage}{0.48\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{burr_baustahl.png}
-    \caption{Handcanner Bild für die Gratschätzung (Baustahl)}
-    \label{fig:burr_baustahl}
-  \end{minipage}\hfill
-  \begin{minipage}{0.48\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{burr_edelstahl.png}
-    \caption{Handcanner Bild für die Gratschätzung (Edelstahl)}
-    \label{fig:burr_edelstahl}
-  \end{minipage}
-\end{figure}
+% Für die bildgestützte Qualitätsschätzung werden die mit dem Handscanner aufgenommenen Schnittkantenbilder als zentrale Eingangsgröße verwendet. Die bisher im Einsatz befindlichen Aufnahmeparameter waren für Baustahl optimiert. Baustahl weist im Vergleich zu Edelstahl eine geringere Oberflächenreflexion und eine tendenziell matte Erscheinung auf. Werden diese Einstellungen unverändert auf Edelstahl angewandt, führt die höhere Reflexion zu Bildartefakten und zu einer unzureichenden Abbildung der relevanten Mikrostruktur \parencite{ZahnerStainlessReflect}. In der Folge würden Grate (\emph{engl. Burr}) unterrepräsentiert und die Rauheit (\emph{engl. Roughness}) potenziell verfälscht erscheinen. Da die Klassifikation der Bildqualität und die darauf basierende Schätzung von \emph{Burr} und \emph{Roughness} unmittelbar in die Parametrierung des Laserschneidprozesses zurückwirken, ist eine werkstoffabhängige Anpassung des Handscanner-Setups zwingend erforderlich.
 
-\begin{figure}[htbp]
-  \centering
-  \begin{minipage}{0.48\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{roughness_baustahl.png}
-    \caption{Handscnanner Bild für die Rauheitsschätzung (Baustahl)}
-    \label{fig:roughness_baustahl}
-  \end{minipage}\hfill
-  \begin{minipage}{0.48\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{roughness_edelstahl.png}
-    \caption{Handscanner Bild für die Rauheitsschätzung (Edelstahl)}
-    \label{fig:roughness_edelstahl}
-  \end{minipage}
-\end{figure}
+% Das Aufnahmeprotokoll sieht pro Schnittkante drei Bilder vor: (i) ein bewusst dunkler belichtetes Bild, das primär der Beurteilung der Schnittflächenrauheit dient, sowie (ii) zwei überbelichtete Bilder, die gemeinsam mit dem ersten zu einem HDR-Komposit zusammengeführt werden, um die Kontur und Ausprägung des Grats sicher zu erfassen (siehe besipielhafte Aufnahme in Abbildung ~\ref{fig:vier_bilder_simple}). 
 
-Zur konsistenten Anwendung der angepassten Handscanner-Parameter wird das Messzellen-Skript so erweitert, dass das passende Setup automatisiert auf Basis der Bauteilbezeichnung gewählt wird. Die Benennung folgt dem Schema
-\texttt{Maschinenname-\allowbreak Experimentalplanname-\allowbreak Materia
-lnummer-\allowbreak Bauteildicke-\allowbreak Bauteilnummer},
-z.\,B.\ \texttt{A02280E0005-\allowbreak AiMuWrCjd0-\allowbreak 3-\allowbreak 050-\allowbreak 0176}.
-Die folgende Abbildung ~\ref{fig:probenID} zeigt eine Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen mit den einzelnen Segmenten.
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_625_12.0_3.png}\hfill
+%   \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_OFFOFFON_1400_12.0_2.png}\hfill
+%   \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_ONONOFF_270_12.0_1.png}\hfill
+%   \includegraphics[width=.24\textwidth]{A1221E0233-H5uCOXjtm6-3-100-0011_20250828083003-1_HACO_burr_HDR.png}
+%   \caption{Dunkle Belichtung für die Rauheitsschätzung (i, erstes Bild links), zwei helle Belichtungen für die Gratschätzung (ii, mittlere Bilder) und das daraus generierte HDR-Bild (rechts).}
+%   \label{fig:vier_bilder_simple}
+% \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Werkstück_Proben-ID.jpg}
-    \caption{Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}
-    \label{fig:probenID}
-\end{figure}
 
-Das Skript parst die Zeichenkette, prüft die Zahl nach dem zweiten Bindestrich und lädt abhängig davon die vordefinierten Handscanner-Einstellungen für den jeweiligen Werkstoff. Auf diese Weise wird sichergestellt, dass die für Edelstahl kalibrierten Belichtungen und Aufnahmeparameter reproduzierbar zur Anwendung kommen und die so erzeugten Bilder ohne systematische Verzerrungen in die Qualitätsmodellierung eingehen. Dies ist im folgendem C-Sharp Quellcode ~\ref{lst:messzellen-routing} dargestellt und im Messzellenskript inplementiert.
+% Die Kalibrierung der Belichtung erfolgt schrittweise. Zunächst wird die Belichtungszeit für das Rauheitsbild so eingestellt, dass die Textur der Schnittfläche ohne Sättigung und mit klarer Detailzeichnung sichtbar ist. Diese Entscheidung erfolgt in dieser Phase bewusst subjektiv, jedoch anhand vorab definierter visueller Kriterien, wie z.B. ausreichender Tonwertumfang und erkennbarer Strukturkontrast. Im Anschluss werden die Belichtungsparameter der beiden HDR-Bilder iterativ variiert, bis der Grat entlang der Schnittkante über den gesamten Bildbereich eindeutig detektierbar ist, ohne dass umliegende Bereiche vollständig verloren gehen. Da die HDR-Komposition durch die Eingangsbilder beeinflusst wird, erfolgt die Abstimmung der HDR-Belichtungen stets nach der Festlegung des Rauheitsbildes. 
+
+% Zur Sicherstellung der Kompatibilität mit dem bestehenden KI-Modell wird die Anpassung an Referenzaufnahmen aus der bereits validierten Baustahlkonfiguration ausgerichtet. Praktisch bedeutet dies, dass eine Baustahlschnittkante mit den etablierten Baustahleinstellungen aufgenommen wird und die Edelstahlaufnahmen so justiert werden, dass die resultierenden Bildcharakteristika in qualitativer Hinsicht vergleichbar sind. Auf diese Weise wird gewährleistet, dass die Edelstahlbilder in das bestehende Modell eingebunden und mit den vorhandenen Trainings- und Bewertungsroutinen verarbeitet werden können.
+
+% Die Abbildungen~\ref{fig:burr_baustahl},~\ref{fig:burr_edelstahl}, ~\ref{fig:roughness_baustahl} und ~\ref{fig:roughness_edelstahl} zeigen exemplarisch die finalen Handscanner Bilder, welche für die Qualitätsschätzung genutzt werden, für Edelstahl im Vergleich zu den bisherigen Bildern für die Qualitätsschätzung von Baustahl. In den Abbildungen ist jeweils die gleiche Schnittkante eines Blechteils aus den geschnittenen Experimentalplänen dargestellt mit einer Dicke von 15 mm, einmal ein Baustahlblech und einmal ein Edelstahlblech.
+
+% \begin{figure}[htbp]
+%   \centering
+%   \begin{minipage}{0.48\linewidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{burr_baustahl.png}
+%     \caption{Handcanner Bild für die Gratschätzung (Baustahl)}
+%     \label{fig:burr_baustahl}
+%   \end{minipage}\hfill
+%   \begin{minipage}{0.48\linewidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{burr_edelstahl.png}
+%     \caption{Handcanner Bild für die Gratschätzung (Edelstahl)}
+%     \label{fig:burr_edelstahl}
+%   \end{minipage}
+% \end{figure}
+
+% \begin{figure}[htbp]
+%   \centering
+%   \begin{minipage}{0.48\linewidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{roughness_baustahl.png}
+%     \caption{Handscnanner Bild für die Rauheitsschätzung (Baustahl)}
+%     \label{fig:roughness_baustahl}
+%   \end{minipage}\hfill
+%   \begin{minipage}{0.48\linewidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{roughness_edelstahl.png}
+%     \caption{Handscanner Bild für die Rauheitsschätzung (Edelstahl)}
+%     \label{fig:roughness_edelstahl}
+%   \end{minipage}
+% \end{figure}
+
+% Zur konsistenten Anwendung der angepassten Handscanner-Parameter wird das Messzellen-Skript so erweitert, dass das passende Setup automatisiert auf Basis der Bauteilbezeichnung gewählt wird. Die Benennung folgt dem Schema
+% \texttt{Maschinenname-\allowbreak Experimentalplanname-\allowbreak Materia
+% lnummer-\allowbreak Bauteildicke-\allowbreak Bauteilnummer},
+% z.\,B.\ \texttt{A02280E0005-\allowbreak AiMuWrCjd0-\allowbreak 3-\allowbreak 050-\allowbreak 0176}.
+% Die folgende Abbildung ~\ref{fig:probenID} zeigt eine Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen mit den einzelnen Segmenten.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.7\linewidth]{Werkstück_Proben-ID.jpg}
+%     \caption{Beispiel-Proben-ID eines Blechstücks aus den Experimentalplänen}
+%     \label{fig:probenID}
+% \end{figure}
+
+% Das Skript parst die Zeichenkette, prüft die Zahl nach dem zweiten Bindestrich und lädt abhängig davon die vordefinierten Handscanner-Einstellungen für den jeweiligen Werkstoff. Auf diese Weise wird sichergestellt, dass die für Edelstahl kalibrierten Belichtungen und Aufnahmeparameter reproduzierbar zur Anwendung kommen und die so erzeugten Bilder ohne systematische Verzerrungen in die Qualitätsmodellierung eingehen. Dies ist im folgendem C-Sharp Quellcode ~\ref{lst:messzellen-routing} dargestellt und im Messzellenskript inplementiert.

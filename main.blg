@@ -1,26 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[175] biber-MSWIN64:342> INFO - === 
-[324] Biber.pm:421> INFO - Reading 'main.bcf'
-[524] Biber.pm:1002> INFO - Found 11 citekeys in bib section 0
-[551] Biber.pm:4487> INFO - Processing section 0
-[566] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[679] bibtex.pm:1713> INFO - LaTeX decoding ...
-[690] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[788] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[788] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[788] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[788] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[807] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[810] bbl.pm:779> INFO - Output to main.bbl
-[810] Biber.pm:132> WARN - I didn't find a database entry for 'ISO11145-2018' (section 0)
-[810] Biber.pm:132> WARN - I didn't find a database entry for 'ISO9013-2017' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'TRUMPF_FusionCutting' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'MitutoyoQuickGuide' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'KeyenceISO4287' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'Timesavers_Rauheit_Ra' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'FischerPochwyt_NeuronaleNetze_2017' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'SensorInstruments_LLASLT_Manual_2023' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'ZahnerStainlessReflect' (section 0)
-[811] Biber.pm:132> WARN - I didn't find a database entry for 'Tatzel-2021' (section 0)
-[811] Biber.pm:134> INFO - WARNINGS: 10
+[94] biber-MSWIN64:342> INFO - === 
+[137] Biber.pm:421> INFO - Reading 'main.bcf'
+[235] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[246] Biber.pm:4487> INFO - Processing section 0
+[254] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
+[322] bibtex.pm:1713> INFO - LaTeX decoding ...
+[326] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[454] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[454] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[454] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[454] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[549] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[551] bbl.pm:779> INFO - Output to main.bbl
+[551] Biber.pm:132> WARN - I didn't find a database entry for 'ResearchGate' (section 0)
+[551] Biber.pm:132> WARN - I didn't find a database entry for 'KIT' (section 0)
+[551] Biber.pm:134> INFO - WARNINGS: 2
