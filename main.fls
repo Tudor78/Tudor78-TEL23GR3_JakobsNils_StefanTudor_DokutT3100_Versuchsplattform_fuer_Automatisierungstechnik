@@ -302,18 +302,13 @@ INPUT C:\Program Files\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
 INPUT .\template\_dhbw_deckblatt.tex
 INPUT .\template\_dhbw_deckblatt.tex
 INPUT template\_dhbw_deckblatt.tex
-INPUT .\img\TruLogo_Print_RGB.jpg
-INPUT .\img\TruLogo_Print_RGB.jpg
-INPUT .\img\TruLogo_Print_RGB.jpg
-INPUT .\img\TruLogo_Print_RGB.jpg
-INPUT .\img\TruLogo_Print_RGB.jpg
-INPUT .\img\TruLogo_Print_RGB.jpg
 INPUT .\img\DHBW_Logo.jpg
 INPUT .\img\DHBW_Logo.jpg
 INPUT .\img\DHBW_Logo.jpg
 INPUT .\img\DHBW_Logo.jpg
 INPUT .\img\DHBW_Logo.jpg
 INPUT .\img\DHBW_Logo.jpg
+<<<<<<< HEAD
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\eccc1728.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
@@ -356,6 +351,46 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecsl1095.tfm
 INPUT .\includes\ehrenwoertliche_erklaerung.tex
 INPUT .\includes\ehrenwoertliche_erklaerung.tex
 INPUT includes\ehrenwoertliche_erklaerung.tex
+=======
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc1728.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\includes\ehrenwoertliche_erklaerung.tex
+INPUT .\includes\ehrenwoertliche_erklaerung.tex
+INPUT includes\ehrenwoertliche_erklaerung.tex
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecss1095.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsx1095.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsx1728.tfm
+INPUT C:\Users\lupsatu\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsl1095.tfm
+>>>>>>> origin/main
 INPUT .\includes\abstract.tex
 INPUT .\includes\abstract.tex
 INPUT includes\abstract.tex
@@ -387,6 +422,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT .\includes\grundlagen.tex
 INPUT .\includes\grundlagen.tex
 INPUT includes\grundlagen.tex
+<<<<<<< HEAD
 INPUT .\img\Eulerwinkel.png
 INPUT .\img\Eulerwinkel.png
 INPUT .\img\Eulerwinkel.png
@@ -406,6 +442,20 @@ INPUT .\img\CF.png
 INPUT .\img\CF.png
 INPUT .\img\CF.png
 INPUT .\img\CF.png
+=======
+INPUT .\img\V-Modell_RCP.png
+INPUT .\img\V-Modell_RCP.png
+INPUT .\img\V-Modell_RCP.png
+INPUT .\img\V-Modell_RCP.png
+INPUT .\img\V-Modell_RCP.png
+INPUT .\img\V-Modell_RCP.png
+INPUT .\img\Workflow_MBD.png
+INPUT .\img\Workflow_MBD.png
+INPUT .\img\Workflow_MBD.png
+INPUT .\img\Workflow_MBD.png
+INPUT .\img\Workflow_MBD.png
+INPUT .\img\Workflow_MBD.png
+>>>>>>> origin/main
 INPUT .\includes\stand_der_technik.tex
 INPUT .\includes\stand_der_technik.tex
 INPUT includes\stand_der_technik.tex
@@ -431,6 +481,7 @@ INPUT .\main.out
 INPUT .\main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
+<<<<<<< HEAD
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
@@ -479,3 +530,31 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti1095.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti1095.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sftt1095.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sftt1095.pfb
+=======
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk
+INPUT C:\Users\lupsatu\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk
+>>>>>>> origin/main

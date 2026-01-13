@@ -1,20 +1,82 @@
 
 \chapter{Grundlagen und Stand der Technik}
+<<<<<<< HEAD
+=======
+\label{chap:grundlagen und stand der technik}
+Für die vorliegende Arbeit sind Kenntnisse in den Bereichen Rapid Control Prototyping, modellbasierte Entwicklung mit Matlab und Simulink, Inertialsensorik sowie Lageschätzung mittels Sensorfusion erforderlich, weshalb in den folgenden Kapiteln die hierfür relevanten Grundlagen und der Stand der Technik dargestellt werden.
+>>>>>>> origin/main
 
 
 \section{Rapid Control Prototyping}
 \label{sec:Rapid Control Prototyping}
+<<<<<<< HEAD
 "Tudor"
 \section{MBD mit Matlab/Simulink}
 \label{sec:MBD mit Matlab/Simulink}
 "Tudor"
 
 
+=======
+Rapid Control Prototyping bezeichnet einen Ansatz zur schnellen Entwicklung und Erprobung von Regelungsstrategien an Anwendungen oder Laboraufbauten. Charakteristisch ist, dass der Entwurf nicht primär durch eine manuelle Implementierung in textbasierten Programmiersprachen erfolgt, sondern durch die Modellierung als grafisches Blockdiagramm, das anschließend auf eine Zielplattform übertragen wird. Ziel ist es, den Übergang vom Entwurf zur lauffähigen Implementierung zu verkürzen, indem aus dem grafischen Modell automatisch ausführbarer Code erzeugt und auf der Zielhardware ausgeführt wird. Dadurch werden kurze Iterationszyklen unterstützt, weil Entwurf, Test und Parametrierung in engem Zusammenhang durchgeführt werden können \parencite{HoyosGutierrez2023RCPReview}.
+
+Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielhardware und Entwicklungssoftware verstanden. Die Zielhardware umfasst eine Recheneinheit mit Speicher sowie Ein und Ausgängen und kann je nach Anwendung als \ac{PC}, Mikrocontroller oder programmierbare Logik realisiert sein. Die Entwicklungssoftware stellt eine grafische Modellierungsumgebung bereit, in der der Regelalgorithmus als Blockdiagramm beschrieben wird und aus der anschließend ausführbarer Code für die Zielplattform generiert wird \parencite{HoyosGutierrez2023RCPReview}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\linewidth]{V-Modell_RCP.png}
+  \caption[V-Modell zur Einordnung von Rapid Control Prototyping]{V-Modell zur Einordnung des Rapid Control Prototyping \parencite{HoyosGutierrez2023RCPReview}.}
+  \label{fig:V-Modell_RCP}
+\end{figure}
+
+Die Abbildung ~\ref{fig:V-Modell_RCP} ordnet den Einsatz von RCP in einen V Modellentwicklungsprozess ein. Die linke Seite beschreibt die Schritte von \emph{Design, Modelling and Simulation} bis zur \emph{Validation with RCP}. In dieser Phase wird der Reglerentwurf im Modell erstellt, simulativ bewertet und für die Ausführung vorbereitet. Der Übergang zur Zielplattform erfolgt im Schritt \emph{Target Code on Hardware}, bei dem der aus dem Modell abgeleitete Code auf der Hardware ausgeführt wird. Die rechte Seite des V Modells umfasst die Schritte \emph{Verification with SIL or HIL} sowie \emph{Integration and Test}. Dabei werden Implementierung und Systemverhalten anhand geeigneter Testumgebungen geprüft, wobei SIL und HIL als etablierte Testformen zur schrittweisen Absicherung dienen. Die in der Abbildung markierte Verifikationsphase adressiert die Frage, ob die Implementierung die spezifizierten Anforderungen korrekt erfüllt. Die Validierungsphase adressiert die Frage, ob die Lösung im Anwendungskontext den beabsichtigten Nutzen liefert und die vorgesehenen Funktionen in der Zielumgebung erfüllt. RCP unterstützt diesen Ablauf, indem Modell, Simulation und Ausführung auf der Zielhardware eng gekoppelt sind und Anpassungen am Entwurf zeitnah am realen System überprüft werden können \parencite{HoyosGutierrez2023RCPReview}.
+
+In vielen Anwendungen bildet Matlab in Verbindung mit Simulink die zentrale Entwicklungsumgebung, da Reglerentwurf, Simulation und Implementierung über einen konsistenten Modellkern verbunden werden können \parencite{Werth2020LowCostRCP,Fang2009LowCostDSPRCP}. Die Funktionsweise der modellbasierten Entwicklung mit Matlab und Simulink wird in Abschnitt~\ref{sec:Modellbasierte Entwicklung mit Matlab/Simulink} erläutert.
+\newpage
+
+\section{Modellbasierte Entwicklung mit Matlab/Simulink}
+\label{sec:Modellbasierte Entwicklung mit Matlab/Simulink}
+Bei der modellbasierten Entwicklung in Matlab und Simulink steht ein ausführbares Systemmodell im Mittelpunkt des Engineeringprozesses. Anstatt frühzeitig eine reine Softwareimplementierung zu erstellen, wird das Systemverhalten zunächst durch Modelle beschrieben, die sowohl für Analysen als auch für Simulationen genutzt werden. Matlab wird dabei vor allem für Berechnungen, Auswertungen, Parametrierungen und Visualisierungen eingesetzt. Simulink ergänzt dies durch eine grafische Blockdiagrammumgebung, mit der dynamische Systeme strukturiert aufgebaut und simuliert werden können. Für physikalische Teilbereiche wie mechanische oder elektrische Komponenten lässt sich Simscape verwenden, um domänenübergreifende Modelle konsistent in einem gemeinsamen Rahmen zu formulieren.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\linewidth]{Workflow_MBD.png}
+  \caption[Zentraler Workflow der modellbasierten Entwicklung]{Zentraler Workflow der modellbasierten Entwicklung\parencite{Aarenstrup2025ManagingMBD}.}
+  \label{fig:workflow-mbd}
+\end{figure}
+
+Die Abbildung~\ref{fig:workflow-mbd} veranschaulicht den Grundgedanken der modellbasierten Entwicklung, bei der ein ausführbares Modell als zentrales Entwicklungsartefakt den gesamten Engineeringprozess strukturiert \parencite{Aarenstrup2025ManagingMBD}. Im Mittelpunkt steht das \emph{Model}, in dem sowohl die Anforderungen (\emph{Requirements}) als auch Ergebnisse aus Voruntersuchungen und Domänenwissen (\emph{Research}) zusammengeführt werden. Das Modell dient als gemeinsame Grundlage, aus der sich das Systemverhalten, die Schnittstellen und wichtige Entwurfsentscheidungen ableiten lassen, ohne dass zu Beginn bereits eine separate Implementierung als Textcode im Fokus steht. Simulink unterstützt dies durch die grafische Modellierung dynamischer Systeme als Blockdiagramm, während Matlab für Berechnungen, Auswertungen, Parametrierungen und Visualisierungen genutzt wird. Für physikalische Teilmodelle kann Simscape eingesetzt werden, um mechanische, elektrische oder andere Domänen im gleichen Modell abzubilden.
+
+Die in der Abbildung umlaufenden Rückkopplungen verdeutlichen, dass die Modellentwicklung nicht linear erfolgt, sondern iterativ organisiert ist. Der Zyklus \emph{Modeling and simulation} steht für das wiederholte Aufbauen und Simulieren des Systems, um das zeitliche Verhalten zu analysieren und zentrale Eigenschaften wie Stabilität und Regelgüte unter variierenden Betriebsbedingungen zu bewerten. Die dabei gewonnenen Ergebnisse fließen in die Modellanpassung und Parametrierung zurück, wodurch die Modellgüte schrittweise erhöht wird. Matlab wird in dieser Phase insbesondere zur systematischen Auswertung von Simulationsergebnissen eingesetzt, etwa für Parameterstudien, Kennwertberechnungen und die grafische Darstellung relevanter Signale.
+
+Der Kreis \emph{Rapid prototyping} beschreibt den frühen Übergang vom Modell zur lauffähigen Ausführung, um Entwurfsentscheidungen unter realitätsnäheren Randbedingungen zu prüfen. Ein zentraler Baustein ist hierbei die Codegenerierung aus dem Simulink Modell, durch die automatisch ausführbarer Code erzeugt wird, der auf Zielhardware wie einem Mikrocontroller, \ac{DSP} oder \ac{FPGA} eingesetzt werden kann. Die Abbildung verdeutlicht damit, dass Implementierungsergebnisse nicht als unabhängige Parallelentwicklung entstehen, sondern als abgeleitete Artefakte aus dem zentralen Modell, wodurch die Konsistenz zwischen Entwurf und Ausführung erhöht wird.
+
+Der dritte Kreis \emph{Continuous test and verification} betont, dass Verifikation und Tests fortlaufend in den Entwicklungsprozess integriert sind. In diesem Kontext werden gestufte Testmethoden eingesetzt, um die Anforderungen systematisch abzusichern. Bei \ac{SIL} wird das Regelungssystem gemeinsam mit der Strecke in einer simulierten Umgebung ausgeführt, während bei \ac{HIL} eine reale Steuerungshardware mit einem in Echtzeit berechneten Streckenmodell gekoppelt wird. Diese Vorgehensweisen ermöglichen eine frühe Prüfung gegen Anforderungen und unterstützen die Identifikation von Abweichungen, bevor ein vollständiger Versuchsaufbau oder ein finales Gesamtsystem vorliegt.
+
+Der nach unten gerichtete Pfeil \emph{Generation of outputs} fasst zusammen, welche Ergebnisse aus dem Modell abgeleitet werden. Dazu zählen insbesondere Produktionscode, Berichte sowie Nachweisartefakte für eine spätere Dokumentation und gegebenenfalls Zertifizierung. Abbildung~\ref{fig:workflow-mbd} macht damit deutlich, dass modellbasierte Entwicklung in Matlab und Simulink nicht nur die Simulation unterstützt, sondern einen durchgängigen Ablauf von der Anforderungsableitung über die iterative Modellentwicklung bis zur Implementierung und Absicherung bereitstellt. Für die vorliegende Arbeit ist dieser Ansatz zentral, da die Versuchsplattform und die Algorithmen in einer einheitlichen Modellbasis entwickelt, prototypisch auf Zielhardware ausgeführt und anschließend experimentell validiert werden.
+
+
+\section{Inertialmesseinheit}
+\label{sec:Inertialmesseinheit}
+Die Funktionsweise und die Anwendungsgebiete einer \ac{IMU} werden im folgenden Abschnitt im Kontext der Lageschätzung als Anwendungsszenario der RCP Versuchsplattform näher erläutert.
+
+Eine Inertialmesseinheit (\ac{IMU}) ist ein Sensorsystem zur Erfassung von Bewegungen eines Körpers im Raum. Sie kombiniert Beschleunigungssensoren, die die spezifische Kraft messen, mit Drehratensensoren, die die Winkelgeschwindigkeit erfassen. Üblich ist eine Ausführung mit jeweils drei Sensoren pro Messgröße, deren empfindliche Achsen orthogonal angeordnet sind, sodass dreidimensionale Messungen in einem körperfesten Koordinatensystem bereitgestellt werden können \parencite{Groves2015InertialSensorsTutorial}.
+
+Die \ac{IMU} liefert ihre Messwerte typischerweise als zeitdiskrete Signale. Dazu werden die analogen Sensorausgänge intern aufbereitet, digitalisiert und anschließend über eine Datenschnittstelle ausgegeben. Die Messraten liegen häufig im Bereich mehrerer hundert Hertz und sind damit für dynamische Vorgänge geeignet, bei denen schnelle Änderungen der Bewegung erfasst werden müssen. Für die Interpretation der Signale ist wesentlich, dass ein Beschleunigungssensor nicht die kinematische translatorische Beschleunigung direkt misst, sondern die spezifische Kraft. Diese Größe ist relativ zu einem frei fallenden Bezug definiert und beinhaltet daher die Gravitation als dominanten Anteil, sobald keine starken linearen Beschleunigungen vorliegen. Das Gyroskop misst die Winkelgeschwindigkeit des Sensorsystems um die jeweiligen Achsen und stellt damit die Grundlage für die Beschreibung von Rotationsbewegungen dar \parencite{Groves2015InertialSensorsTutorial}.
+
+In praktischen Anwendungen werden die Rohmessungen einer \ac{IMU} durch Sensoreigenschaften und Fehlerquellen beeinflusst. Dazu zählen insbesondere konstante oder langsam driftende Offsets, die als Bias beschrieben werden, Skalierungsfehler sowie Achsfehlstellungen und Kreuzkopplungen zwischen den Sensorkanälen. Zusätzlich wirkt stochastisches Rauschen auf die Messwerte, wodurch kurzzeitige Schwankungen entstehen. Diese Fehleranteile sind für die spätere Verarbeitung relevant, weil sich insbesondere Bias und Skalierungsfehler bei einer zeitlichen Integration oder bei länger andauernder Nutzung als Drift bemerkbar machen können. Entsprechend hängt die Qualität der bereitgestellten Bewegungsinformation stark von der Sensorgüte und von der Kalibrierung ab, mit der systematische Abweichungen reduziert werden.
+
+Die Einsatzgebiete von \acp{IMU} ergeben sich aus der Fähigkeit, Bewegungen unabhängig von externen Referenzen zu erfassen. Ein zentrales Anwendungsfeld ist die Bestimmung der Orientierung und Bewegungsdynamik in technischen Systemen, insbesondere wenn optische oder satellitengestützte Referenzen nicht verfügbar oder nur eingeschränkt nutzbar sind. Demnach wird eine\acp{IMU} in Fahrzeugen, Fluggeräten und mobilen Robotern zur Erfassung von Drehraten, Neigungen und Beschleunigungen eingesetzt, beispielsweise zur Stabilisierung, zur Regelung und als Eingangssignal für Navigations und Lokalisierungssysteme. Darüber hinaus finden sie Anwendung in der Industrieautomation, etwa zur Zustandsüberwachung bewegter Komponenten und zur Erfassung von Schwingungen oder Lageänderungen in Maschinen und Anlagen. Weitere typische Einsatzbereiche sind die Bewegungserfassung in tragbaren Systemen und Consumer Geräten, bei denen \acp{IMU} Gesten, Lageänderungen und Aktivitätsmuster erkennen und als Sensorbasis für Interaktions und Assistenzfunktionen dienen.
+
+Die \ac{IMU} stellt damit die grundlegenden Messgrößen für nachgelagerte Schätz und Regelalgorithmen bereit. Aus den Drehraten können Orientierungsänderungen abgeleitet werden, während die spezifische Kraft als Referenzinformation genutzt werden kann, wenn die Gravitation als dominanter Anteil vorliegt. Für eine robuste Lageschätzung wird die \ac{IMU} in der Regel nicht isoliert betrachtet, sondern als Sensormodul, dessen Messwerte mit geeigneten Algorithmen weiterverarbeitet und mit Modellannahmen oder weiteren Sensoren kombiniert werden, um die Auswirkungen von Rauschen und Drift zu begrenzen.
+
+Eine solche \ac{IMU} soll in dieser Projektarbeit zunächst als Simulationsmodell abgebildet und untersucht werden und, sofern erforderlich, zusätzlich als reale Hardwarekomponente im Rahmen des Rapid Control Prototyping in die Versuchsplattform integriert werden.
+>>>>>>> origin/main
 
 
 \newpage
 \section{Quaternionen und Euler-Winkel}
 \label{sec:Quaternionen und Euler-Winkel}
+<<<<<<< HEAD
 % Für die Lageschätzung einer IMU ist eine Orientierungsdarstellung erforderlich, da die Lage der IMU aus den Messgrößen des Gyroskops, Beschleunigungssensors geschätzt und anschließend bewertet werden soll. Für die Umsetzung der Filteralgorithmen wird eine mathematische Beschreibung der Rotation benötigt.  
 
 Quaternionen und Euler-Winkel sind mathematische Darstellungen, um Rotationen im dreidimensionalen Raum zu beschreiben. Solche Rotationsbeschreibungen werden unter anderem in der Lageschätzung von Inertialmesseinheiten (IMU) benötigt, um die Orientierung aus Sensormessgrössen zu modellieren und zu bewerten.
@@ -100,10 +162,14 @@ Im Folgenden werden die resultierenden Ausdrücke direkt angegeben; eine vollst�
 
 
 
+=======
+"Lorem ipsum" 
+>>>>>>> origin/main
 
 \newpage
 \section{Lageschätzung mittels Sensorfusion}
 \label{sec:Lageschätzung mittels Sensorfusion}
+<<<<<<< HEAD
 Sensorfusion bezeichnet die Kombination von Messdaten mehrerer Sensoren, um die Qualität der Zustandsinformation zu erhöhen. Durch die Nutzung komplementärer Sensoreigenschaften lassen sich Unsicherheiten reduzieren und konsistente Schätzwerte gewinnen. \textbf{ In dieser Arbeit steht die Orientierungsschätzung (Attitude) einer IMU im Vordergrund}. Da kein Magnetometer eingesetzt wird, basiert die Schätzung auf Gyroskop- und Beschleunigungssignalen. Dadurch können Roll und Pitch langfristig stabilisiert werden, während der Yaw-Winkel ohne externe Referenz grundsätzlich driftbehaftet bleibt.
 \\
 Eine robuste Orientierungsbestimmung ist mit einem einzelnen Sensor nicht zuverlässig möglich, da die Messgrößen jeweils systematische Einschränkungen besitzen. Das Gyroskop misst die Winkelgeschwindigkeit und erlaubt eine hochdynamische Fortschreibung der Orientierung. Die Messung ist jedoch durch Rauschen beeinflusst und weist typischerweise einen Bias auf. 
@@ -359,3 +425,7 @@ beschreiben. Dabei bezeichnet \(\hat{\theta}_k\) den geschätzten Winkel zum Zei
 % \label{sec:cnns-pooling}
 
 % Pooling fasst lokale Nachbarschaften zusammen und reduziert die räumliche Auflösung. Dadurch sinkt der Rechenaufwand und die Darstellung wird unempfindlicher gegenüber kleinen Verschiebungen. Am Ende des Merkmalsextraktors wird häufig ein \emph{Global Average Pooling} eingesetzt. Die Gleichung ~\eqref{eq:gap} mittelt für jeden Kanal \(c\) alle Werte \(y_{i,j,c}\) über Höhe \(H\) und Breite \(W\) zu einem einzigen Skalar \(z_c\). Die so entstehende Vektordarstellung ist kompakt, senkt die Parameterzahl des Ausgabekopfes und eignet sich für Klassifikation und Regression. Andere Pooling-Varianten wie Max- oder lokales Average-Pooling können in früheren Stufen eingesetzt werden, ohne die in Gleichung ~\eqref{eq:gap} definierte globale Verdichtung am Ende zu ersetzen. Das Max-Pooling behält pro lokalem Fenster den größten Wert und hebt starke Aktivierungen hervor und das Min-Pooling behält den kleinsten Wert und betont schwache Antworten oder dunkle Strukturen. Beide Varianten reduzieren die Zahl der Werte und wirken als nichtlineare Verdichtung.
+=======
+"Lorem ipsum"
+\newpage
+>>>>>>> origin/main

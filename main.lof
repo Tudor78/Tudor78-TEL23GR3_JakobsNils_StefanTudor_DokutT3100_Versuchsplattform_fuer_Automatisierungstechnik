@@ -1,3 +1,8 @@
 \babel@toc {ngerman}{}\relax 
+<<<<<<< HEAD
 \contentsline {figure}{\numberline {1}{\ignorespaces Schematische Darstellung der Euler-Winkel}}{4}{figure.17}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Blockdiagramm zur Veranschaulichung der Funktionsweise eines Komplementärfilter}}{10}{figure.33}%
+=======
+\contentsline {figure}{\numberline {1}{\ignorespaces V-Modell zur Einordnung von Rapid Control Prototyping}}{4}{figure.13}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Zentraler Workflow der modellbasierten Entwicklung}}{5}{figure.15}%
+>>>>>>> origin/main

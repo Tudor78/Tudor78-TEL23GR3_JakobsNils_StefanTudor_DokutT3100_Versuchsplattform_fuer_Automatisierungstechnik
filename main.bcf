@@ -2372,6 +2372,7 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">HoyosGutierrez2023RCPReview</bcf:citekey>
+<<<<<<< HEAD
     <bcf:citekey order="2" intorder="1">ResearchGate</bcf:citekey>
     <bcf:citekey order="3" intorder="1">ResearchGate</bcf:citekey>
     <bcf:citekey order="4" intorder="1">KIT</bcf:citekey>
@@ -2383,6 +2384,20 @@
     <bcf:citekey order="10" intorder="1">Komplementärfilter</bcf:citekey>
     <bcf:citekey order="11" intorder="1">Komplementärfilter</bcf:citekey>
     <bcf:citekey order="12" intorder="1">Komplementärfilter</bcf:citekey>
+=======
+    <bcf:citekey order="2" intorder="1">HoyosGutierrez2023RCPReview</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">HoyosGutierrez2023RCPReview</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">HoyosGutierrez2023RCPReview</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">HoyosGutierrez2023RCPReview</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">HoyosGutierrez2023RCPReview</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Werth2020LowCostRCP</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">Fang2009LowCostDSPRCP</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Aarenstrup2025ManagingMBD</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Aarenstrup2025ManagingMBD</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Aarenstrup2025ManagingMBD</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Groves2015InertialSensorsTutorial</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Groves2015InertialSensorsTutorial</bcf:citekey>
+>>>>>>> origin/main
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
