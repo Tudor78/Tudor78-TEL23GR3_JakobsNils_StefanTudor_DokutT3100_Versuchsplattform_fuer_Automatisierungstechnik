@@ -1,22 +1,4 @@
 \babel@toc {ngerman}{}\relax 
-<<<<<<< HEAD
-\contentsline {chapter}{Abkürzungsverzeichnis}{V}{chapter*.5}%
-\contentsline {chapter}{Abbildungsverzeichnis}{VI}{section*.6}%
-\contentsline {chapter}{Tabellenverzeichnis}{VII}{section*.7}%
-\contentsline {chapter}{Quellcodeverzeichnis}{VIII}{chapter*.8}%
-\contentsline {chapter}{\numberline {1}Einführung}{1}{chapter.9}%
-\contentsline {section}{\numberline {1.1}Zielsetzung}{1}{section.10}%
-\contentsline {section}{\numberline {1.2}Vorgehensweise}{1}{section.11}%
-\contentsline {section}{\numberline {1.3}Anwendungsszenario Lageschätzung}{2}{section.12}%
-\contentsline {chapter}{\numberline {2}Grundlagen und Stand der Technik}{3}{chapter.13}%
-\contentsline {section}{\numberline {2.1}Rapid Control Prototyping}{3}{section.14}%
-\contentsline {section}{\numberline {2.2}MBD mit Matlab/Simulink}{3}{section.15}%
-\contentsline {section}{\numberline {2.3}Quaternionen und Euler-Winkel}{4}{section.16}%
-\contentsline {section}{\numberline {2.4}Lageschätzung mittels Sensorfusion}{7}{section.25}%
-\contentsline {subsection}{\numberline {2.4.1}Erweitertes Kalmanfilter}{8}{subsection.26}%
-\contentsline {subsection}{\numberline {2.4.2}Komplementärfilter}{10}{subsection.32}%
-\contentsline {chapter}{Literaturverzeichnis}{12}{section*.35}%
-=======
 \contentsline {chapter}{Abkürzungsverzeichnis}{IV}{chapter*.4}%
 \contentsline {chapter}{Abbildungsverzeichnis}{V}{section*.5}%
 \contentsline {chapter}{Tabellenverzeichnis}{VI}{section*.6}%
@@ -29,6 +11,7 @@
 \contentsline {section}{\numberline {2.2}Modellbasierte Entwicklung mit Matlab/Simulink}{5}{section.14}%
 \contentsline {section}{\numberline {2.3}Inertialmesseinheit}{7}{section.16}%
 \contentsline {section}{\numberline {2.4}Quaternionen und Euler-Winkel}{9}{section.17}%
-\contentsline {section}{\numberline {2.5}Lageschätzung mittels Sensorfusion}{10}{section.18}%
-\contentsline {chapter}{Literaturverzeichnis}{11}{section*.19}%
->>>>>>> origin/main
+\contentsline {section}{\numberline {2.5}Lageschätzung mittels Sensorfusion}{12}{section.26}%
+\contentsline {subsection}{\numberline {2.5.1}Erweitertes Kalmanfilter}{13}{subsection.27}%
+\contentsline {subsection}{\numberline {2.5.2}Komplementärfilter}{15}{subsection.33}%
+\contentsline {chapter}{Literaturverzeichnis}{17}{section*.36}%

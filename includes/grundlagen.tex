@@ -1,22 +1,11 @@
 
 \chapter{Grundlagen und Stand der Technik}
-<<<<<<< HEAD
-=======
 \label{chap:grundlagen und stand der technik}
 Für die vorliegende Arbeit sind Kenntnisse in den Bereichen Rapid Control Prototyping, modellbasierte Entwicklung mit Matlab und Simulink, Inertialsensorik sowie Lageschätzung mittels Sensorfusion erforderlich, weshalb in den folgenden Kapiteln die hierfür relevanten Grundlagen und der Stand der Technik dargestellt werden.
->>>>>>> origin/main
 
 
 \section{Rapid Control Prototyping}
 \label{sec:Rapid Control Prototyping}
-<<<<<<< HEAD
-"Tudor"
-\section{MBD mit Matlab/Simulink}
-\label{sec:MBD mit Matlab/Simulink}
-"Tudor"
-
-
-=======
 Rapid Control Prototyping bezeichnet einen Ansatz zur schnellen Entwicklung und Erprobung von Regelungsstrategien an Anwendungen oder Laboraufbauten. Charakteristisch ist, dass der Entwurf nicht primär durch eine manuelle Implementierung in textbasierten Programmiersprachen erfolgt, sondern durch die Modellierung als grafisches Blockdiagramm, das anschließend auf eine Zielplattform übertragen wird. Ziel ist es, den Übergang vom Entwurf zur lauffähigen Implementierung zu verkürzen, indem aus dem grafischen Modell automatisch ausführbarer Code erzeugt und auf der Zielhardware ausgeführt wird. Dadurch werden kurze Iterationszyklen unterstützt, weil Entwurf, Test und Parametrierung in engem Zusammenhang durchgeführt werden können \parencite{HoyosGutierrez2023RCPReview}.
 
 Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielhardware und Entwicklungssoftware verstanden. Die Zielhardware umfasst eine Recheneinheit mit Speicher sowie Ein und Ausgängen und kann je nach Anwendung als \ac{PC}, Mikrocontroller oder programmierbare Logik realisiert sein. Die Entwicklungssoftware stellt eine grafische Modellierungsumgebung bereit, in der der Regelalgorithmus als Blockdiagramm beschrieben wird und aus der anschließend ausführbarer Code für die Zielplattform generiert wird \parencite{HoyosGutierrez2023RCPReview}.
@@ -70,13 +59,11 @@ Die Einsatzgebiete von \acp{IMU} ergeben sich aus der Fähigkeit, Bewegungen una
 Die \ac{IMU} stellt damit die grundlegenden Messgrößen für nachgelagerte Schätz und Regelalgorithmen bereit. Aus den Drehraten können Orientierungsänderungen abgeleitet werden, während die spezifische Kraft als Referenzinformation genutzt werden kann, wenn die Gravitation als dominanter Anteil vorliegt. Für eine robuste Lageschätzung wird die \ac{IMU} in der Regel nicht isoliert betrachtet, sondern als Sensormodul, dessen Messwerte mit geeigneten Algorithmen weiterverarbeitet und mit Modellannahmen oder weiteren Sensoren kombiniert werden, um die Auswirkungen von Rauschen und Drift zu begrenzen.
 
 Eine solche \ac{IMU} soll in dieser Projektarbeit zunächst als Simulationsmodell abgebildet und untersucht werden und, sofern erforderlich, zusätzlich als reale Hardwarekomponente im Rahmen des Rapid Control Prototyping in die Versuchsplattform integriert werden.
->>>>>>> origin/main
 
 
 \newpage
 \section{Quaternionen und Euler-Winkel}
 \label{sec:Quaternionen und Euler-Winkel}
-<<<<<<< HEAD
 % Für die Lageschätzung einer IMU ist eine Orientierungsdarstellung erforderlich, da die Lage der IMU aus den Messgrößen des Gyroskops, Beschleunigungssensors geschätzt und anschließend bewertet werden soll. Für die Umsetzung der Filteralgorithmen wird eine mathematische Beschreibung der Rotation benötigt.  
 
 Quaternionen und Euler-Winkel sind mathematische Darstellungen, um Rotationen im dreidimensionalen Raum zu beschreiben. Solche Rotationsbeschreibungen werden unter anderem in der Lageschätzung von Inertialmesseinheiten (IMU) benötigt, um die Orientierung aus Sensormessgrössen zu modellieren und zu bewerten.
@@ -162,14 +149,10 @@ Im Folgenden werden die resultierenden Ausdrücke direkt angegeben; eine vollst�
 
 
 
-=======
-"Lorem ipsum" 
->>>>>>> origin/main
 
 \newpage
 \section{Lageschätzung mittels Sensorfusion}
 \label{sec:Lageschätzung mittels Sensorfusion}
-<<<<<<< HEAD
 Sensorfusion bezeichnet die Kombination von Messdaten mehrerer Sensoren, um die Qualität der Zustandsinformation zu erhöhen. Durch die Nutzung komplementärer Sensoreigenschaften lassen sich Unsicherheiten reduzieren und konsistente Schätzwerte gewinnen. \textbf{ In dieser Arbeit steht die Orientierungsschätzung (Attitude) einer IMU im Vordergrund}. Da kein Magnetometer eingesetzt wird, basiert die Schätzung auf Gyroskop- und Beschleunigungssignalen. Dadurch können Roll und Pitch langfristig stabilisiert werden, während der Yaw-Winkel ohne externe Referenz grundsätzlich driftbehaftet bleibt.
 \\
 Eine robuste Orientierungsbestimmung ist mit einem einzelnen Sensor nicht zuverlässig möglich, da die Messgrößen jeweils systematische Einschränkungen besitzen. Das Gyroskop misst die Winkelgeschwindigkeit und erlaubt eine hochdynamische Fortschreibung der Orientierung. Die Messung ist jedoch durch Rauschen beeinflusst und weist typischerweise einen Bias auf. 
@@ -425,7 +408,3 @@ beschreiben. Dabei bezeichnet \(\hat{\theta}_k\) den geschätzten Winkel zum Zei
 % \label{sec:cnns-pooling}
 
 % Pooling fasst lokale Nachbarschaften zusammen und reduziert die räumliche Auflösung. Dadurch sinkt der Rechenaufwand und die Darstellung wird unempfindlicher gegenüber kleinen Verschiebungen. Am Ende des Merkmalsextraktors wird häufig ein \emph{Global Average Pooling} eingesetzt. Die Gleichung ~\eqref{eq:gap} mittelt für jeden Kanal \(c\) alle Werte \(y_{i,j,c}\) über Höhe \(H\) und Breite \(W\) zu einem einzigen Skalar \(z_c\). Die so entstehende Vektordarstellung ist kompakt, senkt die Parameterzahl des Ausgabekopfes und eignet sich für Klassifikation und Regression. Andere Pooling-Varianten wie Max- oder lokales Average-Pooling können in früheren Stufen eingesetzt werden, ohne die in Gleichung ~\eqref{eq:gap} definierte globale Verdichtung am Ende zu ersetzen. Das Max-Pooling behält pro lokalem Fenster den größten Wert und hebt starke Aktivierungen hervor und das Min-Pooling behält den kleinsten Wert und betont schwache Antworten oder dunkle Strukturen. Beide Varianten reduzieren die Zahl der Werte und wirken als nichtlineare Verdichtung.
-=======
-"Lorem ipsum"
-\newpage
->>>>>>> origin/main

@@ -1,36 +1,20 @@
-<<<<<<< HEAD
-[0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'main.blg'
-[105] biber-MSWIN64:340> INFO - === 
-[148] Biber.pm:420> INFO - Reading 'main.bcf'
-[240] Biber.pm:994> INFO - Found 9 citekeys in bib section 0
-[251] Biber.pm:4463> INFO - Processing section 0
-[263] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[322] bibtex.pm:1713> INFO - LaTeX decoding ...
-[334] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[405] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[405] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[414] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[420] bbl.pm:779> INFO - Output to main.bbl
-[421] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\JIK2FE\AppData\Local\Temp\biber_tmp_lKa5\e672c201c8e0f1acfb439ecdc2413f6e_1268.utf8, line 40, warning: undefined macro "july"
-[421] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\JIK2FE\AppData\Local\Temp\biber_tmp_lKa5\e672c201c8e0f1acfb439ecdc2413f6e_1268.utf8, line 73, warning: undefined macro "oktober"
-[421] Biber.pm:133> INFO - WARNINGS: 2
-=======
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[165] biber-MSWIN64:342> INFO - === 
-[235] Biber.pm:421> INFO - Reading 'main.bcf'
-[352] Biber.pm:1002> INFO - Found 5 citekeys in bib section 0
-[363] Biber.pm:4487> INFO - Processing section 0
-[373] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[448] bibtex.pm:1713> INFO - LaTeX decoding ...
-[494] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[587] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[588] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[588] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[588] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[600] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[606] bbl.pm:779> INFO - Output to main.bbl
->>>>>>> origin/main
+[117] biber-MSWIN64:342> INFO - === 
+[179] Biber.pm:421> INFO - Reading 'main.bcf'
+[291] Biber.pm:1002> INFO - Found 13 citekeys in bib section 0
+[303] Biber.pm:4487> INFO - Processing section 0
+[313] Biber.pm:4678> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
+[428] bibtex.pm:1713> INFO - LaTeX decoding ...
+[491] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[613] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[613] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[613] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[613] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[774] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[780] bbl.pm:779> INFO - Output to main.bbl
+[780] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\lupsatu\AppData\Local\Temp\biber_tmp_cMXe\e672c201c8e0f1acfb439ecdc2413f6e_9160.utf8, line 56, warning: undefined macro "july"
+[780] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\lupsatu\AppData\Local\Temp\biber_tmp_cMXe\e672c201c8e0f1acfb439ecdc2413f6e_9160.utf8, line 89, warning: undefined macro "oktober"
+[780] Biber.pm:132> WARN - I didn't find a database entry for 'ResearchGate' (section 0)
+[780] Biber.pm:132> WARN - I didn't find a database entry for 'KIT' (section 0)
+[780] Biber.pm:134> INFO - WARNINGS: 4

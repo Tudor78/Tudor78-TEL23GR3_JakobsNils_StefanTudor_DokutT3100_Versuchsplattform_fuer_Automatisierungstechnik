@@ -19,7 +19,52 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-<<<<<<< HEAD
+    \entry{Aarenstrup2025ManagingMBD}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f17ca0aad6a19c33022ae017e7d19386}{%
+           family={Aarenstrup},
+           familyi={A\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Natick, MA}%
+      }
+      \list{publisher}{1}{%
+        {The MathWorks, Inc.}%
+      }
+      \strng{namehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{fullhash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{fullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{bibnamehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authorbibnamehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authornamehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authorfullhash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authorfullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1512036138}
+      \field{langid}{english}
+      \field{note}{E-Book PDF, ISBN-10: 1512036137, Copyright 2015--2025 The MathWorks, Inc.}
+      \field{title}{Managing Model-Based Design}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/content/dam/mathworks/ebook/managing-model-based-design-2025.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/content/dam/mathworks/ebook/managing-model-based-design-2025.pdf
+      \endverb
+    \endentry
     \entry{Schlussbericht}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=739ced337aad63aeaef44510e3b390a5}{%
@@ -84,38 +129,10 @@
       \strng{authorfullhashraw}{4d20f0c0cb583117558cdb16b3faa730}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-=======
-    \entry{Aarenstrup2025ManagingMBD}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f17ca0aad6a19c33022ae017e7d19386}{%
-           family={Aarenstrup},
-           familyi={A\bibinitperiod},
-           given={Roger},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Natick, MA}%
-      }
-      \list{publisher}{1}{%
-        {The MathWorks, Inc.}%
-      }
-      \strng{namehash}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{fullhash}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{fullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{bibnamehash}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{authorbibnamehash}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{authornamehash}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{authorfullhash}{f17ca0aad6a19c33022ae017e7d19386}
-      \strng{authorfullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
->>>>>>> origin/main
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-<<<<<<< HEAD
       \field{langid}{english}
       \field{month}{10}
       \field{title}{Representing Attitude: Euler Angles, Unit Quaternions, and Rotation Vectors}
@@ -130,43 +147,6 @@
       \endverb
       \verb{url}
       \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
-      \endverb
-    \endentry
-    \entry{Komplementärfilter}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=f2ff85c5515bed2d5ce4903dc8b42948}{%
-           family={Gui},
-           familyi={G\bibinitperiod},
-           given={Pengfei},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7e9b1514f09792d4186341527073bc25}{%
-           family={Tang},
-           familyi={T\bibinitperiod},
-           given={Liqiong},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7f60c90951c49f0b9d059d85c775e187}{%
-           family={Mukhopadhyay},
-           familyi={M\bibinitperiod},
-           given={Subhas\bibnamedelima C.},
-           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
-=======
-      \field{isbn}{978-1512036138}
-      \field{langid}{english}
-      \field{note}{E-Book PDF, ISBN-10: 1512036137, Copyright 2015--2025 The MathWorks, Inc.}
-      \field{title}{Managing Model-Based Design}
-      \field{urlday}{13}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.mathworks.com/content/dam/mathworks/ebook/managing-model-based-design-2025.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.mathworks.com/content/dam/mathworks/ebook/managing-model-based-design-2025.pdf
       \endverb
     \endentry
     \entry{Fang2009LowCostDSPRCP}{inproceedings}{}{}
@@ -194,22 +174,11 @@
            familyi={C\bibinitperiod},
            given={Tianyou},
            giveni={T\bibinitperiod},
->>>>>>> origin/main
            givenun=0}}%
       }
       \list{publisher}{1}{%
         {IEEE}%
       }
-<<<<<<< HEAD
-      \strng{namehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{fullhash}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{fullhashraw}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{bibnamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{authorbibnamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{authornamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{authorfullhash}{a08f13f0bb8c2e18f7388a46df1e4c07}
-      \strng{authorfullhashraw}{a08f13f0bb8c2e18f7388a46df1e4c07}
-=======
       \strng{namehash}{28eae54ce5fb721cc0966e260d3d615b}
       \strng{fullhash}{7dab0788de8a3acd4543cc44e0b1a422}
       \strng{fullhashraw}{7dab0788de8a3acd4543cc44e0b1a422}
@@ -265,28 +234,77 @@
       \strng{authornamehash}{3393e4433194d61b91167d137548c370}
       \strng{authorfullhash}{3393e4433194d61b91167d137548c370}
       \strng{authorfullhashraw}{3393e4433194d61b91167d137548c370}
->>>>>>> origin/main
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-<<<<<<< HEAD
-      \field{booktitle}{Proceedings of the 2015 10th IEEE Conference on Industrial Electronics and Applications (ICIEA 2015)}
-      \field{title}{MEMS based IMU for tilting measurement: Comparison of complementary and kalman filter based data fusion}
-=======
       \field{journaltitle}{IEEE Aerospace and Electronic Systems Magazine}
       \field{langid}{english}
       \field{month}{2}
       \field{note}{Tutorial, Part II of II}
       \field{title}{Navigation Using Inertial Sensors}
->>>>>>> origin/main
       \field{urlday}{13}
       \field{urlmonth}{1}
       \field{urlyear}{2026}
       \field{year}{2015}
-<<<<<<< HEAD
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/MAES.2014.130191
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/MAES.2014.130191
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/MAES.2014.130191
+      \endverb
+    \endentry
+    \entry{Komplementärfilter}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f2ff85c5515bed2d5ce4903dc8b42948}{%
+           family={Gui},
+           familyi={G\bibinitperiod},
+           given={Pengfei},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e9b1514f09792d4186341527073bc25}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Liqiong},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f60c90951c49f0b9d059d85c775e187}{%
+           family={Mukhopadhyay},
+           familyi={M\bibinitperiod},
+           given={Subhas\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{fullhash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{fullhashraw}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{bibnamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authorbibnamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authornamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authorfullhash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authorfullhashraw}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2015 10th IEEE Conference on Industrial Electronics and Applications (ICIEA 2015)}
+      \field{title}{MEMS based IMU for tilting measurement: Comparison of complementary and kalman filter based data fusion}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2015}
       \field{urldateera}{ce}
       \field{pages}{2004\bibrangedash 2009}
       \range{pages}{6}
@@ -298,18 +316,6 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/7334442
-=======
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1109/MAES.2014.130191
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1109/MAES.2014.130191
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1109/MAES.2014.130191
->>>>>>> origin/main
       \endverb
     \endentry
     \entry{HoyosGutierrez2023RCPReview}{article}{}{}
@@ -375,72 +381,6 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/10056232
-      \endverb
-    \endentry
-    \entry{Werth2020LowCostRCP}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=29457f29894469a5195c76a430a4d2fd}{%
-           family={Werth},
-           familyi={W\bibinitperiod},
-           given={Wolfgang},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9056eee0ef4c32b24e9bacf0961046f7}{%
-           family={Faller},
-           familyi={F\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f6b85b9b78856ebe449ef4a150b9c0b6}{%
-           family={Liechtenecker},
-           familyi={L\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e39699444226b76c01f725c33f59c241}{%
-           family={Ungermanns},
-           familyi={U\bibinitperiod},
-           given={Christoph},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{82b932ea9560d0118ee0694c20344e13}
-      \strng{fullhash}{d841b9462e518891ebcb59ad933c9835}
-      \strng{fullhashraw}{d841b9462e518891ebcb59ad933c9835}
-      \strng{bibnamehash}{d841b9462e518891ebcb59ad933c9835}
-      \strng{authorbibnamehash}{d841b9462e518891ebcb59ad933c9835}
-      \strng{authornamehash}{82b932ea9560d0118ee0694c20344e13}
-      \strng{authorfullhash}{d841b9462e518891ebcb59ad933c9835}
-      \strng{authorfullhashraw}{d841b9462e518891ebcb59ad933c9835}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{2020 43rd International Convention on Information, Communication and Electronic Technology (MIPRO)}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{note}{In den Arbeitsunterlagen als PDF vorhanden}
-      \field{title}{Low Cost Rapid Control Prototyping a useful method in Control Engineering Education}
-      \field{urlday}{12}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.23919/MIPRO48935.2020.9245122
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
-      \endverb
-      \verb{url}
-<<<<<<< HEAD
-      \verb https://www.researchgate.net/figure/Euler-Angles-Yaw-Pitch-and-Roll_fig2_342145524
       \endverb
     \endentry
     \entry{EKF}{article}{}{}
@@ -523,41 +463,6 @@
       \verb http://hdl.handle.net/20.500.12738/8460
       \endverb
     \endentry
-    \entry{KIT}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=42247643d9461e6059d611c47b8cf8b4}{%
-           family={{Tamim Asfour}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{fullhash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{fullhashraw}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{bibnamehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authorbibnamehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authornamehash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authorfullhash}{42247643d9461e6059d611c47b8cf8b4}
-      \strng{authorfullhashraw}{42247643d9461e6059d611c47b8cf8b4}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Robotik U: Einführung in die Robotik}
-      \field{urlday}{10}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
-      \endverb
-      \verb{url}
-      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
-=======
-      \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
->>>>>>> origin/main
-      \endverb
-    \endentry
     \entry{vonRosenberg2006}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6a6ae377ab50af3843805513c5876810}{%
@@ -604,7 +509,74 @@
       \verb https://www.vrosenberg.de/download/Diplomarbeit%20Harald%20von%20Rosenberg%20%28public%20version%29.pdf
       \endverb
     \endentry
+    \entry{Werth2020LowCostRCP}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=29457f29894469a5195c76a430a4d2fd}{%
+           family={Werth},
+           familyi={W\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9056eee0ef4c32b24e9bacf0961046f7}{%
+           family={Faller},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6b85b9b78856ebe449ef4a150b9c0b6}{%
+           family={Liechtenecker},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e39699444226b76c01f725c33f59c241}{%
+           family={Ungermanns},
+           familyi={U\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{82b932ea9560d0118ee0694c20344e13}
+      \strng{fullhash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{fullhashraw}{d841b9462e518891ebcb59ad933c9835}
+      \strng{bibnamehash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{authorbibnamehash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{authornamehash}{82b932ea9560d0118ee0694c20344e13}
+      \strng{authorfullhash}{d841b9462e518891ebcb59ad933c9835}
+      \strng{authorfullhashraw}{d841b9462e518891ebcb59ad933c9835}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2020 43rd International Convention on Information, Communication and Electronic Technology (MIPRO)}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{note}{In den Arbeitsunterlagen als PDF vorhanden}
+      \field{title}{Low Cost Rapid Control Prototyping a useful method in Control Engineering Education}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.23919/MIPRO48935.2020.9245122
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
+      \endverb
+    \endentry
   \enddatalist
+  \missing{KIT}
+  \missing{ResearchGate}
 \endrefsection
 \endinput
 
