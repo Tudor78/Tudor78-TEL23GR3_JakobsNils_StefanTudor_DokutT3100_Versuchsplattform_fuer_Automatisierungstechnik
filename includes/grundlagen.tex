@@ -5,14 +5,56 @@ Für die vorliegende Arbeit sind Kenntnisse in den Bereichen Rapid Control Proto
 
 \section{Rapid Control Prototyping}
 \label{sec:Rapid Control Prototyping}
-Rapid Control Prototyping bezeichnet einen Ansatz zur schnellen Entwicklung und Erprobung von Regelungsstrategien an Anwendungen oder Laboraufbauten. Charakteristisch ist, dass der Entwurf nicht primär durch eine manuelle Implementierung in textbasierten Programmiersprachen erfolgt, sondern durch die Modellierung als grafisches Blockdiagramm, das anschließend auf eine Zielplattform übertragen wird. Die grundlegende Zielrichtung von RCP besteht darin, auf eine manuelle Programmierung in textbasierten Sprachen zu verzichten und stattdessen ein grafisches Modell zu erstellen, aus dem die Entwicklungsplattform direkt programmiert wird. RCP unterstützt damit kurze Iterationszyklen, da Entwurf, Test und Parametrierung in engem Zusammenhang durchgeführt werden können \parencite{HoyosGutierrez2023RCPReview}.
+Rapid Control Prototyping bezeichnet einen Ansatz zur schnellen Entwicklung und Erprobung von Regelungsstrategien an Anwendungen oder Laboraufbauten. Charakteristisch ist, dass der Entwurf nicht primär durch eine manuelle Implementierung in textbasierten Programmiersprachen erfolgt, sondern durch die Modellierung als grafisches Blockdiagramm, das anschließend auf eine Zielplattform übertragen wird. Ziel ist es, den Übergang vom Entwurf zur lauffähigen Implementierung zu verkürzen, indem aus dem grafischen Modell automatisch ausführbarer Code erzeugt und auf der Zielhardware ausgeführt wird. Dadurch werden kurze Iterationszyklen unterstützt, weil Entwurf, Test und Parametrierung in engem Zusammenhang durchgeführt werden können \parencite{HoyosGutierrez2023RCPReview}.
 
-Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielhardware und Entwicklungssoftware verstanden. Die Zielhardware umfasst eine Recheneinheit mit Speicher sowie Ein und Ausgängen und kann je nach Anwendung als PC, Mikrocontroller, DSP oder programmierbare Logik realisiert sein. Die Software stellt eine grafische Modellierungsumgebung bereit, in der der Regelalgorithmus als Blockdiagramm beschrieben wird und aus der anschließend ausführbarer Code für die Zielplattform generiert wird \parencite{HoyosGutierrez2023RCPReview}. In vielen Anwendungen bildet Matlab in Verbindung mit Simulink die zentrale Entwicklungsumgebung, da der Reglerentwurf, die Simulation und die Implementierung über einen konsistenten Modellkern verbunden werden können \parencite{Werth2020LowCostRCP,Fang2009LowCostDSPRCP}. Die genaue Funktionsweise der Modellbasierten Entwicklung mit Matlab und Simulink wird in Abschnitt ~\ref{sec:Modellbasierte Entwicklung mit Matlab/Simulink} erläutert.
+Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielhardware und Entwicklungssoftware verstanden. Die Zielhardware umfasst eine Recheneinheit mit Speicher sowie Ein und Ausgängen und kann je nach Anwendung als \ac{PC}, Mikrocontroller oder programmierbare Logik realisiert sein. Die Entwicklungssoftware stellt eine grafische Modellierungsumgebung bereit, in der der Regelalgorithmus als Blockdiagramm beschrieben wird und aus der anschließend ausführbarer Code für die Zielplattform generiert wird \parencite{HoyosGutierrez2023RCPReview}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\linewidth]{V-Modell_RCP.png}
+  \caption[V-Modell zur Einordnung von Rapid Control Prototyping]{V-Modell zur Einordnung des Rapid Control Prototyping \parencite{HoyosGutierrez2023RCPReview}.}
+  \label{fig:V-Modell_RCP}
+\end{figure}
+
+Die Abbildung ~\ref{fig:V-Modell_RCP} ordnet den Einsatz von RCP in einen V Modellentwicklungsprozess ein. Die linke Seite beschreibt die Schritte von \emph{Design, Modelling and Simulation} bis zur \emph{Validation with RCP}. In dieser Phase wird der Reglerentwurf im Modell erstellt, simulativ bewertet und für die Ausführung vorbereitet. Der Übergang zur Zielplattform erfolgt im Schritt \emph{Target Code on Hardware}, bei dem der aus dem Modell abgeleitete Code auf der Hardware ausgeführt wird. Die rechte Seite des V Modells umfasst die Schritte \emph{Verification with SIL or HIL} sowie \emph{Integration and Test}. Dabei werden Implementierung und Systemverhalten anhand geeigneter Testumgebungen geprüft, wobei SIL und HIL als etablierte Testformen zur schrittweisen Absicherung dienen. Die in der Abbildung markierte Verifikationsphase adressiert die Frage, ob die Implementierung die spezifizierten Anforderungen korrekt erfüllt. Die Validierungsphase adressiert die Frage, ob die Lösung im Anwendungskontext den beabsichtigten Nutzen liefert und die vorgesehenen Funktionen in der Zielumgebung erfüllt. RCP unterstützt diesen Ablauf, indem Modell, Simulation und Ausführung auf der Zielhardware eng gekoppelt sind und Anpassungen am Entwurf zeitnah am realen System überprüft werden können \parencite{HoyosGutierrez2023RCPReview}.
+
+In vielen Anwendungen bildet Matlab in Verbindung mit Simulink die zentrale Entwicklungsumgebung, da Reglerentwurf, Simulation und Implementierung über einen konsistenten Modellkern verbunden werden können \parencite{Werth2020LowCostRCP,Fang2009LowCostDSPRCP}. Die Funktionsweise der modellbasierten Entwicklung mit Matlab und Simulink wird in Abschnitt~\ref{sec:Modellbasierte Entwicklung mit Matlab/Simulink} erläutert.
 \newpage
 
 \section{Modellbasierte Entwicklung mit Matlab/Simulink}
 \label{sec:Modellbasierte Entwicklung mit Matlab/Simulink}
-"Lorem ipsum"
+Bei der modellbasierten Entwicklung in Matlab und Simulink steht ein ausführbares Systemmodell im Mittelpunkt des Engineeringprozesses. Anstatt frühzeitig eine reine Softwareimplementierung zu erstellen, wird das Systemverhalten zunächst durch Modelle beschrieben, die sowohl für Analysen als auch für Simulationen genutzt werden. Matlab wird dabei vor allem für Berechnungen, Auswertungen, Parametrierungen und Visualisierungen eingesetzt. Simulink ergänzt dies durch eine grafische Blockdiagrammumgebung, mit der dynamische Systeme strukturiert aufgebaut und simuliert werden können. Für physikalische Teilbereiche wie mechanische oder elektrische Komponenten lässt sich Simscape verwenden, um domänenübergreifende Modelle konsistent in einem gemeinsamen Rahmen zu formulieren.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\linewidth]{Workflow_MBD.png}
+  \caption[Zentraler Workflow der modellbasierten Entwicklung]{Zentraler Workflow der modellbasierten Entwicklung\parencite{Aarenstrup2025ManagingMBD}.}
+  \label{fig:workflow-mbd}
+\end{figure}
+
+Die Abbildung~\ref{fig:workflow-mbd} veranschaulicht den Grundgedanken der modellbasierten Entwicklung, bei der ein ausführbares Modell als zentrales Entwicklungsartefakt den gesamten Engineeringprozess strukturiert \parencite{Aarenstrup2025ManagingMBD}. Im Mittelpunkt steht das \emph{Model}, in dem sowohl die Anforderungen (\emph{Requirements}) als auch Ergebnisse aus Voruntersuchungen und Domänenwissen (\emph{Research}) zusammengeführt werden. Das Modell dient als gemeinsame Grundlage, aus der sich das Systemverhalten, die Schnittstellen und wichtige Entwurfsentscheidungen ableiten lassen, ohne dass zu Beginn bereits eine separate Implementierung als Textcode im Fokus steht. Simulink unterstützt dies durch die grafische Modellierung dynamischer Systeme als Blockdiagramm, während Matlab für Berechnungen, Auswertungen, Parametrierungen und Visualisierungen genutzt wird. Für physikalische Teilmodelle kann Simscape eingesetzt werden, um mechanische, elektrische oder andere Domänen im gleichen Modell abzubilden.
+
+Die in der Abbildung umlaufenden Rückkopplungen verdeutlichen, dass die Modellentwicklung nicht linear erfolgt, sondern iterativ organisiert ist. Der Zyklus \emph{Modeling and simulation} steht für das wiederholte Aufbauen und Simulieren des Systems, um das zeitliche Verhalten zu analysieren und zentrale Eigenschaften wie Stabilität und Regelgüte unter variierenden Betriebsbedingungen zu bewerten. Die dabei gewonnenen Ergebnisse fließen in die Modellanpassung und Parametrierung zurück, wodurch die Modellgüte schrittweise erhöht wird. Matlab wird in dieser Phase insbesondere zur systematischen Auswertung von Simulationsergebnissen eingesetzt, etwa für Parameterstudien, Kennwertberechnungen und die grafische Darstellung relevanter Signale.
+
+Der Kreis \emph{Rapid prototyping} beschreibt den frühen Übergang vom Modell zur lauffähigen Ausführung, um Entwurfsentscheidungen unter realitätsnäheren Randbedingungen zu prüfen. Ein zentraler Baustein ist hierbei die Codegenerierung aus dem Simulink Modell, durch die automatisch ausführbarer Code erzeugt wird, der auf Zielhardware wie einem Mikrocontroller, \ac{DSP} oder \ac{FPGA} eingesetzt werden kann. Die Abbildung verdeutlicht damit, dass Implementierungsergebnisse nicht als unabhängige Parallelentwicklung entstehen, sondern als abgeleitete Artefakte aus dem zentralen Modell, wodurch die Konsistenz zwischen Entwurf und Ausführung erhöht wird.
+
+Der dritte Kreis \emph{Continuous test and verification} betont, dass Verifikation und Tests fortlaufend in den Entwicklungsprozess integriert sind. In diesem Kontext werden gestufte Testmethoden eingesetzt, um die Anforderungen systematisch abzusichern. Bei \ac{SIL} wird das Regelungssystem gemeinsam mit der Strecke in einer simulierten Umgebung ausgeführt, während bei \ac{HIL} eine reale Steuerungshardware mit einem in Echtzeit berechneten Streckenmodell gekoppelt wird. Diese Vorgehensweisen ermöglichen eine frühe Prüfung gegen Anforderungen und unterstützen die Identifikation von Abweichungen, bevor ein vollständiger Versuchsaufbau oder ein finales Gesamtsystem vorliegt.
+
+Der nach unten gerichtete Pfeil \emph{Generation of outputs} fasst zusammen, welche Ergebnisse aus dem Modell abgeleitet werden. Dazu zählen insbesondere Produktionscode, Berichte sowie Nachweisartefakte für eine spätere Dokumentation und gegebenenfalls Zertifizierung. Abbildung~\ref{fig:workflow-mbd} macht damit deutlich, dass modellbasierte Entwicklung in Matlab und Simulink nicht nur die Simulation unterstützt, sondern einen durchgängigen Ablauf von der Anforderungsableitung über die iterative Modellentwicklung bis zur Implementierung und Absicherung bereitstellt. Für die vorliegende Arbeit ist dieser Ansatz zentral, da die Versuchsplattform und die Algorithmen in einer einheitlichen Modellbasis entwickelt, prototypisch auf Zielhardware ausgeführt und anschließend experimentell validiert werden.
+
+
+\section{Inertialsensorik}
+\label{sec:Inertialsensorik}
+Eine Inertialmesseinheit (\ac{IMU}) ist ein Sensorsystem zur Erfassung von Bewegungen eines Körpers im Raum. Sie kombiniert Beschleunigungssensoren, die die spezifische Kraft messen, mit Drehratensensoren, die die Winkelgeschwindigkeit erfassen. Üblich ist eine Ausführung mit jeweils drei Sensoren pro Messgröße, deren empfindliche Achsen orthogonal angeordnet sind, sodass dreidimensionale Messungen in einem körperfesten Koordinatensystem bereitgestellt werden können \parencite{Groves2015InertialSensorsTutorial}.
+
+Die Messgrößen einer \ac{IMU} werden typischerweise als zeitdiskrete Signale ausgegeben. Dazu versorgt die \ac{IMU} die Sensoren, digitalisiert deren Ausgangssignale und überträgt die Messwerte über eine Datenschnittstelle. Die Ausgabe erfolgt häufig mit hohen Datenraten im Bereich von mehreren hundert Hertz, was insbesondere für dynamische Systeme in Regelungs und Navigationsaufgaben relevant ist \parencite{Groves2015InertialSensorsTutorial}. Inhaltlich ist zu beachten, dass Beschleunigungssensoren nicht direkt die translatorische Beschleunigung im Sinne der Kinematik liefern, sondern die spezifische Kraft. Diese entspricht der durch Trägheit verursachten Beschleunigung relativ zu einem frei fallenden Bezug und enthält damit die Wirkung der Gravitation in der Messinterpretation \parencite{Groves2015InertialSensorsTutorial}.
+
+Aus den \ac{IMU} Messungen kann mittels inertialer Navigation eine Schätzung von Position, Geschwindigkeit und Orientierung abgeleitet werden. Das Grundprinzip besteht darin, die gemessenen Winkelgeschwindigkeiten zur Aktualisierung der Orientierung zu integrieren. Mit der so bestimmten Orientierung lassen sich die gemessenen spezifischen Kräfte in ein erdfestes oder navigationsbezogenes Koordinatensystem transformieren. Nach Berücksichtigung eines Gravitationsmodells wird daraus die translatorische Beschleunigung bestimmt, die wiederum zu Geschwindigkeit und Position integriert wird \parencite{Groves2015InertialSensorsTutorial}. Dieses Vorgehen wird in der Praxis als Strapdown Inertialnavigation umgesetzt, bei der eine \ac{IMU} mit einem Navigationsprozessor zusammenwirkt, der die Navigationslösung aus spezifischer Kraft und Winkelgeschwindigkeit fortschreibt \parencite{Groves2015InertialSensorsTutorial}.
+
+Ein wesentliches Merkmal inertialer Systeme ist die Fehlerfortpflanzung durch Integration. Bereits kleine konstante Sensorabweichungen, etwa Bias, Skalierungsfehler oder Achsfehlstellungen, führen über die Zeit zu wachsenden Fehlern in Geschwindigkeit, Orientierung und Position. Das Tutorial beschreibt typische Biaswerte für unterschiedliche Qualitätsklassen von \ac{IMU} Systemen und zeigt, dass insbesondere bei niedrigeren Sensorgüten deutliche Drift auftreten kann \parencite{Groves2015InertialSensorsTutorial}. Für taktische Sensorik wird beispielsweise beschrieben, dass sich Positionsfehler im Bereich mehrerer Kilometer innerhalb etwa einer Stunde aufbauen können, wenn entsprechende Fehleranteile nicht kompensiert werden \parencite{Groves2015InertialSensorsTutorial}. Daraus folgt, dass eine reine inertiale Lösung für längere Zeiträume meist nur begrenzt geeignet ist, sofern keine zusätzlichen Informationsquellen zur Korrektur verfügbar sind.
+
+Zur Begrenzung der Drift werden \ac{IMU} basierte Lösungen häufig mit weiteren Sensorsystemen kombiniert. Das Tutorial beschreibt hierfür integrierte Navigationsarchitekturen, bei denen ein Schätzalgorithmus, typischerweise ein Kalmanfilter, die inertiale Lösung mit einem Hilfssystem wie \ac{GNSS} vergleicht und daraus Korrekturen für Position, Geschwindigkeit und Orientierung ableitet. Die Kopplung ist so ausgelegt, dass auch bei zeitweilig fehlenden Hilfsmessungen weiterhin eine Navigationslösung vorliegt, während bei verfügbaren Messungen eine geschlossene Rückführung zur Fehlerreduktion erfolgt \parencite{Groves2015InertialSensorsTutorial}. Für Anwendungen mit wiederkehrenden Stillstandsphasen oder Bewegungsrestriktionen können zusätzlich sogenannte Nullupdates oder Bewegungskonstraints genutzt werden, um den Zustand zu stabilisieren und Sensorfehler indirekt zu kalibrieren \parencite{Groves2015InertialSensorsTutorial}.
+
 
 \newpage
 \section{Quaternionen und Euler-Winkel}
@@ -23,129 +65,4 @@ Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielha
 \section{Lageschätzung mittels Sensorfusion}
 \label{sec:Lageschätzung mittels Sensorfusion}
 "Lorem ipsum"
-
-
-
-
-
-
-
-
-% Die in Tabelle~\ref{tab:symbole-rauheit-grat} zusammengefassten Formelzeichen werden in diesem Dokument verwendet.
-% \begin{table}[htbp]
-%   \centering
-%   \ra{1.2}
-%   \caption{Formelzeichen für Rauheit und Grat}
-%   \label{tab:symbole-rauheit-grat}
-%   \begin{tabular}{@{}lll@{}}
-%     \toprule
-%     Zeichen & Bedeutung & Einheit \\
-%     \midrule
-%     $Z(x)$      & gefiltertes Profil entlang der Auswertelänge $L$ & $\mu$m \\
-%     $Z_i$       & diskreter Profilwert an Position $x_i$            & $\mu$m \\
-%     $L$         & Auswertelänge                                      & mm \\
-%     $n$         & Anzahl der Stützstellen in $L$                     & -- \\
-%     $X_{s,j}$   & $j$-te Teilstrecke innerhalb von $L$               & mm \\
-%     $R_a$       & arithmetischer Mittenrauwert                       & $\mu$m \\
-%     $R_z$       & mittlere Rautiefe aus fünf Teilstrecken            & $\mu$m \\
-%     $P^{\max}_{j}$, $P^{\min}_{j}$ & höchster bzw.\ tiefster Punkt in $X_{s,j}$ & $\mu$m \\
-%     $h_b$       & Grathöhe an der unteren Schnittkante               & $\mu$m \\
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-
-% Die Berechnung der Kenngrößen folgt den nachfolgenden Rechenregeln. Der arithmetische Mittenrauwert \(R_a\) ist das Mittel der Beträge der Profilabweichung über die Auswertelänge \(L\) \parencite{MitutoyoQuickGuide}:
-% \[
-% R_a=\frac{1}{L}\int_{0}^{L}\lvert Z(x)\rvert\,\mathrm{d}x
-% \]
-% und in diskreter Form mit \(n\) Stützstellen \(Z_i\):
-% \[
-% R_a=\frac{1}{n}\sum_{i=1}^{n}\lvert Z_i\rvert.
-% \]
-% Die mittlere Rautiefe \(R_z\) wird über fünf Teilstrecken \(X_{s,1}\) bis \(X_{s,5}\) bestimmt \parencite{KeyenceISO4287}. In jeder Teilstrecke wird die Differenz zwischen höchstem und tiefstem Profilpunkt gebildet. \(R_z\) ist das arithmetische Mittel dieser fünf Differenzen:
-% \[
-% R_z=\frac{1}{5}\sum_{j=1}^{5}\bigl(P^{\max}_{j}-P^{\min}_{j}\bigr).
-% \]
-
-% Die Grathöhe \(h_b\) wird als maximale positive Auslenkung des Profils im Randbereich der unteren Schnittkante bestimmt. Grundlage ist dasselbe Profil \(Z(x)\) oder ein aus einer Punktwolke abgeleitetes Profil senkrecht zur Kante. Neben \(h_b\) können Breite und Form des Grates angegeben werden.
-% Die Profilwerte \(Z_i\) stammen aus einer 3D-Punktwolke oder aus einer bildbasierten Profilerfassung. Aus diesen Werten werden \(R_a\) und \(R_z\) berechnet. Die Grathöhe \(h_b\) wird im Kantenbereich aus demselben Profil ermittelt. Einen Überblick zum verwendeten 3D-Messsystem gibt Abschnitt~\ref{sec:3d-messsystem-keyence}.
-
-% Die Abbildung~\ref{fig:roughness-profile} zeigt das gefilterte Rauheitsprofil \(Z(x)\) über der Messstrecke \(X\).
-% Die rote Linie kennzeichnet \(R_a\), \(Z_i\) sind die diskreten Profilwerte und \(X_{s,j}\) die Teilstrecken für \(R_z\). Die Grathöhe \(h_b\) wird an der unteren Schnittkante als größte positive Auslenkung im Kantenfenster bestimmt.
-
-
-
-% \section{Convolutional Neural Networks (CNNs)}
-% \label{sec:cnns}
-
-% Das vorliegende soll ein Grundverständis zu \ac{CNNs} vermitteln, da dies die Grundlegende Architektur der neuronalen Netze ist und darauf der Cutting Assistant aufbaut (siehe Kapitel ~\ref{sec:cutting-assistent}).
-
-% \ac{CNNs} sind neuronale Netze für Bilddaten. Sie bestehen aus wiederholten Blöcken aus Faltung (Convolution), nichtlinearer Aktivierung (z.\,B.\ \ac{ReLU}) und Pooling.
-% Die wichtigsten Bausteine sind in den Unterkapiteln ~\ref{sec:cnns-conv-blocks}, ~\ref{sec:cnns-activation-batchnorm} und ~\ref{sec:cnns-pooling} näher beschrieben.
-
-% Die Abbildung~\ref{fig:cnn-schema} zeigt den Aufbau eines \ac{CNNs} am Beispiel eines Roboterbildes. Zu Beginn laufen kleine Filter (typisch $3{\times}3$) über das Pixelgitter und reagieren auf lokale Muster, auch Kernel genannt. In den ersten Schichten entstehen somit Merkmalskarten für einfache Strukturen wie Kanten und Ecken, etwa an der Kontur des Kopfes oder entlang der Armsegmente des Roboters. Eine Aktivierungsfunktion unterdrückt schwache oder negative Antworten und erhöht den Kontrast zwischen relevanten und irrelevanten Bildbereichen. Pooling verdichtet die Merkmalskarten und macht die Darstellung unempfindlicher gegenüber kleinen Verschiebungen. Demnach ist die genaue Position der runden Augen oder Schrauben wird damit weniger wichtig als ihr Auftreten.
-
-% Mit zunehmender Tiefe kombinieren weitere Faltungen diese einfachen Muster zu komplexeren Teilen wie Gesicht, Gelenken oder ganzen Körpersegmenten. Am Ende wird die verdichtete Repräsentation \emph{geflattet} und von vollverbundenen Schichten zu einer Ausgabe verdichtet, etwa zu Klassenwahrscheinlichkeiten (\enquote{Roboter ja/nein}) oder zu kontinuierlichen Werten. Das Netzwerk lernt dabei sämtliche Filtergewichte gemeinsam, sodass frühe und späte Schichten aufeinander abgestimmt sind und eine konsistente Merkmals­hierarchie vom Lokalen zum Globalen entsteht \parencite{FischerPochwyt_NeuronaleNetze_2017}.
-
-% \begin{figure}[htbp]
-%   \centering
-%   \includegraphics[width=0.9\linewidth]{CNNs.png}
-%   \caption[Schematischer Aufbau eines CNN]{Schematische Pipeline eines CNN am Beispiel eines Roboterbildes: Faltung extrahiert lokale Muster, Pooling verdichtet die Repräsentation, tiefere Stufen kombinieren Teile zu Objekten, die Entscheidung erfolgt in vollverbundenen Schichten \parencite{FischerPochwyt_NeuronaleNetze_2017}.}
-%   \label{fig:cnn-schema}
-% \end{figure}
-
-% Nach demselben Prinzip arbeitet der in dieser Arbeit weiterentwickelte \enquote{Cutting Assistent} (siehe Kapitel~\ref{sec:cutting-assistent}). Frühe Filter reagieren auf Kanten und Texturwechsel in Schnittkantenbildern, Pooling sorgt für Robustheit gegen kleine Lageänderungen, und tiefere Schichten fassen wiederkehrende Muster wie Riefen, Rauheitsstrukturen oder Gratbildung zusammen. Die abschließenden Schichten liefern je nach Aufgabe eine Klassifikation oder Regressionswerte wie Rauheit oder Grathöhe.
-
-% Die nachfolgenden Unterkapitel erläutern die zuvor genannten zentralen Bausteine eines \ac{CNNs} im Detail.
-
-% \subsection{Faltungsblöcke}
-% \label{sec:cnns-conv-blocks}
-% Die 2D-Faltung berechnet an jeder Position \((i,j)\) einen gewichteten Mittelwert der lokalen Nachbarschaft. Die Gleichung~\eqref{eq:conv2d} definiert dies präzise. Der Kernel mit Kantenlänge \(k\) und Gewichten \(w_{u,v}\) wird zentriert über das Eingabebild \(x\) gelegt, die Offsets \((u,v)\) laufen über das Fenster. Das Ergebnis ist der Ausgabewert \(y_{i,j}\). Die in Tabelle ~\ref{tab:formelzeichen-min} aufgeführten Symbole legen die Notation fest. Durch das gemeinsame Nutzen der Kernelgewichte über alle \((i,j)\) sinkt die Parameterzahl und die Abbildung bleibt verschiebungsgleich. In praktischen Netzen ist die Faltung mehrkanalig, dies bedeutet dass mehrere Eingabekanäle gemeinsam gefaltet  werden und zu mehreren Ausgabekanälen kombiniert werden.
-% % Kompakte Tabelle: nur die für \eqref{eq:conv2d} und \eqref{eq:gap} nötigen Formelzeichen
-% \begin{table}[htbp]
-%   \centering
-%   \caption{Formelzeichen zu Gl.~\eqref{eq:conv2d} (Faltung) und Gl.~\eqref{eq:gap} (Global Average Pooling).}
-%   \label{tab:formelzeichen-min}
-%   \renewcommand{\arraystretch}{1.1}
-%   \begin{tabular}{l p{0.62\linewidth} l}
-%     \hline
-%     \textbf{Symbol} & \textbf{Bedeutung} & \textbf{Einheit/Bereich} \\
-%     \hline
-%     $x_{i,j}$   & Eingabewert an Position $(i,j)$ & reell \\
-%     $y_{i,j}$   & Ausgabewert der Faltung an Position $(i,j)$ & reell \\
-%     $w_{u,v}$   & Gewicht des $k\times k$-Kerns an Offset $(u,v)$ & reell \\
-%     $k$         & Kantenlänge des Faltungskerns & Pixel \\
-%     $i,j$       & Räumliche Indizes (Zeile, Spalte) & — \\
-%     $u,v$       & Kernelindizes & — \\
-%     $H, W$      & Höhe und Breite der Merkmalskarte für GAP & Pixel \\
-%     $z_c$       & GAP-Ausgabe für Kanal $c$ & reell \\
-%     $c$         & Kanalindex & — \\
-%     \hline
-%   \end{tabular}
-% \end{table}
-
-
-% % 2D-Faltung (ein Kanal, Kernel k×k, zentriert)
-% \begin{equation}
-%   y_{i,j}
-%   = \sum_{u=0}^{k-1}\sum_{v=0}^{k-1}
-%     w_{u,v}\; x_{\,i+u-\lfloor k/2 \rfloor,\; j+v-\lfloor k/2 \rfloor}
-%   \label{eq:conv2d}
-% \end{equation}
-
-% % Global Average Pooling (über H×W)
-% \begin{equation}
-%   z_c = \frac{1}{H\,W}\sum_{i=1}^{H}\sum_{j=1}^{W} y_{i,j,c}
-%   \label{eq:gap}
-% \end{equation}
-
-
-% \subsection{Aktivierungsfunktion}
-% \label{sec:cnns-activation-batchnorm}
-% Die Faltung liefert lineare Antworten \(y_{i,j}\), die im nächsten Schritt nichtlinear transformiert werden. Eine Aktivierungsfunktion \(\phi(\cdot)\) wird punktweise angewandt und macht die Abbildung modellierfähig, etwa durch ReLU, die negative Werte auf null setzt.
-% Die ReLU-Aktivierung ist eine üblich genutzte Aktiviewrungsfunktion.
-
-% \subsection{Pooling und Downsampling (mit Global Average Pooling)}
-% \label{sec:cnns-pooling}
-
-% Pooling fasst lokale Nachbarschaften zusammen und reduziert die räumliche Auflösung. Dadurch sinkt der Rechenaufwand und die Darstellung wird unempfindlicher gegenüber kleinen Verschiebungen. Am Ende des Merkmalsextraktors wird häufig ein \emph{Global Average Pooling} eingesetzt. Die Gleichung ~\eqref{eq:gap} mittelt für jeden Kanal \(c\) alle Werte \(y_{i,j,c}\) über Höhe \(H\) und Breite \(W\) zu einem einzigen Skalar \(z_c\). Die so entstehende Vektordarstellung ist kompakt, senkt die Parameterzahl des Ausgabekopfes und eignet sich für Klassifikation und Regression. Andere Pooling-Varianten wie Max- oder lokales Average-Pooling können in früheren Stufen eingesetzt werden, ohne die in Gleichung ~\eqref{eq:gap} definierte globale Verdichtung am Ende zu ersetzen. Das Max-Pooling behält pro lokalem Fenster den größten Wert und hebt starke Aktivierungen hervor und das Min-Pooling behält den kleinsten Wert und betont schwache Antworten oder dunkle Strukturen. Beide Varianten reduzieren die Zahl der Werte und wirken als nichtlineare Verdichtung.
+\newpage

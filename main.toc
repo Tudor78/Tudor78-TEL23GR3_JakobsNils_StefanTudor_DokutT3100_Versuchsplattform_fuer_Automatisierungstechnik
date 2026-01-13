@@ -1,15 +1,15 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{Abkürzungsverzeichnis}{V}{chapter*.5}%
-\contentsline {chapter}{Abbildungsverzeichnis}{VI}{section*.6}%
-\contentsline {chapter}{Tabellenverzeichnis}{VII}{section*.7}%
-\contentsline {chapter}{Quellcodeverzeichnis}{VIII}{chapter*.8}%
-\contentsline {chapter}{\numberline {1}Einführung}{1}{chapter.9}%
-\contentsline {section}{\numberline {1.1}Zielsetzung}{1}{section.10}%
-\contentsline {section}{\numberline {1.2}Vorgehensweise}{1}{section.11}%
-\contentsline {section}{\numberline {1.3}Anwendungsszenario Lageschätzung}{2}{section.12}%
-\contentsline {chapter}{\numberline {2}Grundlagen und Stand der Technik}{3}{chapter.13}%
-\contentsline {section}{\numberline {2.1}Rapid Control Prototyping}{3}{section.14}%
-\contentsline {section}{\numberline {2.2}Modellbasierte Entwicklung mit Matlab/Simulink}{4}{section.15}%
-\contentsline {section}{\numberline {2.3}Quaternionen und Euler-Winkel}{5}{section.16}%
-\contentsline {section}{\numberline {2.4}Lageschätzung mittels Sensorfusion}{6}{section.17}%
-\contentsline {chapter}{Literaturverzeichnis}{7}{section*.18}%
+\contentsline {chapter}{Abkürzungsverzeichnis}{IV}{chapter*.4}%
+\contentsline {chapter}{Abbildungsverzeichnis}{V}{section*.5}%
+\contentsline {chapter}{Tabellenverzeichnis}{VI}{section*.6}%
+\contentsline {chapter}{Quellcodeverzeichnis}{VII}{chapter*.7}%
+\contentsline {chapter}{\numberline {1}Einführung}{1}{chapter.8}%
+\contentsline {section}{\numberline {1.1}Zielsetzung}{1}{section.9}%
+\contentsline {section}{\numberline {1.2}Vorgehensweise}{1}{section.10}%
+\contentsline {chapter}{\numberline {2}Grundlagen und Stand der Technik}{3}{chapter.11}%
+\contentsline {section}{\numberline {2.1}Rapid Control Prototyping}{3}{section.12}%
+\contentsline {section}{\numberline {2.2}Modellbasierte Entwicklung mit Matlab/Simulink}{5}{section.14}%
+\contentsline {section}{\numberline {2.3}Inertialsensorik}{7}{section.16}%
+\contentsline {section}{\numberline {2.4}Quaternionen und Euler-Winkel}{9}{section.17}%
+\contentsline {section}{\numberline {2.5}Lageschätzung mittels Sensorfusion}{10}{section.18}%
+\contentsline {chapter}{Literaturverzeichnis}{11}{section*.19}%

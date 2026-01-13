@@ -19,6 +19,52 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{Aarenstrup2025ManagingMBD}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f17ca0aad6a19c33022ae017e7d19386}{%
+           family={Aarenstrup},
+           familyi={A\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Natick, MA}%
+      }
+      \list{publisher}{1}{%
+        {The MathWorks, Inc.}%
+      }
+      \strng{namehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{fullhash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{fullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{bibnamehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authorbibnamehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authornamehash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authorfullhash}{f17ca0aad6a19c33022ae017e7d19386}
+      \strng{authorfullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1512036138}
+      \field{langid}{english}
+      \field{note}{E-Book PDF, ISBN-10: 1512036137, Copyright 2015--2025 The MathWorks, Inc.}
+      \field{title}{Managing Model-Based Design}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/content/dam/mathworks/ebook/managing-model-based-design-2025.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/content/dam/mathworks/ebook/managing-model-based-design-2025.pdf
+      \endverb
+    \endentry
     \entry{Fang2009LowCostDSPRCP}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=743671a1da3500b316f94b6bc0c4e035}{%
@@ -82,6 +128,53 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1109/ICIEA.2009.5138516
+      \endverb
+    \endentry
+    \entry{Groves2015InertialSensorsTutorial}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3393e4433194d61b91167d137548c370}{%
+           family={Groves},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3393e4433194d61b91167d137548c370}
+      \strng{fullhash}{3393e4433194d61b91167d137548c370}
+      \strng{fullhashraw}{3393e4433194d61b91167d137548c370}
+      \strng{bibnamehash}{3393e4433194d61b91167d137548c370}
+      \strng{authorbibnamehash}{3393e4433194d61b91167d137548c370}
+      \strng{authornamehash}{3393e4433194d61b91167d137548c370}
+      \strng{authorfullhash}{3393e4433194d61b91167d137548c370}
+      \strng{authorfullhashraw}{3393e4433194d61b91167d137548c370}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Aerospace and Electronic Systems Magazine}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{note}{Tutorial, Part II of II}
+      \field{title}{Navigation Using Inertial Sensors}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/MAES.2014.130191
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/MAES.2014.130191
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/MAES.2014.130191
       \endverb
     \endentry
     \entry{HoyosGutierrez2023RCPReview}{article}{}{}
