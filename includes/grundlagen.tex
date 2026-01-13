@@ -1,10 +1,22 @@
+
 \chapter{Grundlagen und Stand der Technik}
+<<<<<<< HEAD
+=======
 \label{chap:grundlagen und stand der technik}
 Für die vorliegende Arbeit sind Kenntnisse in den Bereichen Rapid Control Prototyping, modellbasierte Entwicklung mit Matlab und Simulink, Inertialsensorik sowie Lageschätzung mittels Sensorfusion erforderlich, weshalb in den folgenden Kapiteln die hierfür relevanten Grundlagen und der Stand der Technik dargestellt werden.
+>>>>>>> origin/main
 
 
 \section{Rapid Control Prototyping}
 \label{sec:Rapid Control Prototyping}
+<<<<<<< HEAD
+"Tudor"
+\section{MBD mit Matlab/Simulink}
+\label{sec:MBD mit Matlab/Simulink}
+"Tudor"
+
+
+=======
 Rapid Control Prototyping bezeichnet einen Ansatz zur schnellen Entwicklung und Erprobung von Regelungsstrategien an Anwendungen oder Laboraufbauten. Charakteristisch ist, dass der Entwurf nicht primär durch eine manuelle Implementierung in textbasierten Programmiersprachen erfolgt, sondern durch die Modellierung als grafisches Blockdiagramm, das anschließend auf eine Zielplattform übertragen wird. Ziel ist es, den Übergang vom Entwurf zur lauffähigen Implementierung zu verkürzen, indem aus dem grafischen Modell automatisch ausführbarer Code erzeugt und auf der Zielhardware ausgeführt wird. Dadurch werden kurze Iterationszyklen unterstützt, weil Entwurf, Test und Parametrierung in engem Zusammenhang durchgeführt werden können \parencite{HoyosGutierrez2023RCPReview}.
 
 Für die praktische Umsetzung wird RCP typischerweise als Kombination aus Zielhardware und Entwicklungssoftware verstanden. Die Zielhardware umfasst eine Recheneinheit mit Speicher sowie Ein und Ausgängen und kann je nach Anwendung als \ac{PC}, Mikrocontroller oder programmierbare Logik realisiert sein. Die Entwicklungssoftware stellt eine grafische Modellierungsumgebung bereit, in der der Regelalgorithmus als Blockdiagramm beschrieben wird und aus der anschließend ausführbarer Code für die Zielplattform generiert wird \parencite{HoyosGutierrez2023RCPReview}.
@@ -58,15 +70,362 @@ Die Einsatzgebiete von \acp{IMU} ergeben sich aus der Fähigkeit, Bewegungen una
 Die \ac{IMU} stellt damit die grundlegenden Messgrößen für nachgelagerte Schätz und Regelalgorithmen bereit. Aus den Drehraten können Orientierungsänderungen abgeleitet werden, während die spezifische Kraft als Referenzinformation genutzt werden kann, wenn die Gravitation als dominanter Anteil vorliegt. Für eine robuste Lageschätzung wird die \ac{IMU} in der Regel nicht isoliert betrachtet, sondern als Sensormodul, dessen Messwerte mit geeigneten Algorithmen weiterverarbeitet und mit Modellannahmen oder weiteren Sensoren kombiniert werden, um die Auswirkungen von Rauschen und Drift zu begrenzen.
 
 Eine solche \ac{IMU} soll in dieser Projektarbeit zunächst als Simulationsmodell abgebildet und untersucht werden und, sofern erforderlich, zusätzlich als reale Hardwarekomponente im Rahmen des Rapid Control Prototyping in die Versuchsplattform integriert werden.
+>>>>>>> origin/main
 
 
 \newpage
 \section{Quaternionen und Euler-Winkel}
 \label{sec:Quaternionen und Euler-Winkel}
+<<<<<<< HEAD
+% Für die Lageschätzung einer IMU ist eine Orientierungsdarstellung erforderlich, da die Lage der IMU aus den Messgrößen des Gyroskops, Beschleunigungssensors geschätzt und anschließend bewertet werden soll. Für die Umsetzung der Filteralgorithmen wird eine mathematische Beschreibung der Rotation benötigt.  
+
+Quaternionen und Euler-Winkel sind mathematische Darstellungen, um Rotationen im dreidimensionalen Raum zu beschreiben. Solche Rotationsbeschreibungen werden unter anderem in der Lageschätzung von Inertialmesseinheiten (IMU) benötigt, um die Orientierung aus Sensormessgrössen zu modellieren und zu bewerten.
+\\
+Grundsätzlich kommen hierfür sowohl Quaternionen als auch Euler-Winkel in Frage. Quaternionen eignen sich besonders für die interne Berechnung, da sie eine kompakte und singularitätsfreie Darstellung von Rotationen ermöglichen. Euler-Winkel werden hingegen häufig zur Ausgabe und Visualisierung verwendet, da sie die Orientierung anschaulich über drei aufeinanderfolgende Winkel beschreiben: \textit{Yaw} (Gierwinkel), \textit{Pitch} (Nickwinkel) und \textit{Roll} (Rollwinkel). Abbildung~\ref{fig:Eulerwinkel} zeigt diese Rotationen um die körperfesten Achsen. \textit{Roll} entspricht einer Rotation um die \(x\)-Achse, \textit{Pitch} einer Rotation um die \(y\)-Achse und \textit{Yaw} einer Rotation um die \(z\)-Achse.
+\\
+Euler-Winkel besitzen jedoch Singularitäten und sind daher als interne Zustandsdarstellung nur eingeschränkt geeignet; in der Praxis werden sie meist für die Visualisierung der geschätzten Orientierung verwendet.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.4\linewidth]{Eulerwinkel.png}
+  \caption[Schematische Darstellung der Euler-Winkel]{Schematische Darstellung der Euler-Winkel\parencite{ResearchGate}}
+  \label{fig:Eulerwinkel}
+\end{figure}
+
+Für die konkrete mathematische Beschreibung ist zu beachten, dass Euler-Winkel stets an eine festgelegte Rotationskonvention gebunden sind. Da räumliche Rotationen nicht vertauschbar sind, führt eine andere Reihenfolge der Einzelrotationen zu einer anderen resultierenden Orientierung. Beispielsweise leifert die Abfolge \textit{Yaw--Pitch--Roll} im Allgemeinen ein anderes Ergebnis als \textit{Pitch--Yaw--Roll}, selbst wenn die gleichen Winkelwerte verwendet werden.
+\\
+Neben dieser Konventionsabhänigkeit besitzen Euler-Winkel einen wesentlichen Nachteil: Sie weisen Singularitäten auf. Für die Rotationsreihenfolge \textit{Roll--Pitch--Yaw} (XYZ) tritt der kritische Fall in der Nähe von \(\theta = \pm 90^\circ\) (Pitch) auf, da zwei Rotationsachsen dabei effektiv zusammenfallen. In diesem Bereich sind Roll und Yaw nicht mehr unabhängig bestimmbar, sodass bereits kleine Änderungen der tatsächlichen Orientierung zu großen oder sprunghaften Änderungen einzelner Euler-Winkel führen können. Dieses Verhalten wird als Gimbal-Lock bezeichnet.\parencite{KIT}
+\\
+
+Um diese Einschränkung zu vermeiden, wird die Orientierung in Filteralgorithmen \textbf{Verweis zu 4.2?} intern nicht über Euler-Winkel angegeben, sondern durch Quaternionen beschrieben. Diese Darstellung ist frei von Singularitäten und eignet sich für eine robuste Zustandsführung.
+\\
+Quaternionen sind eine Erweiterung der komplexen Zahlen und lassen sich allgemein in der Form 
+
+\begin{equation}
+q = a + b\,\mathbf{i} + c\,\mathbf{j} + d\,\mathbf{k} 
+\end{equation}
+
+darstellen, wobei $a,b,c,d \in \mathbb{R}$ und $\mathbf{i},\mathbf{j},\mathbf{k}$ imaginäre Einheiten sind. Für die Beschreibung von Rotationen im 3-dimensionalen Raum werden in der Praxis Einheitsquaternionen verwendet, die häufig in Vektorform als 
+
+\begin{equation}
+q= 
+\begin{bmatrix} 
+q_w & q_x & q_y & q_z 
+\end{bmatrix}^{\mathsf{T}} 
+= 
+\begin{bmatrix} 
+q_w & \mathbf{q}_v 
+\end{bmatrix}^{\mathsf{T}} 
+\end{equation}
+
+geschrieben werden. Dabei bezeichnet $q_w$ den Skalaranteil und 
+
+\begin{equation}
+\mathbf{q}_v = 
+\begin{bmatrix} 
+q_x & q_y & q_z 
+\end{bmatrix}^{\mathsf{T}} 
+\end{equation}
+
+den Vektoranteil. 
+ Eine Rotation lässt sich mit Quaternionen besonders anschaulich über das Achse-Winkel-Konzept darstellen: Jede räumliche Drehung kann als Drehung um eine bestimmte Achse mit einem bestimmten Winkel beschrieben werden. Quaternionen verpacken diese Information kompakt, indem der Skalarteil den Winkelanteil und der Vektorteil die Drehachse enthält. Dadurch lassen sich Rotationen effizient speichern. 
+\\
+ Ein weiterer praktischer Vorteil ist, dass sich aufeinanderfolgende Rotationen einfach verketten lassen. Wird eine Orientierung nacheinander um mehrere Rotationen verändert, kann die Gesamtrotation durch Kombination der zugehörigen Quaternionen berechnet werden. Die Hintereinanderausführung von Rotationen entspricht dabei der Quaternion-Multiplikation. Dadurch ist es möglich, Orientierungsänderungen schrittweise zu aktualisieren.
+\textbf{Rotationsmatrix einfügen, falls später verwendet!} \parencite[S.25-28]{Schlussbericht}
+\\
+
+Da die interne Zustandsdarstellung als Quaternionen erfolgt, die Ergebnisse jedoch zur Interpretaion als Euler-Winkel angegeben werden, ist eine konsistente Umrechnung zwischen beiden Darstellungen erforderlich. Durch Gleichsetzen der Rotationsbeschreibungen 
+\begin{equation}
+R(\phi,\theta,\psi)=R_x(\phi)\,R_y(\theta)\,R_z(\psi) 
+\end{equation}
+
+und den anschließenden Vergleich der Matrixelemente, ergeben sich folgenden Umrechnungsformeln von Quaternionen zu Euler-Winkeln in Roll-Pitch-Yaw (XYZ) Reihenfolge. 
+Im Folgenden werden die resultierenden Ausdrücke direkt angegeben; eine vollständige Herleitung findet sich in der Literatur.\parencite[S.24]{attitude} 
+\begin{equation} 
+\phi=\operatorname{atan2}\!\left(2(q_w q_x+q_y q_z),\,1-2(q_x^2+q_y^2)\right) 
+\end{equation}
+ 
+\begin{equation}  
+\theta=\arcsin\!\left(2(q_w q_y-q_z q_x)\right) 
+\end{equation}
+ 
+\begin{equation}  
+\psi=\operatorname{atan2}\!\left(2(q_w q_z+q_x q_y),\,1-2(q_y^2+q_z^2)\right) 
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+=======
 "Lorem ipsum" 
+>>>>>>> origin/main
 
 \newpage
 \section{Lageschätzung mittels Sensorfusion}
 \label{sec:Lageschätzung mittels Sensorfusion}
+<<<<<<< HEAD
+Sensorfusion bezeichnet die Kombination von Messdaten mehrerer Sensoren, um die Qualität der Zustandsinformation zu erhöhen. Durch die Nutzung komplementärer Sensoreigenschaften lassen sich Unsicherheiten reduzieren und konsistente Schätzwerte gewinnen. \textbf{ In dieser Arbeit steht die Orientierungsschätzung (Attitude) einer IMU im Vordergrund}. Da kein Magnetometer eingesetzt wird, basiert die Schätzung auf Gyroskop- und Beschleunigungssignalen. Dadurch können Roll und Pitch langfristig stabilisiert werden, während der Yaw-Winkel ohne externe Referenz grundsätzlich driftbehaftet bleibt.
+\\
+Eine robuste Orientierungsbestimmung ist mit einem einzelnen Sensor nicht zuverlässig möglich, da die Messgrößen jeweils systematische Einschränkungen besitzen. Das Gyroskop misst die Winkelgeschwindigkeit und erlaubt eine hochdynamische Fortschreibung der Orientierung. Die Messung ist jedoch durch Rauschen beeinflusst und weist typischerweise einen Bias auf. 
+\\
+Unter Bias wird ein systematischer, meist langsam zeit- und temperaturabhängiger Offset verstanden, der dazu führt, dass auch im Stillstand eine von Null abweichende Winkelgeschwindigkeit gemessen wird. Da die Orientierung aus der Winkelgeschwindigkeit durch Integration berechnet wird, führt ein solcher Offset zu einem über die Zeit anwachsenden Fehler und damit zu Drift.
+\\
+Der Beschleunigungssensor misst die spezifische Kraft. In quasi-statischen Situationen kann daraus die Richtung der Gravitation als Referenz abgeleitet werden, wodurch insbesondere Roll und Pitch langfristig stabilisiert werden. Bei dynamischen Bewegungen überlagern zusätzliche translatorische Beschleunigungen den Gravitationsanteil, sodass die Gravitation nicht mehr eindeutig aus der Messung bestimmbar ist. Aus diesem Grund wird die beschleunigungsbasierte Korrektur in Fusionsverfahren häufig situationsabhängig gewichtet oder bei erkennbar starker Dynamik unterdrückt, um Fehlkorrekturen zu vermeiden.
+\\
+Die grundlegende Idee der Sensorfusion aus Gyroskop und Beschleunigungssensor besteht in der Kombination beider Eigenschaften. Die Gyroskopintegration liefert eine kurzzeitig genaue Orientierung, driftet jedoch über die Zeit. Die Beschleunigung liefert eine langfristige Referenz, ist aber bei Dynamik verfälschbar. Alle betrachteten Fusionsverfahren folgen dabei dem Prinzip Prädiktion und Korrektur: In der Prädiktion wird die Orientierung aus der Gyroskopmessung fortgeschrieben. In der Korrektur wird die aus der aktuellen Orientierungsschätzung erwartete Gravitationsrichtung mit der Beschleunigungsmessung verglichen. Die daraus resultierende Abweichung wird genutzt, um den Driftanteil der Gyro-Integration zu reduzieren. 
+\\
+\textbf{?Auf Basis dieser gemeinsamen Struktur werden im Folgenden unterschiedliche Verfahren zur Sensorfusion vorgestellt. Abschnitt 2.5.1 skizziert die prinzipielle Funktionsweise eines (E)KF zur Orientierungsschätzung, ohne eine vollständige Herleitung vorzunehmen, da ein bestehender EKF verwendet wird. Abschnitt 2.5.2 beschreibt komplementärfilterbasierte Ansätze als recheneffiziente Alternative, bevor in Abschnitt 2.5.3 der Mahony-Filter als spezielle Ausprägung des Komplementärfilters eingeordnet und die Auswahl begründet wird.}
+\parencite[S.25-27]{vonRosenberg2006}
+
+\subsection{Erweitertes Kalmanfilter}
+\label{sec:Erweitertes Kalmanfilter}
+
+Der \ac{KF} ist ein rekursiver Zustands­schätzer für dynamische Systeme, der aus verrauschten Messungen einen möglichst guten Schätzwert des Systemzustands bestimmt. Er basiert auf einem Zustandsraummodell mit Prozessgleichung und Messgleichung und kombiniert dabei Modellwissen mit Sensordaten. Der klassische KF setzt ein lineares Systemmodell sowie lineare Messgleichungen voraus. Der Algorithmus besteht aus zwei wiederkehrenden Schritten: In der Prädiktion wird der Zustand mit dem Systemmodell fortgeschrieben und die zugehörige Unsicherheit (Kovarianz) propagiert. In der Korrektur wird die Vorhersage mithilfe der Messung aktualisiert, wobei der Kalman-Gain die Gewichtung zwischen Modell und Messung bestimmt.
+\\
+Für die IMU-basierte Orientierungsschätzung ist der klassische KF jedoch nur eingeschränkt geeignet, da die zugrunde liegenden Zusammenhänge nichtlinear sind. Die Orientierungskinematik wird über Quaternionen bzw. Rotationsmatrizen beschrieben und ist nicht linear in den Zuständen. Eine direkte Anwendung des linearen KF würde daher die Modellrealität nur unzureichend abbilden oder starke Vereinfachungen erfordern, was zu ungenauen oder instabilen Schätzergebnissen führen kann.
+\\
+Aus diesem Grund wird in der Praxis ein Erweiterter Kalmanfilter (EKF) eingesetzt. Das EKF überträgt das Prinzip des Kalmanfilters auf nichtlineare Systeme, indem nichtlineare Prozess- und Messmodelle verwendet und in jedem Zeitschritt um den aktuellen Arbeitspunkt linearisiert werden. Die Linearisierung erfolgt über die Jacobi-Matrizen der Prozess- und Messfunktionen. Dadurch bleibt der rekursive Aufbau aus Prädiktion und Korrektur erhalten, während die für die Orientierungsschätzung notwendigen nichtlinearen Rotationsbeziehungen berücksichtigt werden.
+
+
+
+ABBILDUNG MA Vgl. Kim(2011) \parencite[S. 146]{EKF}
+
+Die Abbildung \textbf{ref} zeigt den Ablauf des erweiterten Kalmanfilters (EKF) als rekursiven Algorithmus. Das EKF berechnet in jedem Zeitschritt k aus dem vorherigen Schätzwert und der aktuellen Messung einen verbesserten Schätzwert des Zustands. Der Algorithmus lässt sich in in vier Teile aufspalten:
+
+
+0) \textbf{Initialisierung}\\
+Zu Beginn werden ein Startwert $\hat{x}_0$ sowie die zugehörige Fehlerkovarianz $P_0$ festgelegt.
+$\hat{x}_0$ stellt die erste Zustandsabschätzung dar, $P_0$ beschreibt die anfängliche Unsicherheit
+dieser Schätzung.
+
+\medskip
+I) \textbf{Prädiktion von Zustand und Fehlerkovarianz}\\
+Im ersten Schritt wird aus dem vorherigen Schätzwert $\hat{x}_{k-1}$ eine a-priori-Schätzung
+$\hat{x}_k^{-}$ gebildet:
+\begin{equation}
+\hat{x}_k^{-} = f\!\left(\hat{x}_{k-1}\right).
+\end{equation}
+Gleichzeitig wird die Unsicherheit dieser Vorhersage fortgepflanzt:
+\begin{equation}
+P_k^{-} = A\,P_{k-1}\,A^\top + Q.
+\end{equation}
+Dabei beschreibt $A$ die Linearisierung (Jacobi-Matrix) des Systemmodells um den aktuellen
+Arbeitspunkt, und $Q$ modelliert Prozessrauschen. $P_k^{-}$ charakterisiert
+damit die Unsicherheit der a-priori-Schätzung.
+
+\medskip
+II) \textbf{Berechnung des Kalman-Gains}\\
+Im zweiten Schritt wird der Kalman-Gain $K_k$ berechnet:
+\begin{equation}
+K_k = P_k^{-}H^\top\left(H\,P_k^{-}H^\top + R\right)^{-1}.
+\end{equation}
+Der Kalman-Gain legt fest, wie stark die Messung im nächsten Schritt zur Korrektur herangezogen wird.
+$H$ ist die Linearisierung (Jacobi-Matrix) der Messfunktion, $R$ beschreibt das Messrauschen der Sensorik.
+
+\medskip
+III) \textbf{Berechnung der korrigierten Schätzung (Update)}\\
+Nun wird die a-priori-Schätzung mit der aktuellen Messung $z_k$ korrigiert:
+\begin{equation}
+\hat{x}_k = \hat{x}_k^{-} + K_k\left(z_k - h\!\left(\hat{x}_k^{-}\right)\right).
+\end{equation}
+Der Term $z_k - h\!\left(\hat{x}_k^{-}\right)$ wird als \textbf{Innovation} bezeichnet. Er beschreibt die
+Abweichung zwischen der tatsächlichen Messung $z_k$ und der aus der Vorhersage erwarteten Messung
+$h\!\left(\hat{x}_k^{-}\right)$. Diese Abweichung wird mit $K_k$ gewichtet und zur Vorhersage addiert.
+
+\medskip
+IV) \textbf{Aktualisierung der Fehlerkovarianz}\\
+Abschließend wird die Unsicherheit nach dem Update aktualisiert:
+\begin{equation}
+P_k = P_k^{-} - K_k\,H\,P_k^{-}.
+\end{equation}
+Damit liegt für den aktuellen Zeitschritt $k$ sowohl der korrigierte Zustandsvektor $\hat{x}_k$ als auch die
+zugehörige Fehlerkovarianz $P_k$ vor. Diese Größen dienen im nächsten Zeitschritt wieder als Ausgangspunkt,
+wodurch der EKF kontinuierlich in einer Schleife arbeitet. \parencite{Lagebestimmung}
+
+\newpage
+\subsection{Komplementärfilter}
+\label{sec:Komplementärfilter}
+
+Der Komplementärfilter ist ein einfaches Verfahren der Sensorfusion, das zwei Messgrößen mit komplementären Fehler- und Frequenzeigenschaften kombiniert, um eine robuste Gesamtschätzung zu erhalten. Aufgrund der geringen algorithmischen Komplexität wird er häufig in Embedded-Systemen eingesetzt, wenn eine Echtzeitschätzung bei begrenzten Rechenressourcen erforderlich ist. 
+
+ \begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{CF.png}
+  \caption[Blockdiagramm zur Veranschaulichung der Funktionsweise eines Komplementärfilter]{Blockdiagramm zur Veranschaulichung der Funktionsweise eines Komplementärfilter\parencite{Komplementärfilter}}
+  \label{fig:CF}
+\end{figure}
+
+Anhand von Abbildung~\ref{fig:CF} wird im Folgenden das Funktionsprinzip des Komplementärfilters erläutert. Der Komplementärfilter fusioniert die Messinformationen von Beschleunigungssensor und Gyroskop, indem beide Signalpfade gezielt in unterschiedlichen Frequenzbereichen genutzt werden. Wie in der Abbildung dargestellt, wird aus den Beschleunigungsdaten zunächst eine Neigungsinformation abgeleitet, die anschließend durch einen Tiefpass gefiltert wird. Dieser Pfad trägt damit vor allem die niederfrequenten Anteile der Orientierungsschätzung und liefert insbesondere eine langfristig stabile Referenz über die Schwerkraftrichtung. 
+
+ 
+
+Parallel dazu wird die Winkelgeschwindigkeit des Gyroskops numerisch integriert, um eine Winkelschätzung zu erhalten. Diese Schätzung bildet hochfrequente, dynamische Orientierungsänderungen zuverlässig ab, ist jedoch ohne Korrektur driftbehaftet. Durch Hochpassfilterung werden die niederfrequenten Driftanteile unterdrückt, während die hochfrequenten Anteile erhalten bleiben. 
+
+ 
+
+Beide Anteile werden im Summationsblock zusammengeführt. Durch die komplementäre Aufteilung in Tiefpassanteil (Beschleunigung) und Hochpassanteil (Gyroskop) entsteht eine Winkelschätzung, die kurzfristig dynamikfähig ist und gleichzeitig langfristig stabilisiert wird. In diskreter Form lässt sich dieses Prinzip exemplarisch durch 
+
+\begin{equation} 
+\theta_k = \alpha\left(\hat{\theta}_{k-1} + \omega_k \Delta t\right) + (1-\alpha)\,\theta_{\mathrm{acc},k}
+\end{equation}
+
+beschreiben. Dabei bezeichnet \(\hat{\theta}_k\) den geschätzten Winkel zum Zeitpunkt \(k\), \(\omega_k\) die gemessene Winkelgeschwindigkeit, \(\Delta t\) die Abtastzeit und \(\theta_{\mathrm{acc},k}\) den aus dem Beschleunigungssignal abgeleiteten Winkel. Der Parameter \(\alpha \in (0,1)\) bestimmt die Aufteilung zwischen beiden Informationsquellen. Große \(\alpha\)-Werte gewichten die Gyro-Integration stärker, was eine gute Dynamik ermöglicht, jedoch die Driftkorrektur reduziert. Kleinere \(\alpha\)-Werte erhöhen die niederfrequente Stabilisierung durch den Beschleunigungssensor. Dadurch wird die Drift besser unterdrückt, gleichzeitig steigt jedoch die Empfindlichkeit gegenüber dynamischen Zusatzbeschleunigungen. \parencite{Komplementärfilter}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Die in Tabelle~\ref{tab:symbole-rauheit-grat} zusammengefassten Formelzeichen werden in diesem Dokument verwendet.
+% \begin{table}[htbp]
+%   \centering
+%   \ra{1.2}
+%   \caption{Formelzeichen für Rauheit und Grat}
+%   \label{tab:symbole-rauheit-grat}
+%   \begin{tabular}{@{}lll@{}}
+%     \toprule
+%     Zeichen & Bedeutung & Einheit \\
+%     \midrule
+%     $Z(x)$      & gefiltertes Profil entlang der Auswertelänge $L$ & $\mu$m \\
+%     $Z_i$       & diskreter Profilwert an Position $x_i$            & $\mu$m \\
+%     $L$         & Auswertelänge                                      & mm \\
+%     $n$         & Anzahl der Stützstellen in $L$                     & -- \\
+%     $X_{s,j}$   & $j$-te Teilstrecke innerhalb von $L$               & mm \\
+%     $R_a$       & arithmetischer Mittenrauwert                       & $\mu$m \\
+%     $R_z$       & mittlere Rautiefe aus fünf Teilstrecken            & $\mu$m \\
+%     $P^{\max}_{j}$, $P^{\min}_{j}$ & höchster bzw.\ tiefster Punkt in $X_{s,j}$ & $\mu$m \\
+%     $h_b$       & Grathöhe an der unteren Schnittkante               & $\mu$m \\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
+
+% Die Berechnung der Kenngrößen folgt den nachfolgenden Rechenregeln. Der arithmetische Mittenrauwert \(R_a\) ist das Mittel der Beträge der Profilabweichung über die Auswertelänge \(L\) \parencite{MitutoyoQuickGuide}:
+% \[
+% R_a=\frac{1}{L}\int_{0}^{L}\lvert Z(x)\rvert\,\mathrm{d}x
+% \]
+% und in diskreter Form mit \(n\) Stützstellen \(Z_i\):
+% \[
+% R_a=\frac{1}{n}\sum_{i=1}^{n}\lvert Z_i\rvert.
+% \]
+% Die mittlere Rautiefe \(R_z\) wird über fünf Teilstrecken \(X_{s,1}\) bis \(X_{s,5}\) bestimmt \parencite{KeyenceISO4287}. In jeder Teilstrecke wird die Differenz zwischen höchstem und tiefstem Profilpunkt gebildet. \(R_z\) ist das arithmetische Mittel dieser fünf Differenzen:
+% \[
+% R_z=\frac{1}{5}\sum_{j=1}^{5}\bigl(P^{\max}_{j}-P^{\min}_{j}\bigr).
+% \]
+
+% Die Grathöhe \(h_b\) wird als maximale positive Auslenkung des Profils im Randbereich der unteren Schnittkante bestimmt. Grundlage ist dasselbe Profil \(Z(x)\) oder ein aus einer Punktwolke abgeleitetes Profil senkrecht zur Kante. Neben \(h_b\) können Breite und Form des Grates angegeben werden.
+% Die Profilwerte \(Z_i\) stammen aus einer 3D-Punktwolke oder aus einer bildbasierten Profilerfassung. Aus diesen Werten werden \(R_a\) und \(R_z\) berechnet. Die Grathöhe \(h_b\) wird im Kantenbereich aus demselben Profil ermittelt. Einen Überblick zum verwendeten 3D-Messsystem gibt Abschnitt~\ref{sec:3d-messsystem-keyence}.
+
+% Die Abbildung~\ref{fig:roughness-profile} zeigt das gefilterte Rauheitsprofil \(Z(x)\) über der Messstrecke \(X\).
+% Die rote Linie kennzeichnet \(R_a\), \(Z_i\) sind die diskreten Profilwerte und \(X_{s,j}\) die Teilstrecken für \(R_z\). Die Grathöhe \(h_b\) wird an der unteren Schnittkante als größte positive Auslenkung im Kantenfenster bestimmt.
+
+
+
+% \section{Convolutional Neural Networks (CNNs)}
+% \label{sec:cnns}
+
+% Das vorliegende soll ein Grundverständis zu \ac{CNNs} vermitteln, da dies die Grundlegende Architektur der neuronalen Netze ist und darauf der Cutting Assistant aufbaut (siehe Kapitel ~\ref{sec:cutting-assistent}).
+
+% \ac{CNNs} sind neuronale Netze für Bilddaten. Sie bestehen aus wiederholten Blöcken aus Faltung (Convolution), nichtlinearer Aktivierung (z.\,B.\ \ac{ReLU}) und Pooling.
+% Die wichtigsten Bausteine sind in den Unterkapiteln ~\ref{sec:cnns-conv-blocks}, ~\ref{sec:cnns-activation-batchnorm} und ~\ref{sec:cnns-pooling} näher beschrieben.
+
+% Die Abbildung~\ref{fig:cnn-schema} zeigt den Aufbau eines \ac{CNNs} am Beispiel eines Roboterbildes. Zu Beginn laufen kleine Filter (typisch $3{\times}3$) über das Pixelgitter und reagieren auf lokale Muster, auch Kernel genannt. In den ersten Schichten entstehen somit Merkmalskarten für einfache Strukturen wie Kanten und Ecken, etwa an der Kontur des Kopfes oder entlang der Armsegmente des Roboters. Eine Aktivierungsfunktion unterdrückt schwache oder negative Antworten und erhöht den Kontrast zwischen relevanten und irrelevanten Bildbereichen. Pooling verdichtet die Merkmalskarten und macht die Darstellung unempfindlicher gegenüber kleinen Verschiebungen. Demnach ist die genaue Position der runden Augen oder Schrauben wird damit weniger wichtig als ihr Auftreten.
+
+% Mit zunehmender Tiefe kombinieren weitere Faltungen diese einfachen Muster zu komplexeren Teilen wie Gesicht, Gelenken oder ganzen Körpersegmenten. Am Ende wird die verdichtete Repräsentation \emph{geflattet} und von vollverbundenen Schichten zu einer Ausgabe verdichtet, etwa zu Klassenwahrscheinlichkeiten (\enquote{Roboter ja/nein}) oder zu kontinuierlichen Werten. Das Netzwerk lernt dabei sämtliche Filtergewichte gemeinsam, sodass frühe und späte Schichten aufeinander abgestimmt sind und eine konsistente Merkmals­hierarchie vom Lokalen zum Globalen entsteht \parencite{FischerPochwyt_NeuronaleNetze_2017}.
+
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.9\linewidth]{CNNs.png}
+%   \caption[Schematischer Aufbau eines CNN]{Schematische Pipeline eines CNN am Beispiel eines Roboterbildes: Faltung extrahiert lokale Muster, Pooling verdichtet die Repräsentation, tiefere Stufen kombinieren Teile zu Objekten, die Entscheidung erfolgt in vollverbundenen Schichten \parencite{FischerPochwyt_NeuronaleNetze_2017}.}
+%   \label{fig:cnn-schema}
+% \end{figure}
+
+% Nach demselben Prinzip arbeitet der in dieser Arbeit weiterentwickelte \enquote{Cutting Assistent} (siehe Kapitel~\ref{sec:cutting-assistent}). Frühe Filter reagieren auf Kanten und Texturwechsel in Schnittkantenbildern, Pooling sorgt für Robustheit gegen kleine Lageänderungen, und tiefere Schichten fassen wiederkehrende Muster wie Riefen, Rauheitsstrukturen oder Gratbildung zusammen. Die abschließenden Schichten liefern je nach Aufgabe eine Klassifikation oder Regressionswerte wie Rauheit oder Grathöhe.
+
+% Die nachfolgenden Unterkapitel erläutern die zuvor genannten zentralen Bausteine eines \ac{CNNs} im Detail.
+
+% \subsection{Faltungsblöcke}
+% \label{sec:cnns-conv-blocks}
+% Die 2D-Faltung berechnet an jeder Position \((i,j)\) einen gewichteten Mittelwert der lokalen Nachbarschaft. Die Gleichung~\eqref{eq:conv2d} definiert dies präzise. Der Kernel mit Kantenlänge \(k\) und Gewichten \(w_{u,v}\) wird zentriert über das Eingabebild \(x\) gelegt, die Offsets \((u,v)\) laufen über das Fenster. Das Ergebnis ist der Ausgabewert \(y_{i,j}\). Die in Tabelle ~\ref{tab:formelzeichen-min} aufgeführten Symbole legen die Notation fest. Durch das gemeinsame Nutzen der Kernelgewichte über alle \((i,j)\) sinkt die Parameterzahl und die Abbildung bleibt verschiebungsgleich. In praktischen Netzen ist die Faltung mehrkanalig, dies bedeutet dass mehrere Eingabekanäle gemeinsam gefaltet  werden und zu mehreren Ausgabekanälen kombiniert werden.
+% % Kompakte Tabelle: nur die für \eqref{eq:conv2d} und \eqref{eq:gap} nötigen Formelzeichen
+% \begin{table}[htbp]
+%   \centering
+%   \caption{Formelzeichen zu Gl.~\eqref{eq:conv2d} (Faltung) und Gl.~\eqref{eq:gap} (Global Average Pooling).}
+%   \label{tab:formelzeichen-min}
+%   \renewcommand{\arraystretch}{1.1}
+%   \begin{tabular}{l p{0.62\linewidth} l}
+%     \hline
+%     \textbf{Symbol} & \textbf{Bedeutung} & \textbf{Einheit/Bereich} \\
+%     \hline
+%     $x_{i,j}$   & Eingabewert an Position $(i,j)$ & reell \\
+%     $y_{i,j}$   & Ausgabewert der Faltung an Position $(i,j)$ & reell \\
+%     $w_{u,v}$   & Gewicht des $k\times k$-Kerns an Offset $(u,v)$ & reell \\
+%     $k$         & Kantenlänge des Faltungskerns & Pixel \\
+%     $i,j$       & Räumliche Indizes (Zeile, Spalte) & — \\
+%     $u,v$       & Kernelindizes & — \\
+%     $H, W$      & Höhe und Breite der Merkmalskarte für GAP & Pixel \\
+%     $z_c$       & GAP-Ausgabe für Kanal $c$ & reell \\
+%     $c$         & Kanalindex & — \\
+%     \hline
+%   \end{tabular}
+% \end{table}
+
+
+% % 2D-Faltung (ein Kanal, Kernel k×k, zentriert)
+% \begin{equation}
+%   y_{i,j}
+%   = \sum_{u=0}^{k-1}\sum_{v=0}^{k-1}
+%     w_{u,v}\; x_{\,i+u-\lfloor k/2 \rfloor,\; j+v-\lfloor k/2 \rfloor}
+%   \label{eq:conv2d}
+% \end{equation}
+
+% % Global Average Pooling (über H×W)
+% \begin{equation}
+%   z_c = \frac{1}{H\,W}\sum_{i=1}^{H}\sum_{j=1}^{W} y_{i,j,c}
+%   \label{eq:gap}
+% \end{equation}
+
+
+% \subsection{Aktivierungsfunktion}
+% \label{sec:cnns-activation-batchnorm}
+% Die Faltung liefert lineare Antworten \(y_{i,j}\), die im nächsten Schritt nichtlinear transformiert werden. Eine Aktivierungsfunktion \(\phi(\cdot)\) wird punktweise angewandt und macht die Abbildung modellierfähig, etwa durch ReLU, die negative Werte auf null setzt.
+% Die ReLU-Aktivierung ist eine üblich genutzte Aktiviewrungsfunktion.
+
+% \subsection{Pooling und Downsampling (mit Global Average Pooling)}
+% \label{sec:cnns-pooling}
+
+% Pooling fasst lokale Nachbarschaften zusammen und reduziert die räumliche Auflösung. Dadurch sinkt der Rechenaufwand und die Darstellung wird unempfindlicher gegenüber kleinen Verschiebungen. Am Ende des Merkmalsextraktors wird häufig ein \emph{Global Average Pooling} eingesetzt. Die Gleichung ~\eqref{eq:gap} mittelt für jeden Kanal \(c\) alle Werte \(y_{i,j,c}\) über Höhe \(H\) und Breite \(W\) zu einem einzigen Skalar \(z_c\). Die so entstehende Vektordarstellung ist kompakt, senkt die Parameterzahl des Ausgabekopfes und eignet sich für Klassifikation und Regression. Andere Pooling-Varianten wie Max- oder lokales Average-Pooling können in früheren Stufen eingesetzt werden, ohne die in Gleichung ~\eqref{eq:gap} definierte globale Verdichtung am Ende zu ersetzen. Das Max-Pooling behält pro lokalem Fenster den größten Wert und hebt starke Aktivierungen hervor und das Min-Pooling behält den kleinsten Wert und betont schwache Antworten oder dunkle Strukturen. Beide Varianten reduzieren die Zahl der Werte und wirken als nichtlineare Verdichtung.
+=======
 "Lorem ipsum"
 \newpage
+>>>>>>> origin/main

@@ -19,6 +19,72 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+<<<<<<< HEAD
+    \entry{Schlussbericht}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=739ced337aad63aeaef44510e3b390a5}{%
+           family={Clemens},
+           familyi={C\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Universität Bremen}%
+      }
+      \strng{namehash}{739ced337aad63aeaef44510e3b390a5}
+      \strng{fullhash}{739ced337aad63aeaef44510e3b390a5}
+      \strng{fullhashraw}{739ced337aad63aeaef44510e3b390a5}
+      \strng{bibnamehash}{739ced337aad63aeaef44510e3b390a5}
+      \strng{authorbibnamehash}{739ced337aad63aeaef44510e3b390a5}
+      \strng{authornamehash}{739ced337aad63aeaef44510e3b390a5}
+      \strng{authorfullhash}{739ced337aad63aeaef44510e3b390a5}
+      \strng{authorfullhashraw}{739ced337aad63aeaef44510e3b390a5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{Deutsch}
+      \field{month}{9}
+      \field{title}{Entwicklung eines Subsystems „Sensorfusion“ für Navigation und Operatorsupport}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://edocs.tib.eu/files/e01fb16/87093077X.pdf
+      \endverb
+      \verb{url}
+      \verb https://edocs.tib.eu/files/e01fb16/87093077X.pdf
+      \endverb
+    \endentry
+    \entry{attitude}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d20f0c0cb583117558cdb16b3faa730}{%
+           family={Diebel},
+           familyi={D\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{fullhash}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{fullhashraw}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{bibnamehash}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{authorbibnamehash}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{authornamehash}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{authorfullhash}{4d20f0c0cb583117558cdb16b3faa730}
+      \strng{authorfullhashraw}{4d20f0c0cb583117558cdb16b3faa730}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+=======
     \entry{Aarenstrup2025ManagingMBD}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f17ca0aad6a19c33022ae017e7d19386}{%
@@ -44,10 +110,48 @@
       \strng{authorfullhashraw}{f17ca0aad6a19c33022ae017e7d19386}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+>>>>>>> origin/main
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+<<<<<<< HEAD
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Representing Attitude: Euler Angles, Unit Quaternions, and Rotation Vectors}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+      \endverb
+      \verb{url}
+      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+      \endverb
+    \endentry
+    \entry{Komplementärfilter}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f2ff85c5515bed2d5ce4903dc8b42948}{%
+           family={Gui},
+           familyi={G\bibinitperiod},
+           given={Pengfei},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e9b1514f09792d4186341527073bc25}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Liqiong},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f60c90951c49f0b9d059d85c775e187}{%
+           family={Mukhopadhyay},
+           familyi={M\bibinitperiod},
+           given={Subhas\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+=======
       \field{isbn}{978-1512036138}
       \field{langid}{english}
       \field{note}{E-Book PDF, ISBN-10: 1512036137, Copyright 2015--2025 The MathWorks, Inc.}
@@ -90,11 +194,22 @@
            familyi={C\bibinitperiod},
            given={Tianyou},
            giveni={T\bibinitperiod},
+>>>>>>> origin/main
            givenun=0}}%
       }
       \list{publisher}{1}{%
         {IEEE}%
       }
+<<<<<<< HEAD
+      \strng{namehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{fullhash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{fullhashraw}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{bibnamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authorbibnamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authornamehash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authorfullhash}{a08f13f0bb8c2e18f7388a46df1e4c07}
+      \strng{authorfullhashraw}{a08f13f0bb8c2e18f7388a46df1e4c07}
+=======
       \strng{namehash}{28eae54ce5fb721cc0966e260d3d615b}
       \strng{fullhash}{7dab0788de8a3acd4543cc44e0b1a422}
       \strng{fullhashraw}{7dab0788de8a3acd4543cc44e0b1a422}
@@ -150,21 +265,40 @@
       \strng{authornamehash}{3393e4433194d61b91167d137548c370}
       \strng{authorfullhash}{3393e4433194d61b91167d137548c370}
       \strng{authorfullhashraw}{3393e4433194d61b91167d137548c370}
+>>>>>>> origin/main
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+<<<<<<< HEAD
+      \field{booktitle}{Proceedings of the 2015 10th IEEE Conference on Industrial Electronics and Applications (ICIEA 2015)}
+      \field{title}{MEMS based IMU for tilting measurement: Comparison of complementary and kalman filter based data fusion}
+=======
       \field{journaltitle}{IEEE Aerospace and Electronic Systems Magazine}
       \field{langid}{english}
       \field{month}{2}
       \field{note}{Tutorial, Part II of II}
       \field{title}{Navigation Using Inertial Sensors}
+>>>>>>> origin/main
       \field{urlday}{13}
       \field{urlmonth}{1}
       \field{urlyear}{2026}
       \field{year}{2015}
+<<<<<<< HEAD
+      \field{urldateera}{ce}
+      \field{pages}{2004\bibrangedash 2009}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICIEA.2015.7334442
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7334442
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7334442
+=======
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
@@ -175,6 +309,7 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1109/MAES.2014.130191
+>>>>>>> origin/main
       \endverb
     \endentry
     \entry{HoyosGutierrez2023RCPReview}{article}{}{}
@@ -304,7 +439,169 @@
       \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
       \endverb
       \verb{url}
+<<<<<<< HEAD
+      \verb https://www.researchgate.net/figure/Euler-Angles-Yaw-Pitch-and-Roll_fig2_342145524
+      \endverb
+    \endentry
+    \entry{EKF}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4420bc96821de11936fef32e1dfbd8cf}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {A-JIN Publishing company}%
+      }
+      \strng{namehash}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{fullhash}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{fullhashraw}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{bibnamehash}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{authorbibnamehash}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{authornamehash}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{authorfullhash}{4420bc96821de11936fef32e1dfbd8cf}
+      \strng{authorfullhashraw}{4420bc96821de11936fef32e1dfbd8cf}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1463648350}
+      \field{journaltitle}{IEEE Revista Iberoamericana de Tecnologias del Aprendizaje}
+      \field{langid}{english}
+      \field{title}{Kalman Filter for Beginners: With MATLAB Examples}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{Lagebestimmung}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51094dd7a96e044b33df6224e2214449}{%
+           family={Michaelsen},
+           familyi={M\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universität Hamburg}%
+      }
+      \list{location}{1}{%
+        {Hamburg, Deutschland}%
+      }
+      \strng{namehash}{51094dd7a96e044b33df6224e2214449}
+      \strng{fullhash}{51094dd7a96e044b33df6224e2214449}
+      \strng{fullhashraw}{51094dd7a96e044b33df6224e2214449}
+      \strng{bibnamehash}{51094dd7a96e044b33df6224e2214449}
+      \strng{authorbibnamehash}{51094dd7a96e044b33df6224e2214449}
+      \strng{authornamehash}{51094dd7a96e044b33df6224e2214449}
+      \strng{authorfullhash}{51094dd7a96e044b33df6224e2214449}
+      \strng{authorfullhashraw}{51094dd7a96e044b33df6224e2214449}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lagebestimmung durch Sensorfusion mittels Kalmanfilter}
+      \field{type}{Masterarbeit}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://hdl.handle.net/20.500.12738/8460
+      \endverb
+      \verb{url}
+      \verb http://hdl.handle.net/20.500.12738/8460
+      \endverb
+    \endentry
+    \entry{KIT}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42247643d9461e6059d611c47b8cf8b4}{%
+           family={{Tamim Asfour}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{fullhash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{fullhashraw}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{bibnamehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authorbibnamehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authornamehash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authorfullhash}{42247643d9461e6059d611c47b8cf8b4}
+      \strng{authorfullhashraw}{42247643d9461e6059d611c47b8cf8b4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Robotik U: Einführung in die Robotik}
+      \field{urlday}{10}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+      \endverb
+      \verb{url}
+      \verb https://pasta.place/Informatik/Robotik_1_%5BHIS%5D/Folien/WS_17-18/01-Mathematische-Grundlagen.pdf
+=======
       \verb https://doi.org/10.23919/MIPRO48935.2020.9245122
+>>>>>>> origin/main
+      \endverb
+    \endentry
+    \entry{vonRosenberg2006}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6a6ae377ab50af3843805513c5876810}{%
+           family={Rosenberg},
+           familyi={R\bibinitperiod},
+           given={Harald},
+           giveni={H\bibinitperiod},
+           givenun=0,
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Stuttgart}%
+      }
+      \list{location}{1}{%
+        {Stuttgart, Deutschland}%
+      }
+      \strng{namehash}{6a6ae377ab50af3843805513c5876810}
+      \strng{fullhash}{6a6ae377ab50af3843805513c5876810}
+      \strng{fullhashraw}{6a6ae377ab50af3843805513c5876810}
+      \strng{bibnamehash}{6a6ae377ab50af3843805513c5876810}
+      \strng{authorbibnamehash}{6a6ae377ab50af3843805513c5876810}
+      \strng{authornamehash}{6a6ae377ab50af3843805513c5876810}
+      \strng{authorfullhash}{6a6ae377ab50af3843805513c5876810}
+      \strng{authorfullhashraw}{6a6ae377ab50af3843805513c5876810}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Public version (PDF)}
+      \field{title}{Sensorfusion zur Navigation eines Fahrzeugs mit low-cost Inertialsensorik}
+      \field{type}{Diplomarbeit}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.vrosenberg.de/download/Diplomarbeit%20Harald%20von%20Rosenberg%20%28public%20version%29.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.vrosenberg.de/download/Diplomarbeit%20Harald%20von%20Rosenberg%20%28public%20version%29.pdf
       \endverb
     \endentry
   \enddatalist
