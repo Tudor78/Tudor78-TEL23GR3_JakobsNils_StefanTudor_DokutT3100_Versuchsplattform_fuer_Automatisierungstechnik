@@ -9,7 +9,7 @@
 \contentsline {chapter}{\numberline {2}Grundlagen und Stand der Technik}{3}{chapter.11}%
 \contentsline {section}{\numberline {2.1}Rapid Control Prototyping}{3}{section.12}%
 \contentsline {section}{\numberline {2.2}Modellbasierte Entwicklung mit Matlab/Simulink}{5}{section.14}%
-\contentsline {section}{\numberline {2.3}Inertialsensorik}{7}{section.16}%
+\contentsline {section}{\numberline {2.3}Inertialmesseinheit}{7}{section.16}%
 \contentsline {section}{\numberline {2.4}Quaternionen und Euler-Winkel}{9}{section.17}%
 \contentsline {section}{\numberline {2.5}Lageschätzung mittels Sensorfusion}{10}{section.18}%
 \contentsline {chapter}{Literaturverzeichnis}{11}{section*.19}%
