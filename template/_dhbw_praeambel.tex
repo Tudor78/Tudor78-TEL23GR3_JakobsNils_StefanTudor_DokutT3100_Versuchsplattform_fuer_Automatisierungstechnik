@@ -71,11 +71,18 @@
 \input{template/_dhbw_biblatex-config.tex}
 
 % Verzeichnisse/Tabellen
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{ragged2e} % für \RaggedRight in X-Spalten
+\usepackage{float}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \usepackage{tocloft}
 \usepackage{multirow}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
+
 
 % Hyperlinks
 \usepackage[hypertexnames=false]{hyperref}

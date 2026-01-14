@@ -1,0 +1,405 @@
+\chapter{Auswahl geeigneter Hardware}
+\label{chap:auswahl_geeigneter_hardware}
+Im folgenden Kapitel wird die Auswahl der geeigneten Hardware für das (RCP) beschrieben. Dies gliedert sich in die Boardauswahl in Abschnitt \ref{sec:boardauswahl} als auch die Auswahl der Sensorik in Abschnitt \ref{sec:sensorauswahl}.
+Dabei werden verschiedene Kriterien in einer Pugh-Matrix bewertet, um die bestmögliche Lösung bei der Auswahl des Boardsfür die Anforderungen des Projekts zu finden.
+
+\section{Boardauswahl}
+\label{sec:boardauswahl}
+% Anhand der in Abschnitt \ref{sec:Vorgehensweise} beschriebenen Anforderungen werden verschiedene Hardwareplattformen für das Rapid Control Prototyping verglichen. Hierbei werden Kriterien in der Tabelle \ref{tab:pugh_matrix_kriterien_boardauswahl} definiert, die für die Auswahl relevant sind. Diese Kriterien werden in einer Pugh-Matrix bewertet, um die bestmögliche Hardwareplattform für die Versuchsplattform zu identifizieren.
+
+
+% Für die Auswahl erfolgt eine Recherche geeigneter Hardwareplattformen, welche anhand der Kriterien in Tabelle \ref{tab:pugh_matrix_kriterien_boardauswahl} und der Bewertungsskala in Tabelle \ref{tab:pugh-bewertungsskala} in einer Pugh-Matrix bewertet werden. 
+
+Auf Basis der in Abschnitt \ref{sec:Vorgehensweise} abgeleiteten Anforderungen werden verschiedene Hardwareplattformen für das RCP gegenübergestellt. Die hierfür verwendeten Bewertungskriterien sind in Tabelle \ref{tab:pugh-kriterien-und-skala} zusammengefasst. 
+
+Die Auswahlentscheidung erfolgt anschließend mithilfe einer Pugh-Matrix, in der die betrachteten Plattformen anhand dieser Kriterien und der Bewertungsskala aus Tabelle \ref{tab:pugh-kriterien-und-skala} bewertet werden, um die geeignetste Hardwareplattform für die Versuchsplattform zu bestimmen. Nachdem die Bewertungskriterien definiert wurden, erfolgt die Recherche und Auswahl verschiedener Hardwareplattformen, die für das RCP in Frage kommen. Diese Plattformen werden in der Pugh-Matrix in Tabelle \ref{tab:pugh-matrix-boardauswahl} anhand der zuvor definierten Kriterien bewertet. Die Gesamtpunktzahl jeder Plattform wird berechnet, indem die Bewertungen mit den jeweiligen Gewichtungen multipliziert und summiert werden. Die Plattform mit der höchsten Gesamtpunktzahl wird als die am besten geeignete Hardwarelösung für die RCP-Versuchsplattform identifiziert. Hierbei ist jeoch wichittig zu beachten, dass neben der reinen Punktzahl auch praktische Aspekte wie Verfügbarkeit, Support und Kosten in die endgültige Entscheidung einfließen sollten, somit muss nicht nur die höchste Punktzahl zur Auswahl herangezogen werden. 
+Die Eckdaten der betrachteten Hardwareplattformen sind in Tabelle \ref{tab:board-eckdaten-aus-pugh} zusammengefasst, welche genutzt wurden um die Pugh-Matrix zu erstellen.
+
+Die Evaluierung der letzendlichen Entwicklungsplattform ergibt, dass das \emph{STM32H755ZI-Q} die beste Balance zwischen den Anforderungen und den Bewertungskriterien bietet. Es überzeugt durch eine gute Matlab/Simulink-Anbindung für RCP, ausreichende Rechenleistung und RAM, eine Dual-Core-Architektur zur funktionalen Trennung, sowie umfangreiche I/O-Fähigkeiten und Debugging-Optionen. Zudem ist es im Vergleich zu den professionellen Echtzeitsystemen von dSpace und Speedgoat deutlich kostengünstiger, während es dennoch die wesentlichen Anforderungen für die geplante Versuchsplattform erfüllt. Daher wird das \emph{STM32H755ZI-Q} als die am besten geeignete Hardwareplattform für die Umsetzung der RCP-Versuchsplattform ausgewählt. Dies umfasst die evaluierung weshalb sich das \emph{STM32H755ZI-Q} als Entwicklungsplattform am besten eignet für diese Projektarbeit. Allerdings wird im folgenden Abschnitt beschrieben, welche Gründe gegen die Nutzung der anderen Plattformen sprechen.
+
+Ein weiterer vielversprechender Kandidat ist das \emph{NXP i.MX RT1170}, welches ebenfalls eine Dual-Core-Architektur und gute Performance bietet. Allerdings sind die Simulink-Integrationsmöglichkeiten und der Support im Vergleich zum STM32 etwas eingeschränkt, was die Entwicklungsarbeit erschweren könnte. Die professionellen Echtzeitsysteme von dSpace und Speedgoat bieten zwar eine nahtlose Integration mit Simulink und umfangreiche Debugging-Optionen, sind jedoch aufgrund ihrer hohen Kosten für dieses Projekt nicht praktikabel. Kleinere Mikrocontroller-Plattformen wie der \emph{Teensy 4.1} oder der \emph{Arduino Portenta H7} bieten zwar gute I/O-Fähigkeiten und sind kostengünstig, jedoch fehlt es ihnen an offizieller Simulink-Unterstützung und ausreichender Rechenleistung für komplexe RCP-Anwendungen.  
+
+
+\begin{table}[htbp]
+  \centering
+  \ra{1.15}
+  \caption{Kriterien und Bewertungsskala der Pugh-Matrix zur Boardauswahl}
+  \label{tab:pugh-kriterien-und-skala}
+
+  \begin{tabular}{@{}p{0.34\linewidth}p{0.62\linewidth}@{}}
+    \toprule
+    \textbf{Kriterium} & \textbf{Beschreibung} \\
+    \midrule
+
+    \parbox[t]{\linewidth}{\textbf{Matlab/Simulink-Anbindung}\\(RCP)} &
+    Unterstützung der modellbasierten Implementierung und automatischen Codegenerierung sowie Möglichkeit zur Parametrierung und Signalbeobachtung im Echtzeitbetrieb. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{Performance}\\(Rechenleistung, RAM)} &
+    Verfügbare Rechenleistung und Speicherressourcen für Sensorfusion, Filteralgorithmen und Echtzeitausführung. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{Kernarchitektur}\\(Single, Dual)} &
+    Verfügbarkeit und Nutzbarkeit einer Single-Core- oder Dual-Core-Architektur zur funktionalen Trennung, beispielsweise von Kommunikations- und Rechenaufgaben. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{Debugging und Tracing}\\(MIPI20, ETM)} &
+    Unterstützung von Debug- und Trace-Schnittstellen zur Laufzeitanalyse, Fehlerdiagnose und Performanzbewertung, beispielsweise über ETM oder MIPI20. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{Verfügbarkeit und Support}\\(Community, Hersteller)} &
+    Verfügbarkeit der Hardware, Qualität der Dokumentation sowie Community- und Herstellerunterstützung für Integration und Fehlersuche. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{Preis und Lizenzkosten}} &
+    Hardwarekosten sowie mögliche Zusatzkosten durch erforderliche Softwarelizenzen, Toolchains oder kommerzielle Erweiterungen. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{I/O-Fähigkeiten}\\(Analog, PWM, SPI, CAN)} &
+    Umfang und Leistungsfähigkeit der Ein- und Ausgänge für Sensorik, Aktorik und Bussysteme einschließlich analoger Kanäle und Kommunikationsschnittstellen. \\
+    \addlinespace[6pt]
+
+    \parbox[t]{\linewidth}{\textbf{ROS~2-Unterstützung}} &
+    Möglichkeit zur Integration in ROS~2-Umgebungen. \\
+
+    % --------- klarer Trenner zur Skala ---------
+    \addlinespace[10pt]
+    \midrule
+    \addlinespace[4pt]
+    \multicolumn{2}{c}{\textbf{Bewertungsskala}} \\
+    \addlinespace[4pt]
+    \midrule
+    \addlinespace[6pt]
+
+    % Skala zentriert (Symbol mittig, Bedeutung sauber mit Abstand)
+    \multicolumn{2}{@{}c@{}}{%
+      \begin{tabular}{@{}c@{\hspace{10mm}}l@{}}
+        \textbf{Symbol} & \textbf{Bedeutung} \\
+        \midrule
+        \textbf{\texttt{++}}  & deutlich besser als Referenz (technisch führend) \\
+        \textbf{\texttt{+}}   & besser als Referenz \\
+        \textbf{\texttt{0}}   & vergleichbar \\
+        \textbf{\texttt{--}}  & schlechter \\
+        \textbf{\texttt{---}} & deutlich schlechter \\
+      \end{tabular}%
+    } \\
+
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\newcommand{\pughSym}[1]{\textbf{\texttt{#1}}}
+\newcommand{\pughMinus}{\textbf{\texttt{-}}}
+\newcommand{\pughMinusMinus}{\textbf{\texttt{-\kern0.15em-}}}
+
+\begin{table}[htbp]
+  \centering
+  \ra{1.1}
+  \setlength{\tabcolsep}{2.2pt}
+  \scriptsize
+  \caption{Pugh-Matrix zur Bewertung von Hardwareplattformen für die RCP-Versuchsplattform}
+  \label{tab:pugh-matrix-boardauswahl}
+  \resizebox{\linewidth}{!}{%
+  \begin{tabular}{@{}l c *{15}{c}@{}}
+    \toprule
+    \textbf{Kriterium} & \textbf{Gewicht} &
+    \rotatebox{90}{Arduino Giga R1} &
+    \rotatebox{90}{Nano RP2040} &
+    \rotatebox{90}{Raspberry Pi 4} &
+    \rotatebox{90}{Teensy 4.1} &
+    \rotatebox{90}{Portenta H7} &
+    \rotatebox{90}{STM32 H7S3L8} &
+    \rotatebox{90}{STM32 F767ZI} &
+    \rotatebox{90}{STM32 H755ZI-Q} &
+    \rotatebox{90}{STM32 H753XI} &
+    \rotatebox{90}{NXP i.MX RT1170} &
+    \rotatebox{90}{TI F2837D} &
+    \rotatebox{90}{STM32 MP157} &
+    \rotatebox{90}{Jetson Nano} &
+    \rotatebox{90}{dSpace} &
+    \rotatebox{90}{Speedgoat} \\
+    \midrule
+
+    Matlab/Simulink-Anbindung (RCP) & 5 &
+    \pughSym{0} & \pughMinus & \pughMinus & \pughSym{0} & \pughSym{+} &
+    \pughMinus & \pughSym{0} & \pughSym{+} & \pughSym{0} &
+    \pughSym{+} & \pughSym{+} & \pughSym{0} & \pughSym{++} &
+    \pughSym{++} & \pughSym{++} \\
+
+    Performance (Rechenleistung, RAM) & 5 &
+    \pughSym{0} & \pughMinus & \pughSym{+} & \pughSym{+} & \pughSym{+} &
+    \pughSym{++} & \pughSym{0} & \pughSym{++} & \pughSym{+} &
+    \pughSym{++} & \pughSym{0} & \pughSym{++} & \pughSym{++} &
+    \pughSym{++} & \pughSym{++} \\
+
+    Kernarchitektur (Single/Dual) & 4 &
+    \pughSym{+} & \pughMinus & \pughSym{+} & \pughSym{+} & \pughSym{+} &
+    \pughSym{+} & \pughSym{0} & \pughSym{++} & \pughSym{0} &
+    \pughSym{++} & \pughSym{+} & \pughSym{++} & \pughSym{++} &
+    \pughSym{++} & \pughSym{++} \\
+
+    Debugging und Tracing (MIPI20/ETM) & 2 &
+    \pughSym{0} & \pughMinus & \pughSym{0} & \pughSym{+} & \pughSym{+} &
+    \pughSym{+} & \pughSym{0} & \pughSym{+} & \pughSym{0} &
+    \pughSym{+} & \pughSym{+} & \pughSym{0} & \pughSym{++} &
+    \pughSym{++} & \pughSym{++} \\
+
+    Verfügbarkeit, Community, Support & 4 &
+    \pughSym{+} & \pughSym{++} & \pughSym{++} & \pughSym{++} & \pughSym{+} &
+    \pughSym{0} & \pughSym{++} & \pughSym{+} & \pughSym{++} &
+    \pughSym{+} & \pughSym{0} & \pughSym{+} & \pughSym{+} &
+    \pughMinus & \pughMinus \\
+
+    Preis und Lizenzkosten & 4 &
+    \pughSym{+} & \pughSym{++} & \pughSym{++} & \pughSym{++} & \pughSym{0} &
+    \pughSym{+} & \pughSym{++} & \pughSym{+} & \pughSym{++} &
+    \pughSym{0} & \pughSym{+} & \pughSym{0} & \pughMinus &
+    \pughMinusMinus & \pughMinusMinus \\
+
+    I/O-Fähigkeiten (Analog, PWM, SPI, CAN) & 4 &
+    \pughSym{+} & \pughMinus & \pughSym{++} & \pughSym{++} & \pughSym{+} &
+    \pughSym{++} & \pughSym{++} & \pughSym{++} & \pughSym{++} &
+    \pughSym{++} & \pughSym{+} & \pughSym{++} & \pughSym{++} &
+    \pughSym{++} & \pughSym{++} \\
+
+    ROS~2-Unterstützung & 2 &
+    \pughMinus & \pughMinus & \pughSym{++} & \pughSym{0} & \pughSym{0} &
+    \pughMinus & \pughMinus & \pughMinus & \pughMinus &
+    \pughSym{0} & \pughMinus & \pughSym{+} & \pughSym{++} &
+    \pughSym{++} & \pughSym{++} \\
+
+    \midrule
+    \textbf{Gesamtpunktzahl} &  &
+    \textbf{19} & \textbf{8} & \textbf{32} & \textbf{37} & \textbf{24} &
+    \textbf{38} & \textbf{24} & {\setlength{\fboxsep}{1.2pt}\colorbox{yellow!35}{\textbf{41}}} & \textbf{31} &
+    \textbf{37} & \textbf{17} & \textbf{32} & \textbf{63} &
+    \textbf{75} & \textbf{78} \\
+    \bottomrule
+  \end{tabular}%
+  }
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \renewcommand{\arraystretch}{1.35}
+  \setlength{\tabcolsep}{5.0pt}
+  \footnotesize
+  \caption{Eckdaten der betrachteten Hardwareplattformen einschließlich Preisangaben (aus der Pugh-Matrix abgeleitet)}
+  \label{tab:board-eckdaten-aus-pugh}
+
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|p{0.14\linewidth}|p{0.26\linewidth}|p{0.11\linewidth}|p{0.09\linewidth}|p{0.20\linewidth}|p{0.20\linewidth}|}
+      \hline
+      \textbf{Plattform} & \textbf{CPU und Architektur} & \textbf{Takt} & \textbf{RAM} & \textbf{I/O und Debugging} & \textbf{Hinweise und Preis} \\
+      \hline\hline
+
+      \parbox[t]{\linewidth}{Arduino\\Giga R1} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core\\
+        {\footnotesize (Cortex-M7 + Cortex-M4)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        480\,MHz\\
+        240\,MHz
+      \end{tabular} &
+      1\,MB &
+      Viele I/O und PWM; kein ETM &
+      {\raggedright Begrenzte Simulink-Unterstützung; kein ROS~2; $\sim$60\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{Arduino\\Nano RP2040} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core\\
+        {\footnotesize (Cortex-M0+)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        133\,MHz
+      \end{tabular} &
+      264\,KB &
+      I/O begrenzt; kein ETM &
+      {\raggedright Keine Matlab-Unterstützung; kein ROS~2; $\sim$10\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{Raspberry\\Pi 4} &
+      \begin{tabular}[t]{@{}l@{}}
+        Quad-Core\\
+        {\footnotesize (Cortex-A72)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        1.5\,GHz
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        4--8\,GB
+      \end{tabular} &
+      GPIO, SPI, I\textsuperscript{2}C, UART; Linux-Debug &
+      {\raggedright Simulink über ROS/UDP; ROS~2; $\sim$70\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{Teensy\\4.1} &
+      \begin{tabular}[t]{@{}l@{}}
+        Single-Core\\
+        {\footnotesize (Cortex-M7)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        600\,MHz
+      \end{tabular} &
+      1\,MB &
+      Viele I/O inkl.\ CAN, SPI; JTAG/SWD &
+      {\raggedright Kein offizielles Simulink-Target; microROS möglich; $\sim$35\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{Arduino\\Portenta H7} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core\\
+        {\footnotesize (Cortex-M7 + Cortex-M4)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        480\,MHz\\
+        240\,MHz
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        8\,MB\\
+        SDRAM
+      \end{tabular} &
+      Umfangreiche I/O inkl.\ Ethernet; ETM möglich &
+      {\raggedright Matlab-Target via STM32; microROS teils; $\sim$100\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{STM32\\H7S3L8\\(neueste)} &
+      \begin{tabular}[t]{@{}l@{}}
+        Single-Core\\
+        {\footnotesize (Cortex-M7)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        600\,MHz
+      \end{tabular} &
+      2\,MB &
+      CAN~FD, ADC, SPI, PWM; MIPI20 &
+      {\raggedright Keine Simulink-Targets; Zugang begrenzt; $\sim$80\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{STM32\\F767ZI\\(Vor-Gen.)} &
+      \begin{tabular}[t]{@{}l@{}}
+        Single-Core\\
+        {\footnotesize (Cortex-M7)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        216\,MHz
+      \end{tabular} &
+      512\,KB &
+      Viele I/O, Ethernet; SWD &
+      {\raggedright STM32-Packs möglich; kein ROS~2; $\sim$25\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{STM32\\H755ZI-Q} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core\\
+        {\footnotesize (Cortex-M7 + Cortex-M4)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        480\,MHz\\
+        240\,MHz
+      \end{tabular} &
+      n.\,a. &
+      CAN~FD, Ethernet; ETM &
+      {\raggedright STM32-Target programmierbar; $\sim$80\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{STM32\\H753XI\\(Klassiker)} &
+      \begin{tabular}[t]{@{}l@{}}
+        Single-Core\\
+        {\footnotesize (Cortex-M7)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        400\,MHz
+      \end{tabular} &
+      2\,MB &
+      Viele I/O, FPU; SWD &
+      {\raggedright Simulink via STM32Cube manuell; $\sim$60\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{NXP\\i.MX\\RT1170} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core\\
+        {\footnotesize (Cortex-M7 + Cortex-M4)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        1\,GHz\\
+        400\,MHz
+      \end{tabular} &
+      2\,MB &
+      Ethernet, CAN~FD; ETM/SWO &
+      {\raggedright MATLAB-Target via SDK; EVK $\sim$120\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{TI\\TMS320\\F2837D} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core\\
+        {\footnotesize (C28x)}
+      \end{tabular} &
+      n.\,a. &
+      n.\,a. &
+      PWM, ADC, CAN, SPI, Ethernet; JTAG/ETM &
+      {\raggedright C2000 in Simulink integriert; LaunchPad $\sim$80\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{STM32\\MP157\\(SoC)} &
+      \begin{tabular}[t]{@{}l@{}}
+        Dual-Core A7\\
+        {\footnotesize + Cortex-M4}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        650\,MHz
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        512\,MB--\\
+        1\,GB
+      \end{tabular} &
+      Viele IF (USB, Ethernet); Linux-Debug &
+      {\raggedright ROS~2 via Linux; Dev-Board $\sim$100\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{Nvidia\\Jetson\\Nano} &
+      \begin{tabular}[t]{@{}l@{}}
+        Quad-Core ARM\\
+        {\footnotesize + GPU}
+      \end{tabular} &
+      n.\,a. &
+      4\,GB &
+      Linux; Profiling (Nsight) &
+      {\raggedright ROS~2 Image; Matlab über ROS~2; $\sim$130\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{dSpace} &
+      \begin{tabular}[t]{@{}l@{}}
+        Echtzeit-System\\
+        {\footnotesize (Multicore-RT)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        1--2\,GHz
+      \end{tabular} &
+      n.\,a. &
+      Echtzeit-Tracing; flexible I/O &
+      {\raggedright Voll integriert; proprietär; $>$5000\,\euro.\par} \\
+      \hline
+
+      \parbox[t]{\linewidth}{Speedgoat} &
+      \begin{tabular}[t]{@{}l@{}}
+        Echtzeit-System\\
+        {\footnotesize (Multicore-RT)}
+      \end{tabular} &
+      \begin{tabular}[t]{@{}l@{}}
+        bis 3\,GHz
+      \end{tabular} &
+      n.\,a. &
+      Debugging mit Scope-Sync; flexible I/O &
+      {\raggedright Nahtlos Simulink; ROS~2-Target; $>$8000\,\euro.\par} \\
+      \hline
+
+    \end{tabular}%
+  }
+\end{table}
+
+\section{Sensorauswahl}
+\label{sec:sensorauswahl}
