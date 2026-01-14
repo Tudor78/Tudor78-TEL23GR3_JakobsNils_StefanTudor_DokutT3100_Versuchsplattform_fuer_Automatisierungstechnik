@@ -12,4 +12,7 @@
 \contentsline {section}{\numberline {2.3}Inertialmesseinheit}{7}{section.16}%
 \contentsline {section}{\numberline {2.4}Quaternionen und Euler-Winkel}{9}{section.17}%
 \contentsline {section}{\numberline {2.5}Lageschätzung mittels Sensorfusion}{10}{section.18}%
-\contentsline {chapter}{Literaturverzeichnis}{11}{section*.19}%
+\contentsline {chapter}{\numberline {3}Auswahl geeigneter Hardware}{11}{chapter.19}%
+\contentsline {section}{\numberline {3.1}Boardauswahl}{11}{section.20}%
+\contentsline {section}{\numberline {3.2}Sensorauswahl}{12}{section.24}%
+\contentsline {chapter}{Literaturverzeichnis}{16}{section*.25}%
